@@ -1,0 +1,12 @@
+<?     $dbtype = "mysql";
+        $server   = "localhost";
+        $admin_login="site_tut54_user";
+        $admin_password="qazedcwsx";
+        $dbname="tut54";
+
+
+        $link=mysql_pconnect("$server", "$admin_login", "$admin_password");
+        if (!$link) die ("Couldn't connect to MySQL ");
+
+        mysql_select_db("$dbname",$link) or die (mysql_error(). " : ".mysql_errno());
+        ?>
