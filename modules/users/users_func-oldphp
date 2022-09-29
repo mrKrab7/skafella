@@ -1,0 +1,371 @@
+<?
+function get_input ($form,$nazv,$type,$name,$val,$class,$placeholder)
+{
+	global $cms;
+	$data['NAZV'] =$nazv;
+	$data['TYPE'] =$type;
+	$data['NAME'] =$name;
+	$data['VAL'] = $val;
+	$data['CLASS'] = $class;
+	$data['PLACEHOLDER'] = $placeholder;
+	return $cms->blockparse($form,$data,1);
+}
+function get_div ($text,$class)
+{
+	global $cms;
+	$data['div'] =$text;
+	$data['CLASS'] = $class;
+	return $cms->blockparse("div",$data,1);
+}
+function get_select_form ($form,$nazv,$type,$sel,$class)
+{
+	global $cms;$str_opt='';
+	$select_row = $cms->query("select ID,NAME from zed_select where TYPE='$type' order by NAME");
+	while ($select_res=$cms->fetch_object($select_row))
+	{
+		$dan['NAME'] =$select_res->NAME;
+		$dan['VAL'] = $select_res->ID;
+		if($sel==$select_res->ID){$dan['S'] = ' selected';}
+		else $dan['S'] = '';
+		$str_opt.=$cms->blockparse('select_options',$dan,1);
+	}
+	
+	$data['OPTION'] =$str_opt;
+	$data['NAZV'] =$nazv;
+	$data['TYPE'] =$type;
+	$data['CLASS'] = $class;
+	return $cms->blockparse($form,$data,1);
+}
+function checkmail($str)
+{
+	$badchars = "[ ]+| |\+|=|[|]|{|}|`|\(|\)|,|;|:|!|<|>|%|\*|/|'|\"|~|\?|#|\\$|\\&|\\^|www[.]";
+	return (eregi($badchars,$str));
+}
+
+function User_Login($id)
+{
+	global $cms;
+	$er='';
+	$data['classc']='class="users"';
+	
+	if(@$_SESSION['userid']!='')
+	{
+		$data['content'].=User_Profile_Private($_GET['x'],$_SESSION['type']);
+		return $data['content'];
+	}	
+	else 
+	{		
+		$data['content'].= "<form  action='$cms->url' method='post'>";
+		if(@$_POST['loginin'])
+		{
+			$data['content'].= get_div("Неверный Е-mail или пароль, или ваш аккаунт заблокирован.",'class="error"');
+		}
+		$data['content'].= get_input("form_i",'Е-mail','text','login','','class="blocks"');
+		$data['content'].= get_input("form_i",'пароль','password','password','','class="blocks"');
+		$data['content'].= get_input("form_i",'','submit','loginin','ВХОД','class="btn_default"');
+		$data['content'].= get_div("<a class='link_forget' href='$cms->url/forget'>Забыли пароль?</a><a class='link_register' href='$cms->url/register'>Регистрация</a>",'class="ok"');
+		$data['content'].= "</form>";
+	}
+	return $cms->blockparse("middle",$data,1);
+}
+
+function Add_Subject ($name,$email,$headersubject,$message)
+{
+	global $cms;
+	$config[admin_email] = "info@gornoski.ru";
+	$config[charset] = "windows-1251";
+	$config[recip_file] = "modules/feedback/recip.txt";
+	$config[features] = "on";
+	$config[select_recip] = 1;
+	$config[tittle] = "СООБЩЕНИЕ ОТ АДМИНИСТРАЦИИ САЙТА GORNOSKI.RU";
+	$config[description] = "сайт gornoski.ru";
+
+	$name = trim($name);
+	$email = trim($email);
+	$headersubject=$subject=trim($headersubject);
+	$message = trim($message);
+	
+	$sendmessage = "<html><head><meta http-equiv=\"content-language\" content=\"ru\"><meta http-equiv=\"content-type\" content=\"text/html; charset=windows-1251\"><meta name=\"author\" content=\"Barinov Alecsei (".$config[admin_email].")\"><meta name=\"robots\" content=\"all\"><meta name=\"description\" content=".$config[description]."><title>".$config[tittle]."</title></head><table border='0' cellpadding='2' cellspacing='0' width='100%'>
+<tr><td><font face=\"Verdana\" size=2>".$message."</font></td></tr></table> </body></html>";
+	$headers  = "MIME-Version: 1.0\n";
+	$headers .= "From: ".$headername."<".$email.">\n";
+	$headers .= "Content-Type: text/html; charset=".$config[charset]."\n";
+	$headers .= "X-Mailer: PHP/" . phpversion();
+	
+	$mail = "$name<$email>";
+	set_time_limit(30);
+	if (mail($mail, $headersubject, $sendmessage, $headers)){$resultat= 1;}
+	else{$resultat= 0;}
+	
+	return $resultat;
+}
+
+function User_Save_Data($id,$dan)
+{
+	global $cms;
+	$er="";
+	$str_sql='';
+	if($_POST['fio']=='' || $_POST['phone']=='' || $_POST['gorod']=='')
+	{$er.= "<br>Нельзя очищать поля обязательные для заполнения!";}
+	
+	if(isset($_POST['fio'])){$fio = trim($_POST['fio']);$str_sql.=" `FIO`='$fio',";}
+	if(isset($_POST['phone'])){$phone =  trim($_POST['phone']);$str_sql.=" `PHONE`='$phone',";}
+	if(isset($_POST['gorod'])){$gorod =  trim($_POST['gorod']);$str_sql.=" `GOROD`='$gorod',";}
+	if(isset($_POST['desc'])){$description = trim($_POST['desc']);$str_sql.=" `DESCRIPTION`='$description',";}
+	if($dan=='1')
+	{
+		if(isset($_POST['date'])){$date = trim($_POST['date']);$str_sql.=" `DATE`='$date',";}
+		if(isset($_POST['pol'])){$pol = trim($_POST['pol']);$str_sql.=" `POL`='$pol',";}
+	}
+	if($dan=='0')
+	{	
+			
+	}
+	if($_POST['pass']!='' && $_POST['repass']!='')
+	{
+		$pass = $_POST['pass'];
+		$repass = $_POST['repass'];
+		if($pass!=$repass){ $er.= "<br>Пароли не совпадают или не заполнены";}
+		else {$repass = md5($pass);$str_sql.=" `PASS`='$repass',";}
+	}
+	
+	if($er!=""){return $er;}
+	else
+	{
+		$str_sql=mb_substr($str_sql, 0, -1);
+		$result=$cms->query("update zed_users set $str_sql where ID='$id'");
+		return $er;
+	}
+}
+function User_Profile_Private($id,$vid)
+{
+	global $cms,$zsite;
+/*
+	echo '$_SESSION  <br>';
+	print_r($_SESSION);
+	echo '<br> $_POST  <br>';
+	print_r($_POST);
+	echo '<br> $_GET  <br>';
+	print_r($_GET);*/
+	
+	$data['classc']='class="users"';
+	$data['content']='';
+	$er='';
+	
+	if(@$_SESSION['rank']>=60) {$zsite['navi'].="<a class='link_adm' href='/zed/'>Перейти в админку</a>";}
+	
+	$user = $_SESSION['userid'];
+	$ruser = $cms->fetch_object($cms->query("select * from zed_users where ID='$user' "));
+	$fio = $ruser->FIO;
+	$phone =  $ruser->PHONE;		
+	$gorod = $ruser->GOROD;
+	$date = $ruser->DATE;
+	$pol = $ruser->POL;
+	$desc = $ruser->DESCRIPTION;
+	$face = $ruser->FACE;
+	echo "<br>$fio - $phone";
+	if(isset($_POST['add_data_user'])) $er = User_Save_Data($user,$vid);
+	if($er!="")
+	{
+		@$fio = $_POST['fio'];
+		@$phone =  $_POST['phone'];		
+		@$gorod = $_POST['gorod'];
+		@$date = $_POST['date'];
+		@$pol = $_POST['pol'];
+		@$desc = $_POST['desc'];
+	}
+	elseif(isset($_POST['add_data_user']))
+	{
+		$data['content'].= get_div("Изменения сохранены успешно",'class="ok"');
+	}
+	$data['content'].="<form action='$cms->url/profiles_private' method='post' enctype='multipart/form-data'>";
+	if($er!=""){$data['content'].= get_div($er,'class="error"');}
+	if($vid==0)
+	{
+		if($face==1){$str_face='Вы зарегистрированы как Юридическое лицо';}
+		elseif ($face==2){$str_face='Вы зарегистрированы как Индивидуальный Предпринематель';}
+		elseif ($face==3){$str_face='Вы зарегистрированы как физическое лицо';}
+		$data['content'].= get_div("$str_face",'class="ok"');
+	}
+	
+	$data['content'].= get_input('form_i','ФИО','text','fio',"$fio",'class="blocks"');
+	$data['content'].= get_input('form_i','Телефон','text','phone',"$phone",'class="blocks"');
+	$data['content'].= get_input('form_i','Город','text','gorod',"$gorod",'class="blocks"');
+	if($vid==1)
+	{
+		$data['content'].= get_input('form_i','Дата рождения','text','date',"$date",'class="blocks"');
+	}
+	$data['content'].= get_input('form_t','Коментарий','text','desc',"$desc",'class="blocks"');
+
+	$data['content'].= get_div("Заполняется если нужно сменить пароль",'class="info"');
+	$data['content'].= get_input('form_i','Пароль','password','pass','','class="blocks"');
+	$data['content'].= get_input('form_i','Повтор пароля','password','repass','','class="blocks"');
+	$data['content'].= get_input("form_i",'','submit','add_data_user','СОХРАНИТЬ','class="btn_default"');
+	
+	$data['content'].="</form>";
+	return $cms->blockparse("middle",$data,1);
+}
+
+function User_Register($id,$vid)
+{
+	global $cms;
+
+	echo '$_SESSION  <br>';
+	print_r($_SESSION);
+	echo '<br> $_POST  <br>';
+	print_r($_POST);
+	echo '<br> $_GET  <br>';
+	print_r($_GET);
+		
+	$er=$login = $email = $fio = $phone =  $gorod = $date = $pol = $desc = $data['content']='';
+	if(isset($_POST['add_user'])) $er = User_Registered($id,$vid);
+	if($er!="")
+	{
+		@$login = $_POST['login'];
+		@$email = $_POST['email'];
+		@$fio = $_POST['fio'];
+		@$phone =  $_POST['phone'];		
+		@$gorod = $_POST['gorod'];
+		@$date = $_POST['date'];
+		@$pol = $_POST['pol'];
+		@$desc = $_POST['desc'];
+	}
+	elseif(isset($_POST['add_user']))
+	{
+		$data['content'].= get_div("Пользователь успешно зарегистрирован<br><a href='$cms->url/profiles'>Перейти в Личный Кабинет</a>",'class="ok"');
+		return $cms->blockparse("middle",$data,1);
+	}
+		
+	//вывод полей формы регистрации //
+	
+	$data['content'].="<form action='$cms->url/register' name='add' method='post'>";
+	if($er!=""){$data['content'].= get_div($er,'class="error"');}
+	
+	$data['content'].=get_input('form_i', 'Логин', 'text', 'login', "$login", 'class="login"', 'Login');
+	$data['content'].= get_input('form_i','Е-mail (логин)<i>*</i>','text','email',"$email",'class="blocks"');
+	$data['content'].= get_input('form_i','Пароль <i>*</i>','password','pass','','class="blocks"');
+	$data['content'].= get_input('form_i','Телефон <i>*</i>','text','phone',"$phone",'class="blocks"');
+	$data['content'].= get_input('form_i','Повтор пароля <i>*</i>','password','repass','','class="blocks"');
+	$data['content'].= get_input("form_i",'','submit','add_user','ЗАРЕГИСТРИРОВАТЬСЯ','class="btn_default"');
+	
+	
+	$data['content'].="</form>";
+	
+	/* $data['content'].="<form action='$cms->url/register$l' name='add' method='post'>";
+	if($er!=""){$data['content'].= get_div($er,'class="error"');}
+	
+
+	$data['content'].= get_div("Звездочкой ( <i>*</i> ) помечены обязательные поля для заполнения",'class="info"');
+	$data['content'].= get_input('form_i','Е-mail (логин)<i>*</i>','text','email',"$email",'class="blocks"');
+	$data['content'].= get_input('form_i','ФИО <i>*</i>','text','fio',"$fio",'class="blocks"');
+	$data['content'].= get_input('form_i','Пароль <i>*</i>','password','pass','','class="blocks"');
+	$data['content'].= get_input('form_i','Телефон <i>*</i>','text','phone',"$phone",'class="blocks"');
+	$data['content'].= get_input('form_i','Повтор пароля <i>*</i>','password','repass','','class="blocks"');
+	$data['content'].= get_input('form_i','Город <i>*</i>','text','gorod',"$gorod",'class="blocks"');
+	
+	$data['content'].= get_div("<p>Дата рождения</p><input type='text' name='date' value='$date' class='date' data-lang='ru' data-years='50' data-format='DD.MM.YYYY' data-sundayfirst='false'>",'class="demo__element demo__element_width_small date_input"');
+	
+	$data['content'].= get_input('form_i','Адрес','text','adress',"",'class="blocks"');
+
+	$data['content'].= get_input('form_t','Коментарий','text','desc',"$desc",'class="blocks"');
+	
+	$data['content'].= get_input("form_i",'','submit','add_user','ЗАРЕГИСТРИРОВАТЬСЯ','class="btn_default"');
+	$data['content'].="</form>";
+	*/ return $cms->blockparse("middle",$data,1);
+}
+function User_Registered($id,$vid)
+{
+	global $cms;
+	$er="";
+	$login=$email = $_POST['email'];
+	$fio = $_POST['fio'];
+	$phone =  $_POST['phone'];
+	$gorod = $_POST['gorod'];
+	$adress = $_POST['adress'];
+	$desc = $_POST['desc'];
+	$date = $_POST['date'];
+	$pass = $_POST['pass'];
+	$repass = $_POST['repass'];
+	
+	if($pass!=$repass||$pass==""){ $er.= "<br>Пароли не совпадают или не заполнены";}
+	if($cms->check_if_exist($email,"zed_users","EMAIL")>0){$er.= "<br>Пользователь с таким почтовым ящиком уже зарегистрирован";}
+	if($email=='') $er.= "<br>Не указан E-mail адрес";
+	if($fio=='') $er.= "<br>Не указано ФИО клиента";	
+	if($gorod=='') $er.= "<br>Не указан город";
+	if($phone=='') $er.= "<br>Не указан контактный телефон";
+	
+	if($er!="") return 	$er;
+
+	$activ=1; 
+	
+	$pref = "0|0|0|0|0|0|0|0";
+	$repass = md5($pass);
+	$result=$cms->query("insert into zed_users (RANK,TYPE,PREFERENS,ACTIVE,PASS,LOGIN,FIO,EMAIL,PHONE,DESCRIPTION,GOROD,ADRESS,DATE) values ('20','$vid','$pref','$activ','$repass','$login','$fio','$email','$phone','$desc','$gorod','$adress','$date')");
+	if($result)
+	{
+		$message = trim("Здравствуйте!<br><br>Вы успешно прошли регистрацию на сайте <a href='http://piccolome.ru/'>www.piccolome.ru</a>.<br>Ваш логин: $login<br>Ваш пароль: $pass<br><br>Удачных покупок!<br><br>С уважением, коллектив интернет-магазина piccolome.ru<br>Сайт <a href='http://piccolome.ru'>www.piccolome.ru</a><br>e-mail:  info@piccolome.ru<br>Тел.: +7 (923) 140-72-30");
+		$headersubject='Вы успешно зарегистрировались';
+		Add_Subject($fio,$email,$headersubject,$message);
+		$headersubject="Зарегистрирован пользователь";
+		$message="Зарегистрирован пользователь<br> ФИО: $fio<br>емаил: $email<br>телефон: $phone";
+		Add_Subject('admin','info@piccolome.ru',$headersubject,$message);
+		
+		$row=$cms->insert_id();
+		$cms->loginin($login,$pass);
+		SaveLogin($row);
+		return '';
+	}
+	return "Невозможно зарегистрировать пользователя. Попробуйте позже.";
+}
+
+function SaveLogin($id)
+{
+	global $cms;
+	$str = date("d.m.Y");
+	$str.=" | ".$_SERVER['SERVER_ADDR'];
+	$cms->query("update zed_users set LAST='$str' where ID='$id'");
+}
+
+function User_Forget($id)
+{
+	global $cms;
+	$data['classc']='class="users"';
+	$er="";
+	if(isset($_POST['user_forget']))
+	{
+		$email = $_POST['email'];
+		$res = $cms->fetch_object($cms->query("select LOGIN,EMAIL from zed_users where EMAIL='$email'"));
+		$login=$res->LOGIN;
+		if($res->EMAIL==$email && $email!='')
+		{
+			if($res->EMAIL==$email){$er="";}			
+			else{$er.= "Пользователь с таким почтовым ящиком не зарегистрирован";}
+		}		
+		if($er=="")
+		{
+			$pass = rand(100000,10000000);
+			////////////////////////////
+			$name = trim($login);
+			$headersubject='Востановление пароля';
+			$message = "Здравствуйте!<br><br>Ваши данные для доступа к сайту <a href='gornoski.ru'>www.gornoski.ru</a> были изменены.<br><br>Ваш временный пароль: $pass<br>При следующем входе на сайт <a href='gornoski.ru'>www.gornoski.ru</a> Вам будет предложено сменить пароль на постоянный. Рекомендуем сделать это, так как временный пароль не отвечает правилам безопасности.<br><br>С уважением,<br>Администрация сайта <a href='gornoski.ru'>www.gornoski.ru</a><br>e-mail:  info@gornoski.ru";
+			$rez=Add_Subject($name,$email,$headersubject,$message);
+			if ($rez==1)
+			{
+				$hash = md5($pass);
+				$cms->query("update zed_users set `PASS`='$hash',`PASSEDIT`='1' where LOGIN='$login'");	
+				$er="Вам на электронную почту отправлен новый пароль.<br>Рекомендуем его сменить, так как он не отвечает правилам безопасности.";
+			}
+			else{$er= "СООБЩЕНИЕ НЕ ОТПРАВЛЕНО!<br>Произошла непредвиденная ошибка при попытке отправить сообщение.<br>Пожалуйста попробуйте снова.";}					
+		}
+	}
+	
+	$data['content']="<form id='form' action='$cms->url/forget' method='post'>";
+	if($er!=""){$data['content'].= get_div($er,'class="error"');}
+	$data['content'].= get_input("form_i",'Напишите e-mail указанный при регистрации','text','login','','class="blocks_forget"');
+	$data['content'].= get_input("form_i",'','submit','user_forget','Отправить новый пароль','class="btn_default"');
+
+	$data['content'].= "<div class='clear'></div></form>";
+	
+	return $cms->blockparse("middle",$data,1);
+}
+?>
