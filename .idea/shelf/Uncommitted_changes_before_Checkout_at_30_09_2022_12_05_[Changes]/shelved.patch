@@ -1,0 +1,14 @@
+Index: lib2/main.js
+===================================================================
+diff --git a/lib2/main.js b/lib2/main.js
+--- a/lib2/main.js	
++++ b/lib2/main.js	
+@@ -401,7 +401,7 @@
+         cashAray.forEach(async (item, i) => {
+             console.log(item)
+             await loadImg(item)
+-            console.log(i +'    '+ item)
++            console.log(i +'  '+ item)
+ 
+         })
+ 
