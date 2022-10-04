@@ -365,43 +365,46 @@ const constructor = () => {
     }
 
     function canvasLoadingImages(resObject) {
-        // let cashAray = [];
-        //
-        // function loadImg(url) {
-        //     return new Promise(function (resolve, reject) {
-        //         for (const key in resObject) {
-        //             for (const keyKey in resObject[key]) {
-        //                 resObject[key][keyKey].forEach(item => {
-        //                     let img = new Image()
-        //                     img.src = item.src
-        //                     img.onload = async function () {
-        //                         cashAray.push(img)
-        //                         console.log(new Date)
-        //
-        //                     }
-        //                     if (false) {
-        //                         resolve()
-        //
-        //                     }
-        //
-        //
-        //                 })
-        //
-        //             }
-        //
-        //         }
-        //
-        //
-        //     })
-        //
-        // }
-        //
-        // loadImg()
-        //     .then(
-        //         response => {
-        //             console.log(cashAray)
-        //         }
-        //     )
+        let cashAray = [];
+
+        function loadSrc() {
+
+            for (const key in resObject) {
+                for (const keyKey in resObject[key]) {
+                    resObject[key][keyKey].forEach(item => {
+                        cashAray.push(item.src)
+
+                    })
+
+                }
+
+            }
+        }
+
+        loadSrc()
+        console.log(cashAray)
+
+        function loadImg(url) {
+            return new Promise(function (resolve, reject) {
+                    let img = new Image()
+                    img.onload = function () {
+                        resolve(url)
+                    }
+                    img.onerror = function () {
+                        reject(url);
+                    };
+                    img.src = url;
+                }
+            )
+        }
+
+        cashAray.forEach(async (item, i) => {
+            // console.log(item)
+            await loadImg(item)
+            console.log(i +'    '+ item)
+
+        })
+
 
 
         let canvasTrigger = document.querySelectorAll('.canvas-trigger');
@@ -893,25 +896,25 @@ radioButtonLimitation()
 let fasad = {
     width: '',
     height: '',
-    doorCol : '', // количество дверей
-    handle : '', // ручка
+    doorCol: '', // количество дверей
+    handle: '', // ручка
     colorFrame: '', // цвет профиля
-    doorСloser : '', // доводчик для двери
-    colorFasad : '', // фоновый цвет двери
+    doorСloser: '', // доводчик для двери
+    colorFasad: '', // фоновый цвет двери
     colorCenter: '', // центровая часть двери (если есть то отправляется)
-    centerDoor : true, // двери которые находятся по середине  такие как все или зеркальные
+    centerDoor: true, // двери которые находятся по середине  такие как все или зеркальные
 }
 
 let section = {
     width: '',
     height: '',
-    sectionCol : '', // количество секций
-    fenders : '', // отбойники
+    sectionCol: '', // количество секций
+    fenders: '', // отбойники
     colorFrame: '', // цвет профиля
-    stretchСeiling : '', // натяжной потолок
+    stretchСeiling: '', // натяжной потолок
     zakladnaia: false, // наличие закладной
-    section1 : '',
-    section2 : '',
-    section3 : '',
-    section4 : '',
+    section1: '',
+    section2: '',
+    section3: '',
+    section4: '',
 }
