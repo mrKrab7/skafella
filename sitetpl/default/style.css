@@ -198,7 +198,7 @@ a:hover {
     --black: #333333;
     --gray: #EAEAEA;
     --green: #7EAC4D;
-    --oramge: #F7B04C;
+    --orange: #F7B04C;
 }
 
 .text {
@@ -242,10 +242,10 @@ a:hover {
 }
 
 
-.header__descr_content li {
-    height: 30px;
-    width: 100%;
-}
+/*.header__descr_content li {*/
+/*    height: 30px;*/
+/*    width: 100%;*/
+/*}*/
 
 .header__descr-text-working {
     font-size: 14px;
@@ -334,7 +334,7 @@ a:hover {
 .button {
     display: block;
     border-radius: 59px;
-    border: 2px solid #72BE23;
+    border: none;
 }
 
 .header__call-button {
@@ -347,6 +347,7 @@ a:hover {
     text-indent: 51px;
     cursor: pointer;
     background-color: white;
+    border: 2px solid #72BE23;
 }
 
 .header__call-button:before {
@@ -462,7 +463,8 @@ a:hover {
 
 .header__nav {
     height: 45px;
-    background-color: orange;
+    background-color: var(--orange);
+
 
 }
 
@@ -505,6 +507,7 @@ a:hover {
 .nav-drop {
     position: relative;
     cursor: pointer;
+
 }
 
 .nav-drop:after {
@@ -522,6 +525,10 @@ a:hover {
 
 .nav__item {
     padding-right: 20px;
+
+    padding-top: 7px;
+    padding-bottom: 7px;
+
 }
 
 .nav__item span {
@@ -529,18 +536,11 @@ a:hover {
 
 }
 
-.nav-drop:hover:after {
+.nav__item:hover .nav-drop:after {
     top: -5px;
     transform: rotate(0deg);
 }
 
-.nav__item:hover .header__nav_content {
-    /*display: block;*/
-    visibility: visible;
-    opacity: 1;
-
-
-}
 
 .nav-subtitle {
     font-weight: 600;
@@ -555,15 +555,20 @@ a:hover {
     opacity: 0;
     transition: opacity 1s;
     position: absolute;
-    background-color: red;
+    background-color: white;
     width: 100%;
     left: 0;
     padding-top: 47px;
     padding-bottom: 62px;
     margin-top: 7px;
-    /*display: none;*/
     visibility: hidden;
-    
+    z-index: 10;
+}
+
+.nav__item:hover .header__nav_content {
+    visibility: visible;
+    opacity: 1;
+
 }
 
 .nav_content__item {
@@ -578,3 +583,268 @@ a:hover {
 .nav_content__item:hover {
     color: #000000;
 }
+
+.header__nav_center-wrapper {
+    border-left: 2px solid rgba(52, 52, 52, 0.25);
+    border-right: 2px solid rgba(52, 52, 52, 0.25);
+}
+
+.title {
+    color: var(--orange);
+    font-size: 74px;
+    font-weight: 700;
+    padding-top: 171px;
+}
+
+.main__sub-text {
+    font-weight: 400;
+    font-size: 32px;
+    color: var(--white);
+    width: 567px;
+}
+
+.main__bg-img {
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 700px;
+
+
+}
+
+.main__button {
+    width: 244px;
+    height: 47px;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    margin-top: 67px;
+}
+
+.main__slide {
+
+}
+
+.main-swiper {
+    height: 700px;
+    /*width: 100%;*/
+}
+
+.main-swiper .swiper-button-next:after {
+    content: url("../../image/main-prev.png");
+    width: 22px;
+    height: 84px;
+    right: 60px;
+}
+
+.main-swiper .swiper-button-next {
+    right: 60px;
+}
+
+.main-swiper .swiper-button-prev:after {
+    content: url("../../image/main-next.png");
+    width: 22px;
+    height: 84px;
+    right: 60px;
+}
+
+.main-swiper .swiper-button-prev {
+    left: 60px;
+}
+
+.main-swiper .swiper-pagination {
+    text-align: start;
+    position: relative;
+    bottom: 102px;
+
+}
+
+.main-swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.main-swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background: #72BE23;
+}
+
+.main__advantage-wrapper {
+    padding-top: 48px;
+    padding-bottom: 41px;
+    background-color: var(--orange);
+
+}
+
+.main__advantage__descr {
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 600;
+    transition: all .6s;
+}
+
+.main__advantage-block svg {
+    transition: all .6s;
+}
+
+.main__advantage-block {
+
+    cursor: pointer;
+}
+
+.main__advantage-block:hover .main__advantage__descr {
+    color: white;
+}
+
+.main__advantage-block:hover svg {
+    fill: white;
+}
+
+.advantage {
+    padding-top: 106px;
+    padding-bottom: 102px;
+}
+
+.subtitle {
+    color: var(--black);
+    font-size: 38px;
+    font-weight: 700;
+    position: relative;
+}
+
+.subtitle-border:before {
+    position: absolute;
+    content: '';
+    width: 120px;
+    height: 2px;
+    background: var(--orange);
+    bottom: -5px;
+}
+
+.advantage__card-wrapper .card-title {
+    color: var(--black);
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.advantage__card-wrapper .card {
+    border: none;
+    background-color: white;
+    border-radius: 8px  8px 0px 0px;
+
+    position: relative;
+    z-index: 10;
+}
+
+.advantage__card-wrapper .card img {
+    border-radius: 0;
+}
+
+.advantage__card-wrapper .card-title:before {
+    position: absolute;
+    content: '';
+    width: 42px;
+    height: 2px;
+    background: var(--orange);
+    bottom: -13px;
+}
+
+.advantage__card-wrapper .card:hover {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    height: 100%;
+}
+
+.advantage__card-wrapper .card:hover .card-text {
+    display: block;
+    left: 0;
+
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    padding-top: 0;
+
+}
+
+.advantage__card-wrapper .card-text {
+    font-size: 16px;
+    font-weight: 400;
+    display: none;
+    z-index: 10;
+    height: 250px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 30px 25px rgb(0 0 0 / 25%);
+    border-radius: 0px  0px 8px 8px;
+
+}
+
+.design {
+
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: var(--orange);
+    /*top: -150px;*/
+
+}
+
+.design__subtitle {
+    font-size: 36px;
+}
+
+.design__descr {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.design__button {
+    width: 270px;
+    height: 47px;
+    background-color: var(--green);
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 59px;
+    color: white;
+
+}
+
+.design-img {
+    position: relative;
+    left: 28px;
+    top: 50px;
+}
+.additional-services {
+    padding-top: 131px;
+    padding-bottom: 100px;
+}
+.subtitle span {
+    color: var(--green);
+}
+.additional-services__sub-text {
+    color: var(--black);
+    font-weight: 600;
+    font-size: 28px;
+    margin-left: 100px;
+}
+.additional-services__block img {
+    border-radius: 8px;
+}
+.additional-services__sub-text{
+    position: relative;
+}
+.additional-services__sub-text:after{
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 2px;
+    left: -75px;
+    top: 20px;
+    background-color: var(--orange);
+}
+.additional-services__block {
+    border-right: 8px;
+    border-bottom: 8px;
+    border-color: var(--orange);
+    border-style: solid;
+}
+
