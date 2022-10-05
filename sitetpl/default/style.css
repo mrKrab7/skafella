@@ -828,9 +828,12 @@ a:hover {
 }
 .additional-services__block img {
     border-radius: 8px;
+    max-width: calc(100% + 10px);
 }
 .additional-services__sub-text{
     position: relative;
+    margin-top: 280px;
+    padding-bottom: 30px;
 }
 .additional-services__sub-text:after{
     position: absolute;
@@ -842,9 +845,29 @@ a:hover {
     background-color: var(--orange);
 }
 .additional-services__block {
+    margin-top: 62px;
     border-right: 8px;
     border-bottom: 8px;
+    border-left: 0;
+    border-top: 0;
+    border-radius: 8px;
     border-color: var(--orange);
     border-style: solid;
-}
 
+    position: relative;
+    width: calc(100% - 10px);
+}
+.additional-services__img {
+    position: absolute;
+    top: -10px;
+    right: 0;
+
+}
+.projects {
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+}
+.projects-cards .card {
+    border : 1px solid black;
+}
