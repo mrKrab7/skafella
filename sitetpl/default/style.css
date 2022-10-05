@@ -470,6 +470,7 @@ a:hover {
     position: relative;
     padding-left: 38px;
 }
+
 .nav__item:first-child:before {
     position: absolute;
     content: url("../../image/calculator (1) 1 (Traced).svg");
@@ -480,10 +481,100 @@ a:hover {
     bottom: 0;
     margin: auto;
 }
-.header__nav .nav__item {
+
+.header__nav .nav__item .nav__item-links {
     font-size: 20px;
     color: #343434;
+    font-weight: 600;
 }
-.nav-border:after {
 
+.nav-border {
+    position: relative;
+}
+
+.nav-border:after {
+    position: absolute;
+    content: '';
+    right: -40px;
+    height: 27px;
+    width: 1px;
+    background-color: rgba(52, 52, 52, 0.25);
+
+}
+
+.nav-drop {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-drop:after {
+    /*transition: all 1s;*/
+    content: url("../../image/nav-arrow.svg");
+    position: absolute;
+    /*padding: 10px;*/
+    width: 13px;
+    height: 8px;
+    transform: rotate(180deg);
+    right: -20px;
+    top: 25px;
+
+}
+
+.nav__item {
+    padding-right: 20px;
+}
+
+.nav__item span {
+    padding-bottom: 20px;
+
+}
+
+.nav-drop:hover:after {
+    top: -5px;
+    transform: rotate(0deg);
+}
+
+.nav__item:hover .header__nav_content {
+    /*display: block;*/
+    visibility: visible;
+    opacity: 1;
+
+
+}
+
+.nav-subtitle {
+    font-weight: 600;
+    font-size: 32px;
+    color: #343434;
+    border-bottom: 2px solid #343434;
+    max-width: 120px;
+    line-height: 44px;
+}
+
+.header__nav_content {
+    opacity: 0;
+    transition: opacity 1s;
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    left: 0;
+    padding-top: 47px;
+    padding-bottom: 62px;
+    margin-top: 7px;
+    /*display: none;*/
+    visibility: hidden;
+    
+}
+
+.nav_content__item {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    padding-top: 25px;
+    display: block;
+
+}
+
+.nav_content__item:hover {
+    color: #000000;
 }
