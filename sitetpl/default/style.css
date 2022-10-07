@@ -1285,3 +1285,59 @@ a:hover {
     font-weight: 600;
     cursor: pointer;
 }
+.team {
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+.team__description {
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--black);
+    width: 100%;
+    max-width: 720px;
+    margin-top: 30px;
+}
+.team__description b {
+    font-weight: 700;
+
+
+
+}
+.team__paragraph {
+    position: relative;
+    padding-left: 40px;
+    height: 17px;
+}
+.team__paragraph:after {
+    position: absolute;
+    width: 24px;
+    height: 17px;
+    content: url("../../image/fast-forward (1) 1 (Traced).png");
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.team__photo {
+    position: relative;
+    margin-right: 15px;
+    max-width: 490px;
+    width: 100%;
+    height:487px;
+
+}
+.team__borders {
+    width: 100%;
+    height: 100%;
+    background-color: var(--orange);
+    position: absolute;
+    top: 15px;
+    z-index: -1;
+    right: -15px;
+    border-radius: 8px;
+
+
+}
+.footer {
+
+}
