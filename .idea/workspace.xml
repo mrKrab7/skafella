@@ -7,7 +7,7 @@
     <list default="true" id="426e97c7-c2c8-43bf-b914-f923b0f0eadc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitetpl/default/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sitetpl/default/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib2/slider-settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/slider-settings.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="skafella-main" />
+        <entry key="$PROJECT_DIR$" value="d87d4311b596e3118276fe9e3378cbc430002556" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,7 +44,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="skafella-main" />
-                    <option name="lastUsedInstant" value="1664877109" />
+                    <option name="lastUsedInstant" value="1665131339" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="2" />

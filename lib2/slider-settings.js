@@ -32,10 +32,7 @@ let cardsSwiper = new Swiper(".projects__swiper", {
 
 
 
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+
     navigation: {
         nextEl: "#project__swiperNext",
         prevEl: "#project__swiperPrev",
