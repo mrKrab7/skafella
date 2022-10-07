@@ -161,7 +161,6 @@
 
 /*}*/
 
-
 /*калькулятор--------------------------------------------------------- */
 @import "font-awesome/fonts/stylesheet.css";
 
@@ -623,7 +622,9 @@ a:hover {
     border: none;
     margin-top: 67px;
 }
-
+.main__button:hover {
+    background-color: #62A51D;
+}
 .main__slide {
 
 }
@@ -1169,12 +1170,14 @@ a:hover {
     /*margin-left: 20px;*/
 
 }
+
 .reviews__swiper-wrapper {
     position: relative;
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
 }
+
 .reviews__swiper-button-next {
     position: absolute;
     width: 22px;
@@ -1196,23 +1199,27 @@ a:hover {
     left: 0;
     margin: auto;
 }
+
 .reviews__video {
     background-image: url("https://youtu.be/MzYZSooe6pM");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .swiper-slide > .reviews__preview-img {
     object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 8px;
 }
+
 .video {
     position: relative;
     cursor: pointer;
     transition: opacity 1s;
 }
+
 .video:after {
 
     position: absolute;
@@ -1227,40 +1234,47 @@ a:hover {
 
 
 }
+
 .reviews__user {
     width: 60px;
     height: 60px;
     border-radius: 100%;
 
 }
+
 .grade-img img {
     height: 18px;
     width: 18px;
 }
+
 .grade-img {
     margin-top: 5px;
 }
+
 .reviews__info-user {
     margin-left: 15px;
 }
+
 .reviews-wrapper {
     padding-top: 25px;
     padding-left: 30px;
     padding-right: 30px;
 
 }
+
 .reviews__username {
     font-weight: 600;
     font-size: 16px;
     color: var(--black);
 }
+
 .reviews__date {
     font-size: 13px;
     font-weight: 600;
     color: #828282;
 }
-.reviews__description {
 
+.reviews__description {
 
 
     margin: 0 auto;
@@ -1269,6 +1283,7 @@ a:hover {
     font-size: 16px;
     color: var(--black);
 }
+
 .reviews__description span {
     font-size: 14px;
     color: var(--green);
@@ -1276,19 +1291,24 @@ a:hover {
     cursor: pointer;
 
 }
+
 .reviews__photo-wrapper {
     margin-top: 10px;
 }
-.reviews__photo-wrapper span{
+
+.reviews__photo-wrapper span {
     color: var(--green);
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
 }
+
 .team {
     padding-top: 100px;
     padding-bottom: 150px;
+    border-bottom: 1px solid var(--green);
 }
+
 .team__description {
     font-weight: 400;
     font-size: 18px;
@@ -1297,17 +1317,19 @@ a:hover {
     max-width: 720px;
     margin-top: 30px;
 }
+
 .team__description b {
     font-weight: 700;
 
 
-
 }
+
 .team__paragraph {
     position: relative;
     padding-left: 40px;
     height: 17px;
 }
+
 .team__paragraph:after {
     position: absolute;
     width: 24px;
@@ -1318,14 +1340,16 @@ a:hover {
     bottom: 0;
     margin: auto;
 }
+
 .team__photo {
     position: relative;
     margin-right: 15px;
     max-width: 490px;
     width: 100%;
-    height:487px;
+    height: 487px;
 
 }
+
 .team__borders {
     width: 100%;
     height: 100%;
@@ -1338,6 +1362,92 @@ a:hover {
 
 
 }
-.footer {
 
+.footer {
+    padding-top: 40px;
+
+
+}
+
+.footer__icon-wrapper {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 115px;
+}
+
+.footer__text {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.footer__mail {
+    padding-top: 21px;
+    font-size: 18px;
+}
+
+.footer__list-subtitle {
+    padding-bottom: 15px;
+    font-weight: 600;
+    font-size: 18px;
+
+}
+
+.footer__list-text a {
+    font-weight: 400;
+    font-size: 16px;
+    color: #4F4F4F;
+}
+
+.footer__list-text {
+    padding-bottom: 5px;
+}
+
+.footer__number {
+    margin-top: 16px;
+}
+
+.footer__number a {
+    font-weight: 600;
+    font-size: 18px;
+    color: #333333;
+}
+
+.footer__question a{
+    display: block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--green);
+    padding-left: 26px;
+   margin-top: 15px;
+}
+
+.footer__question a:after {
+    position: absolute;
+    content: url("../../image/question-sign 1 (Traced).svg");
+    height: 17px;
+    width: 13px;
+    left: 0;
+}
+.footer__bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    background-color: #333333;
+
+}
+.footer__bottom-text {
+    font-weight: 400;
+    font-size: 14px;
+    color: #EAEAEA;
+    width: 100%;
+    max-width: 972px;
+}
+.header__call-button:hover {
+    background-color: var(--green);
+    color: white;
+}
+.header__call-button:hover:before {
+    content: url("../../image/call-white.svg");
 }

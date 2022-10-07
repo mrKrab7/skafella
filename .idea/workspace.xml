@@ -215,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665131993038</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="полностью закончил секция Наша команда">
+      <created>1665134424590</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1665134424590</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +272,8 @@
     <MESSAGE value="секция send" />
     <MESSAGE value="секция отзывы" />
     <MESSAGE value="полностью закончил секция отзывы" />
-    <option name="LAST_COMMIT_MESSAGE" value="полностью закончил секция отзывы" />
+    <MESSAGE value="полностью закончил секция Наша команда" />
+    <option name="LAST_COMMIT_MESSAGE" value="полностью закончил секция Наша команда" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
