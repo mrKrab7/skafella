@@ -398,8 +398,8 @@
             <div class="swiper projects__swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="row m-0 projects__card-wrapper">
-                            <div class="col-md-6 d-flex justify-content-start">
+                        <div class="row m-0 projects__card-wrapper ">
+                            <div class="col-md-6 d-flex justify-content-start ps-0">
                                 <div class="card h-100">
 
                                     <img src="image/projects.png" class="card-img-top" alt="...">
@@ -431,7 +431,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-md-6 d-flex justify-content-end">
+                            <div class="col-md-6 d-flex justify-content-end ps-0">
                                 <div class="card h-100">
 
                                     <img src="image/projects.png" class="card-img-top" alt="...">
@@ -469,7 +469,6 @@
                     </div>
 
 
-
                 </div>
 
 
@@ -485,32 +484,112 @@
 <section class="send">
     <div class="send-wrapper">
         <div class="container">
-        <div class="subtitle text-center">Есть свой проект?</div>
-        <div class="send__descr text-center mt-2">Отправьте нам на просчет. <br>
-            Заполните форму, наш менеджер свяжется с Вами и сделает перерасчет стоимости мебели</div>
-        <div class="row send__form-wrapper d-flex align-items-end h-100">
-            <div class="col-lg-4">
-                <div class="modal__input-wrapper mt-3">
-                    <div class="input-text">Телефон </div>
-                    <input required="" class="modal-input send__input" type="text">
-                </div>
+            <div class="subtitle text-center">Есть свой проект?</div>
+            <div class="send__descr text-center mt-2">Отправьте нам на просчет. <br>
+                Заполните форму, наш менеджер свяжется с Вами и сделает перерасчет стоимости мебели
             </div>
-            <div class="col-lg-4">
-                <div class="modal__input-wrapper mt-3">
-                    <div class="input-text">Электронная почта</div>
-                    <input required="" class="modal-input send__input" type="text">
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="modal__input-wrapper h-100 mt-3  ">
+            <form>
+                <div class="row send__form-wrapper d-flex align-items-end h-100">
 
-                    <input id="send-project" required="" class="modal-input" type="file">
-                    <label class="send__input-file d-flex align-items-center justify-content-center" for="send-project"><span>Прикрепить файл</span> </label>
+                    <div class="col-lg-4">
+                        <div class="modal__input-wrapper mt-3">
+                            <div class="input-text">Телефон</div>
+                            <input required="" class="modal-input send__input" type="text">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="modal__input-wrapper mt-3">
+                            <div class="input-text">Электронная почта</div>
+                            <input required="" class="modal-input send__input" type="text">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="modal__input-wrapper h-100 mt-3  ">
+
+                            <input id="send-project" required="" class="modal-input" type="file">
+                            <label class="send__input-file d-flex align-items-center justify-content-center"
+                                   for="send-project"><span>Прикрепить файл</span> </label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="modal__input-wrapper h-100 mt-3  ">
+                            <div class="input-text">Описание проекта</div>
+                            <textarea class="send__descr-project"></textarea>
+
+                        </div>
+
+                    </div>
+                    <div class="col-12">
+                        <div class="send__personal-message">Нажимая на кнопку, вы принимаете Положение и Согласие на
+                            обработку персональных данных.
+                        </div>
+
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="button send__button">Отправить заявку</button>
+                    </div>
+
                 </div>
-            </div>
-        </div>
+            </form>
         </div>
     </div>
+</section>
+<section class="reviews">
+    <div class="container">
+        <div class="subtitle subtitle-border">Отзывы наших клиентов</div>
+
+    </div>
+    <div class="container-fluid">
+        <div class="reviews__swiper-wrapper">
+            <div class="swiper reviews-swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide video">
+                        <img src="https://i.ytimg.com/vi/MzYZSooe6pM/maxresdefault.jpg" alt="">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="reviews-wrapper">
+                            <div class="row">
+                                <div class="col-7 d-flex align-items-center">
+                                    <img class="reviews__user" src="image/user.png" alt="">
+                                    <div class="reviews__info-user d-flex flex-column justify-content-center">
+                                        <div class="reviews__username">raa79.profi</div>
+                                        <div class="reviews__date">22 мая в 22:17</div>
+
+                                    </div>
+                                </div>
+                                <div class="col-5 d-flex ">
+                                    <div class="grade-img">
+                                        <img src="image/Star%201.png" alt="">
+                                        <img src="image/Star%201.png" alt="">
+                                        <img src="image/Star%201.png" alt="">
+                                        <img src="image/Star%201.png" alt="">
+                                        <img src="image/Star%201.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__description">
+                                Заказывали шкаф купе. Обзвонил миллион фирм ,за сумасшедшие деньги срок ожидания от 30,до 45 дней ....шок. И вот они ....спасатели, 3 дня и ... <span>подробнее</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 1</div>
+
+                </div>
+
+            </div>
+
+            <div class="reviews__swiper-button-next"></div>
+            <div class="reviews__swiper-button-prev"></div>
+
+        </div>
+    </div>
+
+
 </section>
 <div class="modal-background">
     <div class="modal-wrapper">

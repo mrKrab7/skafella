@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="426e97c7-c2c8-43bf-b914-f923b0f0eadc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/image/video-player.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/youtube (1).png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib2/slider-settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/slider-settings.js" afterDir="false" />
@@ -69,7 +71,11 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/index.html" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib2/main.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib2/slider-settings.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/sitetpl/default/style.css" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -132,7 +138,8 @@
       <workItem from="1664772735788" duration="625000" />
       <workItem from="1664850899384" duration="28510000" />
       <workItem from="1664936678490" duration="28048000" />
-      <workItem from="1665039752722" duration="14360000" />
+      <workItem from="1665039752722" duration="14734000" />
+      <workItem from="1665108807999" duration="13483000" />
     </task>
     <task id="LOCAL-00001" summary="предварительная загрузка картинок">
       <created>1664512087771</created>
@@ -190,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664967227969</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="секция send">
+      <created>1665054559932</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665054559932</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +251,8 @@
     <MESSAGE value="вёрстка header и написание скрипта для модальных окон v2" />
     <MESSAGE value="У нас также можно заказать  кухню и другую мебель" />
     <MESSAGE value="section projects начало работы" />
-    <option name="LAST_COMMIT_MESSAGE" value="section projects начало работы" />
+    <MESSAGE value="секция send" />
+    <option name="LAST_COMMIT_MESSAGE" value="секция send" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

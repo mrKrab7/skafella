@@ -58,3 +58,32 @@ let cardsSwiper = new Swiper(".projects__swiper", {
     //     }
     // }
 });
+
+let reviewsSwiper = new Swiper(".reviews-swiper", {
+    slidesPerView: 3,
+    spaceBetween: 50,
+    slidesPerGroup: 3,
+
+
+    navigation: {
+        nextEl: ".reviews__swiper-button-next",
+        prevEl: ".reviews__swiper-button-prev",
+    },
+
+    loop: true,
+    // autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false,
+    // },
+    // on: {
+    //     init() {
+    //         this.el.addEventListener('mouseenter', () => {
+    //             this.autoplay.stop();
+    //         });
+    //
+    //         this.el.addEventListener('mouseleave', () => {
+    //             this.autoplay.start();
+    //         });
+    //     }
+    // }
+});
