@@ -1053,7 +1053,7 @@ a:hover {
     background-image: url("../../image/Rectangle 98.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -1305,7 +1305,7 @@ a:hover {
 
 .team {
     padding-top: 100px;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     border-bottom: 1px solid var(--green);
 }
 

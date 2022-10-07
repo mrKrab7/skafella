@@ -39,21 +39,21 @@ let cardsSwiper = new Swiper(".projects__swiper", {
     },
 
     loop: true,
-    // autoplay: {
-    //     delay: 5000,
-    //     disableOnInteraction: false,
-    // },
-    // on: {
-    //     init() {
-    //         this.el.addEventListener('mouseenter', () => {
-    //             this.autoplay.stop();
-    //         });
-    //
-    //         this.el.addEventListener('mouseleave', () => {
-    //             this.autoplay.start();
-    //         });
-    //     }
-    // }
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    on: {
+        init() {
+            this.el.addEventListener('mouseenter', () => {
+                this.autoplay.stop();
+            });
+
+            this.el.addEventListener('mouseleave', () => {
+                this.autoplay.start();
+            });
+        }
+    }
 });
 
 let reviewsSwiper = new Swiper(".reviews-swiper", {
@@ -68,19 +68,19 @@ let reviewsSwiper = new Swiper(".reviews-swiper", {
     },
 
     loop: true,
-    // autoplay: {
-    //     delay: 5000,
-    //     disableOnInteraction: false,
-    // },
-    // on: {
-    //     init() {
-    //         this.el.addEventListener('mouseenter', () => {
-    //             this.autoplay.stop();
-    //         });
-    //
-    //         this.el.addEventListener('mouseleave', () => {
-    //             this.autoplay.start();
-    //         });
-    //     }
-    // }
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    on: {
+        init() {
+            this.el.addEventListener('mouseenter', () => {
+                this.autoplay.stop();
+            });
+
+            this.el.addEventListener('mouseleave', () => {
+                this.autoplay.start();
+            });
+        }
+    }
 });
