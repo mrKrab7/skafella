@@ -1153,8 +1153,8 @@ a:hover {
     margin-top: 45px;
     height: 290px;
     padding-top: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
     max-width: 1380px;
 
 
@@ -1202,12 +1202,11 @@ a:hover {
     background-position: center;
     background-repeat: no-repeat;
 }
-.swiper-slide img {
+.swiper-slide > .reviews__preview-img {
     object-fit: cover;
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     border-radius: 8px;
-
 }
 .video {
     position: relative;
@@ -1276,4 +1275,13 @@ a:hover {
     font-weight: 600;
     cursor: pointer;
 
+}
+.reviews__photo-wrapper {
+    margin-top: 10px;
+}
+.reviews__photo-wrapper span{
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
 }
