@@ -1054,11 +1054,27 @@ a:hover {
     height: 50px;
     background-color: #EAEAEA;
     border-radius: 8px;
-    text-align: center;
     line-height: 45px;
     font-size: 20px;
     font-weight: 600;
+    display: none;
+    cursor: pointer;
     overflow: hidden;
+}
+.send__progres-btn:before {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    content: 'Загрузка...';
+    font-weight: 600;
+    z-index: 5;
+}
+.uploaded:before {
+    content: 'Файл загружен';
 }
 
 .send-wrapper {
@@ -1070,12 +1086,12 @@ a:hover {
     padding-bottom: 40px;
 }
 .send__progres {
+    transition: width 0.5s;
     position: absolute;
-    width: 5%;
+    width: 0;
     background-color: var(--green);
     height: 50px;
     top: 0;
-
 }
 
 .send__form-wrapper {
