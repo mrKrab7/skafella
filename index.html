@@ -12,6 +12,30 @@
 
 </head>
 <body>
+
+<div class="header-fix__wrapper ">
+    <div class="container d-flex justify-content-between align-items-center h-100">
+        <div class="calc-icon"></div>
+        <div class="header-fix__nav">
+            <ul class="h-100 d-flex justify-content-between align-items-center">
+                <li class="header-fix__linls"><a href="">Шкафы - купе</a></li>
+                <li class="header-fix__linls"><a href="">Статьи</a></li>
+                <li class="header-fix__linls"><a href="">О производстве</a></li>
+                <li class="header-fix__linls"><a href="">Доставка и оплата</a></li>
+                <li class="header-fix__linls"><a href="">Установка</a></li>
+                <li class="header-fix__linls"><a href="">Сотрудничество</a></li>
+            </ul>
+        </div>
+        <div class="header-fix__call d-flex h-100 align-items-center justify-content-between">
+                <div class="basket-wrapper">
+                    <div class="basket__icon"><img src="image/baslet-icon.svg" alt=""></div>
+                    <div class="basket__count">10</div>
+                </div>
+                <div class="button header__call-button header-fix__button ">Заказать звонок</div>
+        </div>
+    </div>
+
+</div>
 <header class="header">
     <div class="header__descr-wrap d-flex align-items-center">
         <div class="container">
@@ -110,6 +134,7 @@
 
     <nav class="header__nav">
         <div class="container h-100">
+            <div class="row">
             <div class="col-lg-6 h-100">
                 <ul class="d-flex justify-content-between align-items-center h-100">
                     <li class="nav__item nav-border"><a class="nav__item-links" href="#">Калькулятор шкафов</a></li>
@@ -152,6 +177,16 @@
 
                     </li>
                 </ul>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-end align-items-center ">
+                    <div class="header__nav-question-wrap d-flex justify-content-between">
+                        <div class="header__nav-question   nav-border">Задать вопрос</div>
+                        <div class="basket-wrapper">
+                            <div class="basket__icon"><img src="image/baslet-icon.svg" alt=""></div>
+                            <div class="basket__count">10</div>
+                        </div>
+                    </div>
+            </div>
             </div>
         </div>
     </nav>
@@ -504,11 +539,14 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="modal__input-wrapper h-100 mt-3  ">
+                        <div class="modal__input-wrapper d-flex align-items-end h-100 mt-3  ">
 
                             <input id="send-project" required="" class="modal-input" type="file">
-                            <label class="send__input-file d-flex align-items-center justify-content-center"
+                            <label class="send__input-file d-flex d-none align-items-center justify-content-center"
                                    for="send-project"><span>Прикрепить файл</span> </label>
+                            <label for="send-project" class="send__progres-btn ">Загрузка...
+                                <div class="send__progres"></div>
+                            </label>
                         </div>
                     </div>
                     <div class="col-12">
@@ -633,7 +671,7 @@
 
 </section>
 <section class="team">
-    <div class="container">
+    <div class="container position-relative">
         <div class="row">
             <div class="col-md-7">
                 <div class="subtitle subtitle-border">Наша команда</div>
@@ -653,7 +691,6 @@
 
 
             </div>
-
             <div class=" col-lg-12 col-xl-5  img-fluid  d-flex justify-content-xl-end">
                 <div class="team__photo">
                     <img class=""
@@ -662,9 +699,19 @@
                 </div>
 
             </div>
+<!--            <div class="btn-scroll d-flex align-items-center justify-content-center">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffff" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">-->
+<!--                    <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>-->
+<!--                </svg>-->
+<!--            </div>-->
+            <div class="btn-scroll">
+                <img class="" src="image/sticky-arrow.svg" alt="">
+            </div>
+
         </div>
 
     </div>
+
 </section>
 <div class="modal-background">
     <div class="modal-wrapper">
@@ -686,9 +733,7 @@
         </form>
     </div>
 </div>
-<script src="lib2/modal.js"></script>
-<script src="lib2/swiper-bundle.min.js"></script>
-<script src="lib2/slider-settings.js"></script>
+
 <footer class="footer">
     <div class="container">
 
@@ -758,7 +803,8 @@
                 <div class="col-lg-10 d-flex justify-content-end">
                     <div class="footer__bottom-text ">* Сайт shkafella54.ru не является
                         публичной
-                        офертой ни при каких условиях и носит исключительно информационный характер. <br>  Владельцы сайта
+                        офертой ни при каких условиях и носит исключительно информационный характер. <br> Владельцы
+                        сайта
                         shkafella54.ru оставляет за собой право изменять комплектацию, условия сервиса, акции и цены в
                         любой
                         период времени. Изображения изделий в каталоге и на сайте, в том числе цвет, текстуры и рисунки
@@ -770,5 +816,9 @@
         </div>
     </div>
 </footer>
+<script src="lib2/modal.js"></script>
+<script src="lib2/swiper-bundle.min.js"></script>
+<script src="lib2/slider-settings.js"></script>
+<script src="lib2/additionalFunctionality.js"></script>
 </body>
 </html>

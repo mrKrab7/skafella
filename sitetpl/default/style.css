@@ -1048,6 +1048,18 @@ a:hover {
     padding-top: 75px;
     padding-bottom: 115px;
 }
+.send__progres-btn {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #EAEAEA;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: 600;
+    overflow: hidden;
+}
 
 .send-wrapper {
     background-image: url("../../image/Rectangle 98.png");
@@ -1056,6 +1068,14 @@ a:hover {
 
     padding-top: 40px;
     padding-bottom: 40px;
+}
+.send__progres {
+    position: absolute;
+    width: 5%;
+    background-color: var(--green);
+    height: 50px;
+    top: 0;
+
 }
 
 .send__form-wrapper {
@@ -1448,6 +1468,117 @@ a:hover {
     background-color: var(--green);
     color: white;
 }
+.header__nav-question {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--black);
+    position: relative;
+    padding-left: 27px;
+
+}
+.header__nav-question-wrap {
+    width: 100%;
+    max-width: 270px;
+}
+.header__nav-question:before {
+    position: absolute;
+    left: 0;
+    width: 13px;
+    height: 17px;
+    content: url("../../image/question-sign-black .png");
+}
 .header__call-button:hover:before {
     content: url("../../image/call-white.svg");
+}
+.header-fix__wrapper {
+    height: 90px;
+    width: 100%;
+    background: white;
+    transition: 1s all;
+    transform: translateY(-100%);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+    position: fixed;
+
+    z-index: 100;
+}
+.header-show {
+    transform: translateY(0%);
+}
+.calc-icon {
+    width: 55px;
+    height: 55px;
+    position: relative;
+    background-color: var(--green);
+    border-radius: 100%;
+}
+.calc-icon:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 21px;
+    margin: auto;
+    height: 23px;
+    content: url("../../image/header-fix-calc.svg");
+}
+.header-fix__nav {
+    width: 100%;
+    max-width: 800px;
+
+}
+.header-fix__linls a {
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 600;
+}
+.header-fix__button {
+    border: none;
+    background-color: var(--green);
+    color: white;
+    line-height: 38px;
+    text-indent: 40px;
+
+}
+.header-fix__button:before {
+    content: url("../../image/call-white.svg");
+    left: -15px;
+}
+.basket-wrapper {
+    position: relative;
+    width: 31px;
+    height: 26px;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+.basket__count {
+    width: 19px;
+    height: 19px;
+    border-radius: 100%;
+    background-color: var(--green);
+    font-size: 12px;
+    position: absolute;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    padding-top: 1px;
+    right: -10px;
+    top: -5px;
+}
+.header-fix__call {
+    max-width: 285px;
+    width: 100%;
+}
+.btn-scroll {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 0;
+    bottom: -130px;
+}
+.btn-scroll img {
+    z-index: 5;
+    background-color: white;
+    cursor: pointer;
 }
