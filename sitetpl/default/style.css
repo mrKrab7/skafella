@@ -622,9 +622,11 @@ a:hover {
     border: none;
     margin-top: 67px;
 }
+
 .main__button:hover {
     background-color: #62A51D;
 }
+
 .main__slide {
 
 }
@@ -1048,6 +1050,7 @@ a:hover {
     padding-top: 75px;
     padding-bottom: 115px;
 }
+
 .send__progres-btn {
     position: relative;
     width: 100%;
@@ -1061,6 +1064,7 @@ a:hover {
     cursor: pointer;
     overflow: hidden;
 }
+
 .send__progres-btn:before {
     width: 100%;
     text-align: center;
@@ -1073,6 +1077,7 @@ a:hover {
     font-weight: 600;
     z-index: 5;
 }
+
 .uploaded:before {
     content: 'Файл загружен';
 }
@@ -1085,6 +1090,7 @@ a:hover {
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
 .send__progres {
     transition: width 0.5s;
     position: absolute;
@@ -1449,14 +1455,14 @@ a:hover {
     color: #333333;
 }
 
-.footer__question a{
+.footer__question a {
     display: block;
     position: relative;
     font-size: 16px;
     font-weight: 600;
     color: var(--green);
     padding-left: 26px;
-   margin-top: 15px;
+    margin-top: 15px;
 }
 
 .footer__question a:after {
@@ -1466,6 +1472,7 @@ a:hover {
     width: 13px;
     left: 0;
 }
+
 .footer__bottom {
     margin-top: 30px;
     padding-top: 15px;
@@ -1473,6 +1480,7 @@ a:hover {
     background-color: #333333;
 
 }
+
 .footer__bottom-text {
     font-weight: 400;
     font-size: 14px;
@@ -1480,10 +1488,12 @@ a:hover {
     width: 100%;
     max-width: 972px;
 }
+
 .header__call-button:hover {
     background-color: var(--green);
     color: white;
 }
+
 .header__nav-question {
     font-weight: 600;
     font-size: 18px;
@@ -1492,10 +1502,12 @@ a:hover {
     padding-left: 27px;
 
 }
+
 .header__nav-question-wrap {
     width: 100%;
     max-width: 270px;
 }
+
 .header__nav-question:before {
     position: absolute;
     left: 0;
@@ -1503,9 +1515,11 @@ a:hover {
     height: 17px;
     content: url("../../image/question-sign-black .png");
 }
+
 .header__call-button:hover:before {
     content: url("../../image/call-white.svg");
 }
+
 .header-fix__wrapper {
     height: 90px;
     width: 100%;
@@ -1517,9 +1531,11 @@ a:hover {
 
     z-index: 100;
 }
+
 .header-show {
     transform: translateY(0%);
 }
+
 .calc-icon {
     width: 55px;
     height: 55px;
@@ -1527,6 +1543,7 @@ a:hover {
     background-color: var(--green);
     border-radius: 100%;
 }
+
 .calc-icon:before {
     position: absolute;
     top: 0;
@@ -1538,16 +1555,19 @@ a:hover {
     height: 23px;
     content: url("../../image/header-fix-calc.svg");
 }
+
 .header-fix__nav {
     width: 100%;
     max-width: 800px;
 
 }
+
 .header-fix__linls a {
     font-size: 16px;
     color: var(--black);
     font-weight: 600;
 }
+
 .header-fix__button {
     border: none;
     background-color: var(--green);
@@ -1556,10 +1576,12 @@ a:hover {
     text-indent: 40px;
 
 }
+
 .header-fix__button:before {
     content: url("../../image/call-white.svg");
     left: -15px;
 }
+
 .basket-wrapper {
     position: relative;
     width: 31px;
@@ -1568,6 +1590,7 @@ a:hover {
     cursor: pointer;
 
 }
+
 .basket__count {
     width: 19px;
     height: 19px;
@@ -1582,10 +1605,12 @@ a:hover {
     right: -10px;
     top: -5px;
 }
+
 .header-fix__call {
     max-width: 285px;
     width: 100%;
 }
+
 .btn-scroll {
     position: absolute;
     width: 60px;
@@ -1593,8 +1618,24 @@ a:hover {
     right: 0;
     bottom: -130px;
 }
+
 .btn-scroll img {
     z-index: 5;
     background-color: white;
     cursor: pointer;
+}
+
+/*sroll bar*/
+body::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: var(--green);
+    border-radius: 20px;
+    width: 5px;
+}
+
+
+body::-webkit-scrollbar {
+    background-color: #EAEAEA;
+    width: 12px;
+
 }

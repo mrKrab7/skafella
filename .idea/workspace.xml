@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="426e97c7-c2c8-43bf-b914-f923b0f0eadc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/image/baslet-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/header-fix-calc.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/question-sign-black .png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/sroll-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/sticky-arrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib2/additionalFunctionality.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib2/send.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_09_2022_12_05_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_09_2022_12_05__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_09_2022_12_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_09_2022_12_05__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib2/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sitetpl/default/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sitetpl/default/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="d87d4311b596e3118276fe9e3378cbc430002556" />
+        <entry key="$PROJECT_DIR$" value="skafella-main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
