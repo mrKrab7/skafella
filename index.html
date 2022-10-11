@@ -581,9 +581,79 @@
         <div class="reviews__swiper-wrapper">
             <div class="swiper reviews-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide video">
-                        <img class="reviews__preview-img" src="https://i.ytimg.com/vi/MzYZSooe6pM/maxresdefault.jpg"
-                             alt="">
+                    <div class="swiper-slide ">
+<!--                        <img class="reviews__preview-img" src="https://i.ytimg.com/vi/MzYZSooe6pM/maxresdefault.jpg"-->
+<!--                             alt="">-->
+                        <div class="embed-responsive embed-responsive-1by1">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews-wrapper">
+                            <div class="row">
+                                <div class="col-7 d-flex align-items-center">
+                                    <img class="reviews__user" src="image/user.png" alt="">
+                                    <div class="reviews__info-user d-flex flex-column justify-content-center">
+                                        <div class="reviews__username">raa79.profi</div>
+                                        <div class="reviews__date">22 мая в 22:17</div>
+
+                                    </div>
+                                </div>
+                                <div class="col-5 d-flex ">
+                                    <div class="grade-img">
+                                        <img src="image/Star%201.png" alt="">
+                                        <img src="image/Star%201.png" alt="">
+                                        <img src="image/Star%201.png" alt="">
+                                        <img src="image/Star%201.png" alt="">
+                                        <img src="image/Star%201.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__description">
+                                Заказывали шкаф купе. Обзвонил миллион фирм ,за сумасшедшие деньги срок ожидания от
+                                30,до 45 дней ....шок. И вот они ....спасатели, 3 дня и ... <span>подробнее</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews-wrapper">
+                            <div class="row">
+                                <div class="col-7 d-flex align-items-center">
+                                    <img class="reviews__user" src="image/user.png" alt="">
+                                    <div class="reviews__info-user d-flex flex-column justify-content-center">
+                                        <div class="reviews__username">raa79.profi</div>
+                                        <div class="reviews__date">22 мая в 22:17</div>
+
+                                    </div>
+                                </div>
+                                <div class="col-5 d-flex ">
+                                    <div class="grade-img">
+                                        <img src="image/Star%201.png" alt="">
+                                        <img src="image/Star%201.png" alt="">
+                                        <img src="image/Star%201.png" alt="">
+                                        <img src="image/Star%201.png" alt="">
+                                        <img src="image/Star%201.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__description">
+                                Заказывали шкаф купе. Обзвонил миллион фирм ,за сумасшедшие деньги ...
+                                <span>подробнее</span>
+                            </div>
+                            <div class="reviews__photo-wrapper d-flex justify-content-between align-items-center">
+                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">
+                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">
+                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">
+                                <span>все фото</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <!--                        <img class="reviews__preview-img" src="https://i.ytimg.com/vi/MzYZSooe6pM/maxresdefault.jpg"-->
+                        <!--                             alt="">-->
+                        <div class="embed-responsive embed-responsive-1by1">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="reviews-wrapper">
@@ -717,14 +787,14 @@
     <div class="modal-wrapper">
         <div class="modal__btn-close"><img src="image/modal__btn-close.svg" alt=""></div>
         <div class="modal-title">Мы готовы перезвонить Вам, <br> чтобы согласовать время <br> и дату приезда</div>
-        <form action="">
+        <form  action="">
             <div class="modal__input-wrapper mt-3">
                 <div class="input-text">Имя</div>
                 <input required class="modal-input" type="text">
             </div>
             <div class="modal__input-wrapper mt-3">
                 <div class="input-text">Телефон</div>
-                <input required class="modal-input" type="text">
+                <input data-mask="+7 (___) ___-____" data-slots="" required class="modal-input" type="text">
             </div>
             <div class="modal__consent-text ">Нажимая на кнопку, вы принимаете Положение и Согласие на обработку
                 персональных данных.
