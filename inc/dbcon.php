@@ -1,11 +1,16 @@
-﻿<?     	
+﻿<?
+global $cms;
 		$cms->dbtype = "mysql";
         
 // параметры подключения к sql серверу
-	 $server   = "p269200.mysql.ihc.ru";   			// сервер
-	$admin_login="p269200_shkaf";       			// пользователь
-    $admin_password="tW7YJC2z32";        			// пароль
-    $cms->dbname = "p269200_shkaf";		// база данных
+//	 $server   = "p269200.mysql.ihc.ru";   			// сервер
+//	$admin_login="p269200_shkaf";       			// пользователь
+//    $admin_password="tW7YJC2z32";        			// пароль
+//    $cms->dbname = "p269200_shkaf";		// база данных
+	 $server   = "localhost";   			// сервер
+	$admin_login="root";       			// пользователь
+    $admin_password="";        			// пароль
+    $cms->dbname = "shkafella";		// база данных
 
      
         
