@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="skafella" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeDeletion="false">
+  <component name="PublishConfigData" autoUpload="Always" uploadOnCheckin="cad848dc-bfe2-471b-9d9f-1cf27c84da35" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false" confirmBeforeDeletion="false">
     <option name="confirmBeforeDeletion" value="false" />
+    <option name="confirmBeforeUploading" value="false" />
     <serverData>
       <paths name="skafella">
         <serverdata>
@@ -11,6 +12,7 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="skafella" />
     <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

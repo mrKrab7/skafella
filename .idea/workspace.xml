@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="426e97c7-c2c8-43bf-b914-f923b0f0eadc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/image/articles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib2/additionalFunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/additionalFunctionality.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sitetpl/default/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sitetpl/default/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -88,6 +91,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
@@ -96,13 +100,14 @@
     "WebServerToolWindowPanel.toolwindow.show.date": "false",
     "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "last_opened_file_path": "D:/openServer/OSPanel/domains/Canvas-v2",
+    "last_opened_file_path": "C:/Users/User/Desktop/git-test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "web.server",
+    "settings.editor.selected.configurable": "vcs.Subversion",
+    "two.files.diff.last.used.folder": "D:/openServer/OSPanel/domains/Canvas-v2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -112,11 +117,16 @@
       <recent name="C:\Users\User\Desktop\Canvas-v2\lib2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\openServer\OSPanel\domains\Canvas-v2\image" />
       <recent name="C:\Users\User\Desktop\Canvas-v2\image" />
       <recent name="C:\Users\User\Desktop\Canvas-v2\photo" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\User\AppData\Roaming\Subversion</configuration>
+    <option name="runUnderTerminal" value="true" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="426e97c7-c2c8-43bf-b914-f923b0f0eadc" name="Changes" comment="" />
@@ -139,7 +149,9 @@
       <workItem from="1665039752722" duration="14734000" />
       <workItem from="1665108807999" duration="16669000" />
       <workItem from="1665369519855" duration="9065000" />
-      <workItem from="1665470278001" duration="5551000" />
+      <workItem from="1665470278001" duration="9605000" />
+      <workItem from="1665540421204" duration="9503000" />
+      <workItem from="1665550477826" duration="521000" />
     </task>
     <task id="LOCAL-00001" summary="предварительная загрузка картинок">
       <created>1664512087771</created>
@@ -253,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665470306521</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="маска для телефона">
+      <created>1665479414010</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1665479414010</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +325,9 @@
     <MESSAGE value="полностью закончил секция Наша команда" />
     <MESSAGE value="полностью закончил footer" />
     <MESSAGE value="scroll bar для body" />
-    <option name="LAST_COMMIT_MESSAGE" value="scroll bar для body" />
+    <MESSAGE value="маска для телефона" />
+    <MESSAGE value="test-git" />
+    <option name="LAST_COMMIT_MESSAGE" value="test-git" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
