@@ -32,7 +32,7 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
 
     })
     hideTabContent()
-    showTabContent();
+    showTabContent()
 
 }
 tabs('.tabs-block', '.tabs', '.tabContent', 'after-click')
@@ -401,10 +401,9 @@ const constructor = () => {
         cashAray.forEach(async (item, i) => {
             // console.log(item)
             await loadImg(item)
-            console.log(i +'    '+ item)
+            console.log(i + '    ' + item)
 
         })
-
 
 
         let canvasTrigger = document.querySelectorAll('.canvas-trigger');

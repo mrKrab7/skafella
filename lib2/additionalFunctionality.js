@@ -75,5 +75,5 @@ function maskNumber() {
 }
 
 showHeaderFixed()
-scrollTop()
-maskNumber()
+// scrollTop()
+// maskNumber()

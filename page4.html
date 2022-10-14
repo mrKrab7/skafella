@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="sitetpl/default/bootstrap.min.css">
     <link rel="stylesheet" href="sitetpl/default/swiper-bundle.min.css">
     <link rel="stylesheet" href="sitetpl/default/style.css">
-    <title>page2</title>
+    <title>page4</title>
 </head>
 <body>
 <header class="header">
@@ -170,164 +170,160 @@
 
 
 </header>
-<section class="articles">
+
+<section class="products">
     <div class="container">
-        <div class="nav-history d-flex">
-            <a href="">
-                <div class="nav-history-item ps-0">Главная</div>
-            </a>
-            <div class="nav-history-separator d-flex align-items-center"><img src="image/arrow-nav-history.svg" alt="">
-            </div>
+        <div class="row">
+            <div class="subtitle">Готовые решения</div>
+            <div class="products__header">
+                <div class="col-3 ">
 
-            <div class="nav-history-item">Статьи</div>
+                    <input name="header-sorted" id="hits" type="radio">
+                    <label class="text products__header-text me-3" for="hits">Хиты</label>
 
-        </div>
-
-
-        <div class="subtitle subtitle-border articles__subtitle">Статьи</div>
-
-        <div class="articles__preview">
-
-            <div class="articles__preview-title">С 2014 года</div>
-            <div class="articles__preview-subtitle">мы производим корпусные шкафы купе!</div>
-            <div class="articles-text articles-text-white articles__preview-list">Любая фурнитура и материалы</div>
-            <div class="articles-text articles-text-white articles__preview-list">Помощь дизайнера</div>
-            <div class="articles-text articles-text-white articles__preview-list">Свое производство</div>
-            <div class="articles-text articles-text-white ">Приглашаем в гости по предварительной договоренности.</div>
-            <img class="articles__preview-icon" src="image/YouTube.png" alt="">
-        </div>
-
-
-        <div class="row gx-5 mx-0 articles-wrapper ">
-            <div class="col-md-6 articles__border ps-0">
-                <div class="articles__video-wrap">
-                    <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
+                    <input name="header-sorted" id="price" type="radio">
+                    <label class="text products__header-text" for="price">По цене</label>
 
                 </div>
-                <div class="articles__data mt-3">27 декабря</div>
-                <div class="articles-text  ">Полка выдерживает до 90кг живого веса</div>
+                <div class="card-product__border mt-1"></div>
+
             </div>
-            <div class="col-md-6 articles__border pe-0">
-                <div class="articles__block ">
-                    <div class="row ">
-                        <div class="col-6">
-                            <div class="articles__data ">27 декабря</div>
-                            <div class="articles-text  ">Полка выдерживает до 90кг живого веса</div>
+
+        </div>
+        <div class="row">
+            <div class="col-12  d-flex  flex-wrap align-items-">
+                <input type="radio" name="type-sorted">
+                <label class="mt-3 type-sorted-button">Три двери</label>
+                <input type="radio" name="type-sorted">
+                <label class="mt-3 type-sorted-button">Четыре двери</label>
+                <input type="radio" name="type-sorted">
+                <label class="mt-3 type-sorted-button">Три двери</label>
+                <input type="radio" name="type-sorted">
+                <label class="mt-3 type-sorted-button">Четыре двери</label>
+                <input type="radio" name="type-sorted">
+                <label class="mt-3 type-sorted-button">Три двери</label>
+                <input type="radio" name="type-sorted">
+                <label class="mt-3 type-sorted-button">Четыре двери</label>
+                <input type="radio" name="type-sorted">
+                <label class="mt-3 type-sorted-button">Три двери</label>
+                <input type="radio" name="type-sorted">
+                <label class="mt-3 type-sorted-button">Четыре двери</label>
+                <input type="radio" name="type-sorted">
+                <label class="mt-3 type-sorted-button">Четыре двери</label>
+                <input type="radio" name="type-sorted">
+                <label class="mt-3 type-sorted-button">Четыре двери</label>
+                <input type="radio" name="type-sorted">
+                <label class="mt-3 type-sorted-button">Четыре двери</label>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mt-5">
+                <div class="card products__cards border-0 cards-flag h-100">
+                    <img src="image/projects.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="products__cards-subtitle">Шкаф купе с белым стеклом
                         </div>
-                        <div class="col-6 d-flex justify-content-end">
-                            <img class="img-fluid articles__block-img" src="/image/article-block-img.png" alt="">
-                        </div>
+                        <ul class="">
+                            <li class="card-product__list-item"><span>Высота:</span>&nbsp; 2000мм</li>
+                            <li class="card-product__list-item"><span>Ширина:</span>&nbsp; 20000мм</li>
+                        </ul>
+                        <div class="products__cards-price">Цена 95 000 руб</div>
                     </div>
-
-                </div>
-                <div class="articles__block">
-                    <div class="row ">
-                        <div class="col-6">
-                            <div class="articles__data ">27 декабря</div>
-                            <div class="articles-text ">Полка выдерживает до 90кг живого веса</div>
-                        </div>
-                        <div class="col-6 d-flex justify-content-end">
-                            <img class="img-fluid articles__block-img" src="/image/article-block-img.png" alt="">
-                        </div>
+                    <div class="card-footer bg-white border-0">
+                        <button class="button products__cards-btn-green">Заказать похожий</button>
+                        <button class="button products__cards-btn">Подробнее</button>
                     </div>
-
                 </div>
             </div>
-        </div>
-        <div class="row articles-wrapper gx-5 mx-0 articles__border">
-            <div class="col-md-6 ps-0">
-                <img class="img-fluid articles__block-img w-100" src="/image/articles-gallery.png" alt="">
-                <div class="articles__data mt-3 " >27 декабря</div>
-                <div class="articles-text  ">Полка выдерживает до 90кг живого веса</div>
-            </div>
-            <div class="col-md-6 pe-0 ">
-                <div class="articles__block-img ">
-                    <img class="img-fluid  articles__block-text w-100" src="/image/articles-gallery.png" alt="">
-                </div>
-                <div class="articles__data mt-3 articles__block-text">27 декабря</div>
-                <div class="articles-text  articles__block-text">Полка выдерживает до 90кг живого веса</div>
-            </div>
-
-        </div>
-
-        <div class="row gx-5 mx-0  articles-wrapper ">
-            <div class="col-md-6 articles__border ps-0">
-                <div class="articles__block ">
-                    <div class="row gx-1">
-
-                        <div class="col-6 ">
-                            <img class="img-fluid articles__block-img" src="/image/article-block-img.png" alt="">
-                        </div>
-                        <div class="col-6">
-                            <div class="articles__data ">27 декабря</div>
-                            <div class="articles-text  ">Полка выдерживает до 90кг живого веса</div>
-                        </div>
+            <div class="col-md-4 mt-5">
+                <div class="card products__cards border-0 h-100">
+                    <img src="image/projects.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="products__cards-subtitle">Шкаф купе с белым стеклом</div>
+                        <ul class="">
+                            <li class="card-product__list-item"><span>Высота:</span>&nbsp; 2000мм</li>
+                            <li class="card-product__list-item"><span>Ширина:</span>&nbsp; 20000мм</li>
+                        </ul>
+                        <div class="products__cards-price">Цена 95 000 руб</div>
                     </div>
-
-                </div>
-                <div class="articles__block ">
-                    <div class="row gx-1">
-
-                        <div class="col-6 ">
-                            <img class="img-fluid articles__block-img" src="/image/article-block-img.png" alt="">
-                        </div>
-                        <div class="col-6">
-                            <div class="articles__data ">27 декабря</div>
-                            <div class="articles-text  ">Полка выдерживает до 90кг живого веса</div>
-                        </div>
+                    <div class="card-footer bg-white border-0">
+                        <button class="button products__cards-btn-green">Заказать похожий</button>
+                        <button class="button products__cards-btn">Подробнее</button>
                     </div>
-
                 </div>
-
             </div>
-            <div class="col-md-6 articles__border pe-0 d-flex flex-column align-items-start">
-                <div class="articles__video-wrap">
-                    <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
-
+            <div class="col-md-4 mt-5">
+                <div class="card products__cards border-0 h-100">
+                    <img src="image/projects.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="products__cards-subtitle">Шкаф купе с белым стеклом</div>
+                        <ul class="">
+                            <li class="card-product__list-item"><span>Высота:</span>&nbsp; 2000мм</li>
+                            <li class="card-product__list-item"><span>Ширина:</span>&nbsp; 20000мм</li>
+                        </ul>
+                        <div class="products__cards-price">Цена 95 000 руб</div>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <button class="button products__cards-btn-green">Заказать похожий</button>
+                        <button class="button products__cards-btn">Подробнее</button>
+                    </div>
                 </div>
-                <div class="articles__data mt-3">27 декабря</div>
-                <div class="articles-text  ">Полка выдерживает до 90кг живого веса</div>
             </div>
-
+            <div class="col-md-4 mt-5">
+                <div class="card products__cards border-0 h-100">
+                    <img src="image/projects.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="products__cards-subtitle">Шкаф купе с белым стеклом
+                        </div>
+                        <ul class="">
+                            <li class="card-product__list-item"><span>Высота:</span>&nbsp; 2000мм</li>
+                            <li class="card-product__list-item"><span>Ширина:</span>&nbsp; 20000мм</li>
+                        </ul>
+                        <div class="products__cards-price">Цена 95 000 руб</div>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <button class="button products__cards-btn-green">Заказать похожий</button>
+                        <button class="button products__cards-btn">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5">
+                <div class="card products__cards border-0 h-100">
+                    <img src="image/projects.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="products__cards-subtitle">Шкаф купе с белым стеклом</div>
+                        <ul class="">
+                            <li class="card-product__list-item"><span>Высота:</span>&nbsp; 2000мм</li>
+                            <li class="card-product__list-item"><span>Ширина:</span>&nbsp; 20000мм</li>
+                        </ul>
+                        <div class="products__cards-price">Цена 95 000 руб</div>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <button class="button products__cards-btn-green">Заказать похожий</button>
+                        <button class="button products__cards-btn">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5">
+                <div class="card products__cards border-0 h-100">
+                    <img src="image/projects.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="products__cards-subtitle">Шкаф купе с белым стеклом dgdf gdfg dfgdf g
+                        </div>
+                        <ul class="">
+                            <li class="card-product__list-item"><span>Высота:</span>&nbsp; 2000мм</li>
+                            <li class="card-product__list-item"><span>Ширина:</span>&nbsp; 20000мм</li>
+                        </ul>
+                        <div class="products__cards-price">Цена 95 000 руб</div>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <button class="button products__cards-btn-green">Заказать похожий</button>
+                        <button class="button products__cards-btn">Подробнее</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row articles-wrapper gx-5 mx-0">
-            <div class="col-md-6 ps-0">
-                <img class="img-fluid articles__block-img w-100" src="/image/articles-gallery.png" alt="">
-                <div class="articles__data mt-3 " >27 декабря</div>
-                <div class="articles-text  ">Полка выдерживает до 90кг живого веса</div>
-            </div>
-            <div class="col-md-6 pe-0 ">
-                <div class="articles__block-img ">
-                    <img class="img-fluid  articles__block-text w-100" src="/image/articles-gallery.png" alt="">
-                </div>
-                <div class="articles__data mt-3 articles__block-text">27 декабря</div>
-                <div class="articles-text  articles__block-text">Полка выдерживает до 90кг живого веса</div>
-            </div>
-
-        </div>
-
-        <nav aria-label="Page navigation example" class="d-flex justify-content-center mt-4">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a disabled class="my-page-link bg-body" href="#" aria-label="Previous">
-                        <svg width="12" height="27" fill="none" viewBox="0 0 12 27"  >
-                            <path d="M11 1L1 13.5L11 26" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-
-                    </a>
-                </li>
-                <li class="page-item"><a class="my-page-link my-page-link-active" href="#">1</a></li>
-                <li class="page-item"><a class="my-page-link" href="#">2</a></li>
-                <li class="page-item"><a class="my-page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="my-page-link" href="#" aria-label="Next">
-                        <svg width="12" height="27" viewBox="0 0 12 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L11 13.5L1 26" stroke="#72BE23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </div>
 
 </section>
@@ -418,5 +414,6 @@
 <script src="lib2/slider-settings.js"></script>
 <script src="lib2/additionalFunctionality.js"></script>
 <script src="lib2/send.js"></script>
+<script src="lib2/tabs.js"></script>
 </body>
 </html>
