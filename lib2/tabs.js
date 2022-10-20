@@ -42,4 +42,5 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
 
 
 }
-tabs('.card-product__header-wrapper', '.card-product__header-tab', '.card-product__tab-content', 'card-product__tab-active')
+// tabs('.card-product__header-wrapper', '.card-product__header-tab', '.card-product__tab-content', 'card-product__tab-active')
+tabs('.calculator-header','.calculator-header__item','.calculator-content', 'calculator__item-active' )

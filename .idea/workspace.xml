@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="426e97c7-c2c8-43bf-b914-f923b0f0eadc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/image/articles.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/Arrow 4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/Rectangle 91 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/calc-buscet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/email (1) 1 (Traced).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/telephone-call 1 (Traced).png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib2/additionalFunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/additionalFunctionality.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib2/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page3.html" beforeDir="false" afterPath="$PROJECT_DIR$/page3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sitetpl/default/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sitetpl/default/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +105,7 @@
     "WebServerToolWindowPanel.toolwindow.show.date": "false",
     "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "last_opened_file_path": "C:/Users/User/Desktop/git-test",
+    "last_opened_file_path": "D:/openServer/OSPanel/domains/Canvas-v2/image",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -113,6 +118,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\openServer\OSPanel\domains\Canvas-v2\image" />
       <recent name="C:\Users\User\Desktop\Canvas-v2\image" />
       <recent name="C:\Users\User\Desktop\Canvas-v2\lib2" />
     </key>
@@ -152,6 +158,10 @@
       <workItem from="1665470278001" duration="9605000" />
       <workItem from="1665540421204" duration="9503000" />
       <workItem from="1665550477826" duration="521000" />
+      <workItem from="1665981773291" duration="3367000" />
+      <workItem from="1666148481848" duration="1399000" />
+      <workItem from="1666168112397" duration="4126000" />
+      <workItem from="1666237640913" duration="15876000" />
     </task>
     <task id="LOCAL-00001" summary="предварительная загрузка картинок">
       <created>1664512087771</created>
@@ -327,7 +337,8 @@
     <MESSAGE value="scroll bar для body" />
     <MESSAGE value="маска для телефона" />
     <MESSAGE value="test-git" />
-    <option name="LAST_COMMIT_MESSAGE" value="test-git" />
+    <MESSAGE value="закончил верстать 4 страницу" />
+    <option name="LAST_COMMIT_MESSAGE" value="закончил верстать 4 страницу" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
