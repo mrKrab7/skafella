@@ -310,7 +310,91 @@
             <div class="calculator-header__item">Фасад</div>
 
         </div>
-        <div class="calculator-content"></div>
+        <div class="calculator-content">
+            <div class="row ">
+                <div class="col-md-7 ">
+                    <div class="calculator__content-block">
+                        <div class="calculator__bold-text">Укажите  размеры шкафа:</div>
+                            <div class="row calculator__border">
+                                <div class="col-4 d-flex  align-items-center mt-3">
+                                    <div class="calculator__input-text calculator__input-size">Ширина</div>
+                                    <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">
+                                    <div class="calculator__input-text calculator__input-size">мм</div>
+                                </div>
+                                <div class="col-4 d-flex  align-items-center mt-3">
+                                    <div class="calculator__input-text calculator__input-size">Высота</div>
+                                    <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">
+                                    <div class="calculator__input-text calculator__input-size">мм</div>
+                                </div>
+                                <div class="col-4 d-flex  align-items-center mt-3">
+                                    <div class="calculator__input-text calculator__input-size">Глубина</div>
+                                    <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">
+                                    <div class="calculator__input-text calculator__input-size">мм</div>
+                                </div>
+
+                            </div>
+                        <div class="calculator__bold-text mt-4">Параметры шкафа:</div>
+                        <div class="row calculator__border">
+                            <div class="col-12 d-flex justify-content-between">
+                                <input class="calculator__checkbox " name="cabinet-parameters" id="coupe" type="radio">
+                                <label for="coupe">Шкаф-купе</label>
+                                <input class="calculator__checkbox" name="cabinet-parameters" id="coupe1" type="radio">
+                                <label for="coupe1">Только двери</label>
+                                <input class="calculator__checkbox" name="cabinet-parameters" id="coupe2" type="radio">
+                                <label for="coupe2">Только внутреннее наполнение</label>
+                            </div>
+
+                        </div>
+                        <div class="calculator__bold-text mt-4">Количество секций шкафа:</div>
+                        <div class="row calculator__border">
+                            <div class="col-12 d-flex ">
+                                <input class="calculator__checkbox" name="section-amount" id="section2" type="radio">
+                                <label class="me-3" for="section2">Две секции</label>
+                                <input class="calculator__checkbox" name="section-amount" id="section3" type="radio">
+                                <label class="me-3" for="section3">Три секции</label>
+                                <input class="calculator__checkbox" name="section-amount" id="section4" type="radio">
+                                <label class="me-3" for="section4">Четыре секции</label>
+                            </div>
+
+                        </div>
+                        <div class="calculator__bold-text mt-4">Расположение в пространстве:</div>
+                        <div class="row calculator__border">
+                            <div class="col-12 d-flex justify-content-between">
+                                <input class="calculator__checkbox " name="location" id="location1" type="radio">
+                                <label for="location1">Левый угол</label>
+                                <input class="calculator__checkbox " name="location" id="location2" type="radio">
+                                <label for="location2">Правый угол</label>
+                                <input class="calculator__checkbox" name="location" id="location3" type="radio">
+                                <label for="location3">Между стен</label>
+                                <input class="calculator__checkbox" name="location" id="location4" type="radio">
+                                <label for="location4">Отдельно стоящий шкаф</label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex">
+                                <input class="calculator__switch" type="checkbox" id="stretch-ceiling">
+                                <label class="me-5" for="stretch-ceiling">Потолок натяжной</label>
+                                <input class="calculator__switch" type="checkbox" id="zakladnaia">
+                                <label for="zakladnaia">Требуется закладная</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-end mt-5">
+                                <div class="calculator__prev"><svg width="26" height="12" viewBox="0 0 26 12" fill="#828282" >
+                                    <path d="M25 6.75049C25.4142 6.75049 25.75 6.4147 25.75 6.00049C25.75 5.58627 25.4142 5.25049 25 5.25049L25 6.75049ZM0.469669 5.47016C0.176777 5.76305 0.176777 6.23792 0.469669 6.53082L5.24264 11.3038C5.53553 11.5967 6.01041 11.5967 6.3033 11.3038C6.59619 11.0109 6.59619 10.536 6.3033 10.2431L2.06066 6.00049L6.3033 1.75785C6.59619 1.46495 6.59619 0.990079 6.3033 0.697186C6.01041 0.404292 5.53553 0.404292 5.24264 0.697186L0.469669 5.47016ZM25 5.25049L1 5.25049L1 6.75049L25 6.75049L25 5.25049Z" />
+                                </svg>
+                                </div>
+                                <div class="calculator__next">Далее</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 ">
+                    <img class="img-fluid calculator__preview-img" src="image/calculator__doors-img.png" >
+                </div>
+            </div>
+        </div>
         <div class="calculator-content"></div>
         <div class="calculator-content"></div>
 
