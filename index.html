@@ -36,19 +36,45 @@
     </div>
 
 </div>
+<div class="burger-menu burger-main-menu">
+    <div class="close-burger-menu"><img src="image/modal__btn-close.svg" alt=""></div>
+    <ul class="burger__nav">
+        <li class="burger__item-list">О производстве</li>
+        <li class="burger__item-list">Доставка и оплата</li>
+        <li class="burger__item-list">
+            <span class="burger__item-list burger-menu-arrow">Установка</span>
+                <div class="burger-menu sub-burger-menu">
+                    <div class="close-burger-menu"><img src="image/modal__btn-close.svg" alt=""></div>
+                    <ul class="burger__nav">
+                        <li class="burger__item-list burger-prev-steep"></li>
+                        <li class="burger__item-list">Доставка и оплата</li>
+                        <li class="burger__item-list">Доставка и оплата</li>
+                        <li class="burger__item-list">Доставка и оплата</li>
+                        <li class="burger__item-list">Удобное хранение книг и коллекций</li>
+                        <li class="burger__item-list">Грамотная планировка внутреннего пространства</li>
+                    </ul>
+                </div>
+
+
+        </li>
+        <li class="burger__item-list "><span class="burger__item-icons">Калькулятор шкафов</span> </li>
+
+
+    </ul>
+</div>
 <header class="header">
     <div class="header__descr-wrap d-flex align-items-center">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 d-flex justify-content-between align-items-center ">
+                <div class="col-8 col-md-6 col-lg-5 col-xl-4 d-flex justify-content-md-between align-items-md-center flex-column flex-md-row ">
                     <div class="text header__descr-text  header__descr-text-working">Ежедневно с 9.00 до 22.00</div>
                     <div><a class="text header__descr-text" href="mailto: info@shkafella.ru"> info@shkafella.ru</a>
                     </div>
                 </div>
-                <div class="col-lg-6 offset-lg-2 d-flex justify-content-between">
-                    <div class="text header__descr-text">О производстве</div>
-                    <div class="text header__descr-text">Доставка и оплата</div>
-                    <div class="text header__descr-text header__descr_drop">
+                <div class="col-4 col-md-6 col-lg-7 col-xl-6  offset-xl-2 d-flex justify-content-end justify-content-lg-between">
+                    <div class="d-none d-lg-block text header__descr-text">О производстве</div>
+                    <div class="d-none d-lg-block text header__descr-text">Доставка и оплата</div>
+                    <div class="d-none d-lg-block text header__descr-text header__descr_drop">
                         <span class="text header__descr-text">Устоновка</span>
                         <div class="header__descr_content">
                             <div class="container  ">
@@ -67,7 +93,7 @@
                         </div>
 
                     </div>
-                    <div class="text header__descr-text header__descr_drop">
+                    <div class="d-none d-lg-block text header__descr-text header__descr_drop">
                         <span class="text header__descr-text">Сотрудничество</span>
                         <div class="header__descr_content">
                             <div class="container d-flex justify-content-end align-items-center h-100">
@@ -82,6 +108,15 @@
 
                         </div>
                     </div>
+                    <div class="burger-block d-flex d-lg-none align-items-center ">
+                        <a class="d-none d-md-block header__number" href="tel:7999999999">+ 7(999) 999-99-99</a>
+                        <div class="burger d-flex flex-column align-items-center justify-content-center">
+                            <span class="mt-0"></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -92,17 +127,17 @@
     <div class="header__center-wrap">
         <div class="container">
             <div class="row py-2">
-                <div class="col-lg-6 d-flex h-100 align-items-center justify-content-between">
-                    <div class="logo header__logo">
+                <div class="col-6 col-lg-5 col-xl-6 d-flex h-100 align-items-center justify-content-between">
+                    <div class="logo header__logo d-flex me-3">
                         <img class="img-fluid" src="image/logo_shkafella%20(1)%201.svg" alt="">
                     </div>
-                    <div class="header__search d-flex ">
+                    <div class="header__search d-flex d-none d-md-flex">
                         <input class="header__search-input">
                         <button class="header__search-button"></button>
                     </div>
                 </div>
 
-                <div class="col-lg-6 d-flex align-items-center justify-content-between">
+                <div class="col-6 col-lg-7 col-xl-6 d-flex align-items-center justify-content-end justify-content-md-between">
                     <div class="header__icon-wrapper d-flex justify-content-between">
                         <div class="header__icon d-flex align-items-center justify-content-center me-4">
                             <svg width="27" height="17" fill="#343434">
@@ -120,11 +155,12 @@
 
                         </div>
                     </div>
-                    <div class="header__call-wrapper d-flex justify-content-between align-items-center h-100">
-                        <a class="header__number" href="tel:7999999999">+ 7(999) 999-99-99</a>
+                    <div class="header__call-wrapper d-flex justify-content-end justify-content-xl-between align-items-center h-100">
+                        <a class="header__number d-none d-lg-block" href="tel:7999999999">+ 7(999) 999-99-99</a>
                         <button data-type-modal="call"
                                 data-title-modal="Мы готовы перезвонить Вам, <br> чтобы согласовать время и <br> дату приезда"
-                                class="button header__call-button d-flex align-items-center call-btn">Заказать звонок
+                                class="button header__call-button d-flex align-items-center call-btn ms-3">Заказать
+                            звонок
                         </button>
                     </div>
 
@@ -136,22 +172,30 @@
 
     <nav class="header__nav">
         <div class="container h-100">
-            <div class="row">
-                <div class="col-lg-6 h-100">
+            <div class="row h-100">
+                <div class="col-10 col-md-10  col-lg-8 col-xxl-6 h-100">
                     <ul class="d-flex  align-items-center h-100">
-                        <li class="nav__item nav-border"><a class="nav__item-links" href="#">Калькулятор шкафов</a></li>
-                        <li class="nav__item nav-border"><a class="nav__item-links" href="#">Шкафы - купе</a></li>
+
+                        <a class="d-block d-lg-none" href="">
+                            <img src="image/header-calc-mobile.png" alt="">
+                        </a>
+
+                        <li class="nav__item nav-border d-none d-md-block black-calc-icon"><a class="nav__item-links"
+                                                                                              href="#">Калькулятор
+                            шкафов</a></li>
+
+                        <li class="nav__item nav-border "><a class="nav__item-links" href="#">Шкафы - купе</a></li>
 
 
                         <li class="nav__item ">
                             <span class="text nav__item-links nav-drop">Статьи</span>
-                            <div class="header__nav_content">
+                            <div class="header__nav_content ">
                                 <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-3">
+                                    <div class="row mx-0">
+                                        <div class="px-0 col-md-2 col-lg-3 ms-md-0">
                                             <div class="nav-subtitle">Статьи</div>
                                         </div>
-                                        <div class="col-md-6 d-flex justify-content-center header__nav_center-wrapper">
+                                        <div class="col-12 mt-3 mt-md-0 col-md-9  col-lg-6 d-flex justify-content-md-center header__nav_center-wrapper flex-column">
                                             <ul>
                                                 <li><a class="nav_content__item p-0" href="">Как продлить жизнь
                                                     шкафу-купе</a></li>
@@ -164,9 +208,12 @@
                                                     внутреннего пространства</a></li>
                                                 <li><a class="nav_content__item" href="">Полезные рекомендации при
                                                     выборе</a></li>
+                                                <li class="close-menu-btn d-block d-lg-none">
+                                                    <img src="image/modal__btn-close.svg" alt="">
+                                                </li>
                                             </ul>
                                         </div>
-                                        <div class="col-md-3 d-flex align-items-center justify-content-end">
+                                        <div class="col-lg-3 d-flex align-items-center d-none d-lg-flex justify-content-end">
                                             <div class="nav_content__img-wrapper">
                                                 <img class="img-fluid" src="image/nav-content-img.png" alt="">
                                             </div>
@@ -180,10 +227,14 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-end align-items-center ">
-                    <div class="header__nav-question-wrap d-flex justify-content-between">
-                        <div class="header__nav-question   nav-border">Задать вопрос</div>
-                        <div class="basket-wrapper">
+                <div class="col-2  col-lg-4 col-lg-4 col-xxl-6 d-flex justify-content-end align-items-center ">
+                    <div class="header__nav-question-wrap d-flex align-items-center justify-content-end justify-content-lg-between">
+                        <div class="header__nav-question d-none d-lg-block   nav-border ">Задать вопрос</div>
+                        <div class="question-mobile d-block d-lg-none nav-border pe-3">
+                            <img class=" img-fluid" src="/image/question-sign-black%20.png" alt="">
+                        </div>
+
+                        <div class=" basket-wrapper ms-3">
                             <div class="basket__icon"><img src="image/baslet-icon.svg" alt=""></div>
                             <div class="basket__count">10</div>
                         </div>
@@ -301,800 +352,820 @@
         </div>
     </div>
 </section>
-<section class="calculator">
-    <div class="container">
-        <div class="subtitle mt-5">Сделайте расчет шкафа <span>оnline</span></div>
-        <div data-tab-active="1" class="calculator-header d-flex">
-            <div class="calculator-header__item">Размер шкафа</div>
-            <div class="calculator-header__item">Внутреннее наполнение</div>
-            <div class="calculator-header__item">Фасад</div>
-
-        </div>
-        <div class="calculator-content">
-            <div class="row ">
-                <div class="col-md-7 ">
-                    <div class="calculator__content-block">
-                        <div class="calculator__bold-text">Укажите  размеры шкафа:</div>
-                            <div class="row calculator__border">
-                                <div class="col-4 d-flex  align-items-center mt-3">
-                                    <div class="calculator__input-text calculator__input-size">Ширина</div>
-                                    <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">
-                                    <div class="calculator__input-text calculator__input-size">мм</div>
-                                </div>
-                                <div class="col-4 d-flex  align-items-center mt-3">
-                                    <div class="calculator__input-text calculator__input-size">Высота</div>
-                                    <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">
-                                    <div class="calculator__input-text calculator__input-size">мм</div>
-                                </div>
-                                <div class="col-4 d-flex  align-items-center mt-3">
-                                    <div class="calculator__input-text calculator__input-size">Глубина</div>
-                                    <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">
-                                    <div class="calculator__input-text calculator__input-size">мм</div>
-                                </div>
-
-                            </div>
-                        <div class="calculator__bold-text mt-4">Параметры шкафа:</div>
-                        <div class="row calculator__border">
-                            <div class="col-12 d-flex justify-content-between">
-                                <input class="calculator__checkbox " name="cabinet-parameters" id="coupe" type="radio">
-                                <label for="coupe">Шкаф-купе</label>
-                                <input class="calculator__checkbox" name="cabinet-parameters" id="coupe1" type="radio">
-                                <label for="coupe1">Только двери</label>
-                                <input class="calculator__checkbox" name="cabinet-parameters" id="coupe2" type="radio">
-                                <label for="coupe2">Только внутреннее наполнение</label>
-                            </div>
-
-                        </div>
-                        <div class="calculator__bold-text mt-4">Количество секций шкафа:</div>
-                        <div class="row calculator__border">
-                            <div class="col-12 d-flex ">
-                                <input class="calculator__checkbox" name="section-amount" id="section2" type="radio">
-                                <label class="me-3" for="section2">Две секции</label>
-                                <input class="calculator__checkbox" name="section-amount" id="section3" type="radio">
-                                <label class="me-3" for="section3">Три секции</label>
-                                <input class="calculator__checkbox" name="section-amount" id="section4" type="radio">
-                                <label class="me-3" for="section4">Четыре секции</label>
-                            </div>
-
-                        </div>
-                        <div class="calculator__bold-text mt-4">Расположение в пространстве:</div>
-                        <div class="row calculator__border">
-                            <div class="col-12 d-flex justify-content-between">
-                                <input class="calculator__checkbox " name="location" id="location1" type="radio">
-                                <label for="location1">Левый угол</label>
-                                <input class="calculator__checkbox " name="location" id="location2" type="radio">
-                                <label for="location2">Правый угол</label>
-                                <input class="calculator__checkbox" name="location" id="location3" type="radio">
-                                <label for="location3">Между стен</label>
-                                <input class="calculator__checkbox" name="location" id="location4" type="radio">
-                                <label for="location4">Отдельно стоящий шкаф</label>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-12 d-flex">
-                                <input class="calculator__switch" type="checkbox" id="stretch-ceiling">
-                                <label class="me-5" for="stretch-ceiling">Потолок натяжной</label>
-                                <input class="calculator__switch" type="checkbox" id="zakladnaia">
-                                <label for="zakladnaia">Требуется закладная</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 d-flex justify-content-end mt-5">
-                                <div class="calculator__prev"><svg width="26" height="12" viewBox="0 0 26 12" fill="#828282" >
-                                    <path d="M25 6.75049C25.4142 6.75049 25.75 6.4147 25.75 6.00049C25.75 5.58627 25.4142 5.25049 25 5.25049L25 6.75049ZM0.469669 5.47016C0.176777 5.76305 0.176777 6.23792 0.469669 6.53082L5.24264 11.3038C5.53553 11.5967 6.01041 11.5967 6.3033 11.3038C6.59619 11.0109 6.59619 10.536 6.3033 10.2431L2.06066 6.00049L6.3033 1.75785C6.59619 1.46495 6.59619 0.990079 6.3033 0.697186C6.01041 0.404292 5.53553 0.404292 5.24264 0.697186L0.469669 5.47016ZM25 5.25049L1 5.25049L1 6.75049L25 6.75049L25 5.25049Z" />
-                                </svg>
-                                </div>
-                                <div class="calculator__next">Далее</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 ">
-                    <img class="img-fluid calculator__preview-img" src="image/calculator__doors-img.png" >
-                </div>
-            </div>
-        </div>
-        <div class="calculator-content"></div>
-        <div class="calculator-content"></div>
-
-
-    </div>
-</section>
-<section class="advantage">
-    <div class="container">
-        <div class="subtitle subtitle-border">Преимущества наших шкафов</div>
-        <div class="row mt-5 advantage__card-wrapper">
-
-
-            <div class="col-md-3 h-100">
-                <div class="card  ">
-                    <img src="image/card-img.png" class="card-img-top" alt="...">
-                    <div class="card-body ">
-                        <h5 class="card-title">Надежная система купе</h5>
-
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text ">Рафиксы, футорки, П-образки - делают наши шкафы не только крепкими и
-                            надежными, но и красивыми. Если у вас шкаф с внешней стойкой - вы не увидите снаружи
-                            никакого крепежа - весь крепеж скрыт, и прячется внутри шкафа ittie wti4eqtiq43-tiq3t
-                            rptietie oti340958itp849 435834er optue4ue uu439 u346u </p>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="col-md-3 h-100">
-                <div class="card  ">
-                    <img src="image/card-img.png" class="card-img-top" alt="...">
-                    <div class="card-body ">
-                        <h5 class="card-title">Надежная система купе</h5>
-
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text ">Рафиксы, футорки, П-образки - делают наши шкафы не только крепкими и
-                            надежными, но и красивыми. Если у вас шкаф с внешней стойкой - вы не увидите снаружи
-                            никакого крепежа - весь крепеж скрыт, и прячется внутри шкафа ittie wti4eqtiq43-tiq3t
-                            rptietie oti340958itp849 435834er optue4ue uu439 u346u </p>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="col-md-3 h-100">
-                <div class="card  ">
-                    <img src="image/card-img.png" class="card-img-top" alt="...">
-                    <div class="card-body ">
-                        <h5 class="card-title">Надежная система купе</h5>
-
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text ">Рафиксы, футорки, П-образки - делают наши шкафы не только крепкими и
-                            надежными, но и красивыми. Если у вас шкаф с внешней стойкой - вы не увидите снаружи
-                            никакого крепежа - весь крепеж скрыт, и прячется внутри шкафа ittie wti4eqtiq43-tiq3t
-                            rptietie oti340958itp849 435834er optue4ue uu439 u346u </p>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="col-md-3 h-100">
-                <div class="card  ">
-                    <img src="image/card-img.png" class="card-img-top" alt="...">
-                    <div class="card-body ">
-                        <h5 class="card-title">Надежная система купе</h5>
-
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text ">Рафиксы, футорки, П-образки - делают наши шкафы не только крепкими и
-                            надежными, но и красивыми. Если у вас шкаф с внешней стойкой - вы не увидите снаружи
-                            никакого крепежа - весь крепеж скрыт, и прячется внутри шкафа ittie wti4eqtiq43-tiq3t
-                            rptietie oti340958itp849 435834er optue4ue uu439 u346u </p>
-                    </div>
-
-
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-
-</section>
-<section class="design">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="subtitle design__subtitle">Бесплатный дизайн проект</div>
-                <div class="design__descr mt-3">Заполните форму и получите индивидуальный проект шкафа по Вашим
-                    размерам
-                </div>
-            </div>
-            <div class="col-md-7 d-flex align-items-center justify-content-center">
-                <button class="button design__button d-flex align-items-center justify-content-center">Пригласить
-                    замерщика
-                </button>
-                <img class="design-img" src="image/tap%201%20(Traced).png" alt="">
-            </div>
-
-        </div>
-    </div>
-</section>
-<section class="additional-services">
-    <div class="container">
-        <div class="subtitle">У нас также можно заказать <span>кухню</span> и другую <span>мебель</span></div>
-        <div class="row">
-            <div class="col-md-4 d-flex justify-content-center">
-                <div class="additional-services__block d-flex flex-column">
-                    <img class="img-fluid additional-services__img" src="image/servis.png" alt="">
-                    <div class="additional-services__sub-text">Кухни</div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex justify-content-center">
-                <div class="additional-services__block d-flex flex-column">
-                    <img class="img-fluid additional-services__img" src="image/servis.png" alt="">
-                    <div class="additional-services__sub-text">Кухни</div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex justify-content-center">
-                <div class="additional-services__block d-flex flex-column">
-                    <img class="img-fluid additional-services__img" src="image/servis.png" alt="">
-                    <div class="additional-services__sub-text">Кухни</div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="subtitle"></div>
-</section>
-<section class="projects">
-    <div class="container">
-        <div class="subtitle subtitle-border">Заказанные проекты</div>
-        <div class=" projects-cards">
-
-            <div class="swiper projects__swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="row m-0 projects__card-wrapper ">
-                            <div class="col-md-6 d-flex justify-content-start ps-0">
-                                <div class="card h-100">
-
-                                    <img src="image/projects.png" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Шкаф купе с белым стеклом</h5>
-                                        <p class="card-text">Встроенный шкаф купе с красивыми белыми дверьми из белого
-                                            стекла. Внутри 3 sf dsf sdf sdf dsf dsf
-                                            ящика и полки, и 2 отсека со штангами</p>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"><span> Материал:</span>&nbsp; ЛДСП "EGGER"</li>
-                                        <li class="list-group-item"><span> Кромка:&nbsp;</span> ПВХ "REHAU"</li>
-                                        <li class="list-group-item"><span> Профиль:&nbsp;</span> Алюм. Система "MODUS"
-                                        </li>
-                                        <li class="list-group-item"><span> Фурнитура: &nbsp;</span> "GTV"</li>
-
-                                    </ul>
-                                    <div class="card-footer">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="card-footer__price">Цена 95 000 руб.</div>
-                                            </div>
-                                            <div class="col-6">
-                                                <button class="button card-footer__button">Заказать такой же</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="projects-cards__border"></div>
-                                </div>
-
-                            </div>
-                            <div class="col-md-6 d-flex justify-content-end ps-0">
-                                <div class="card h-100">
-
-                                    <img src="image/projects.png" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Шкаф купе с белым стеклом</h5>
-                                        <p class="card-text">Встроенный шкаф купе с красивыми белыми дверьми из белого
-                                            стекла. Внутри 3
-                                            ящика и полки, и 2 отсека со штангами</p>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"><span> Материал:</span>&nbsp; ЛДСП "EGGER"</li>
-                                        <li class="list-group-item"><span> Кромка:&nbsp;</span> ПВХ "REHAU"</li>
-                                        <li class="list-group-item"><span> Профиль:&nbsp;</span> Алюм. Система "MODUS"
-                                        </li>
-                                        <li class="list-group-item"><span> Фурнитура: &nbsp;</span> "GTV"</li>
-
-                                    </ul>
-                                    <div class="card-footer">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="card-footer__price">Цена 95 000 руб.</div>
-                                            </div>
-                                            <div class="col-6">
-                                                <button class="button card-footer__button">Заказать такой же</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="projects-cards__border"></div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div style="height: 10px; width: 100%"></div>
-                    </div>
-
-
-                </div>
-
-
-            </div>
-            <div class="swiper-navigation">
-                <div id="project__swiperPrev"></div>
-                <div id="project__swiperNext"></div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<section class="send">
-    <div class="send-wrapper">
-        <div class="container">
-            <div class="subtitle text-center">Есть свой проект?</div>
-            <div class="send__descr text-center mt-2">Отправьте нам на просчет. <br>
-                Заполните форму, наш менеджер свяжется с Вами и сделает перерасчет стоимости мебели
-            </div>
-            <form>
-                <div class="row send__form-wrapper d-flex align-items-end h-100">
-
-                    <div class="col-lg-4">
-                        <div class="modal__input-wrapper mt-3">
-                            <div class="input-text">Телефон</div>
-                            <input required="" class="modal-input send__input" type="text">
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="modal__input-wrapper mt-3">
-                            <div class="input-text">Электронная почта</div>
-                            <input required="" class="modal-input send__input" type="text">
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="modal__input-wrapper d-flex align-items-end h-100 mt-3  ">
-
-                            <input id="send-project" required="" class="modal-input" type="file">
-                            <label class="send__input-file d-flex  align-items-center justify-content-center"
-                                   for="send-project"><span>Прикрепить файл</span> </label>
-                            <label for="send-project" class="send__progres-btn">
-                                <div class="send__progres"></div>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="modal__input-wrapper h-100 mt-3  ">
-                            <div class="input-text">Описание проекта</div>
-                            <textarea class="send__descr-project"></textarea>
-
-                        </div>
-
-                    </div>
-                    <div class="col-12">
-                        <div class="send__personal-message">Нажимая на кнопку, вы принимаете Положение и Согласие на
-                            обработку персональных данных.
-                        </div>
-
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="button send__button">Отправить заявку</button>
-                    </div>
-
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-<section class="reviews">
-    <div class="container">
-        <div class="subtitle subtitle-border">Отзывы наших клиентов</div>
-
-    </div>
-    <div class="container-fluid">
-        <div class="reviews__swiper-wrapper">
-            <div class="swiper reviews-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide ">
-                        <!--                        <img class="reviews__preview-img" src="https://i.ytimg.com/vi/MzYZSooe6pM/maxresdefault.jpg"-->
-                        <!--                             alt="">-->
-                        <div class="embed-responsive embed-responsive-1by1">
-                            <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="reviews-wrapper">
-                            <div class="row">
-                                <div class="col-7 d-flex align-items-center">
-                                    <img class="reviews__user" src="image/user.png" alt="">
-                                    <div class="reviews__info-user d-flex flex-column justify-content-center">
-                                        <div class="reviews__username">raa79.profi</div>
-                                        <div class="reviews__date">22 мая в 22:17</div>
-
-                                    </div>
-                                </div>
-                                <div class="col-5 d-flex ">
-                                    <div class="grade-img">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="reviews__description">
-                                Заказывали шкаф купе. Обзвонил миллион фирм ,за сумасшедшие деньги срок ожидания от
-                                30,до 45 дней ....шок. И вот они ....спасатели, 3 дня и ... <span>подробнее</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="reviews-wrapper">
-                            <div class="row">
-                                <div class="col-7 d-flex align-items-center">
-                                    <img class="reviews__user" src="image/user.png" alt="">
-                                    <div class="reviews__info-user d-flex flex-column justify-content-center">
-                                        <div class="reviews__username">raa79.profi</div>
-                                        <div class="reviews__date">22 мая в 22:17</div>
-
-                                    </div>
-                                </div>
-                                <div class="col-5 d-flex ">
-                                    <div class="grade-img">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="reviews__description">
-                                Заказывали шкаф купе. Обзвонил миллион фирм ,за сумасшедшие деньги ...
-                                <span>подробнее</span>
-                            </div>
-                            <div class="reviews__photo-wrapper d-flex justify-content-between align-items-center">
-                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">
-                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">
-                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">
-                                <span>все фото</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide ">
-                        <!--                        <img class="reviews__preview-img" src="https://i.ytimg.com/vi/MzYZSooe6pM/maxresdefault.jpg"-->
-                        <!--                             alt="">-->
-                        <div class="embed-responsive embed-responsive-1by1">
-                            <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="reviews-wrapper">
-                            <div class="row">
-                                <div class="col-7 d-flex align-items-center">
-                                    <img class="reviews__user" src="image/user.png" alt="">
-                                    <div class="reviews__info-user d-flex flex-column justify-content-center">
-                                        <div class="reviews__username">raa79.profi</div>
-                                        <div class="reviews__date">22 мая в 22:17</div>
-
-                                    </div>
-                                </div>
-                                <div class="col-5 d-flex ">
-                                    <div class="grade-img">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="reviews__description">
-                                Заказывали шкаф купе. Обзвонил миллион фирм ,за сумасшедшие деньги срок ожидания от
-                                30,до 45 дней ....шок. И вот они ....спасатели, 3 дня и ... <span>подробнее</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="reviews-wrapper">
-                            <div class="row">
-                                <div class="col-7 d-flex align-items-center">
-                                    <img class="reviews__user" src="image/user.png" alt="">
-                                    <div class="reviews__info-user d-flex flex-column justify-content-center">
-                                        <div class="reviews__username">raa79.profi</div>
-                                        <div class="reviews__date">22 мая в 22:17</div>
-
-                                    </div>
-                                </div>
-                                <div class="col-5 d-flex ">
-                                    <div class="grade-img">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                        <img src="image/Star%201.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="reviews__description">
-                                Заказывали шкаф купе. Обзвонил миллион фирм ,за сумасшедшие деньги ...
-                                <span>подробнее</span>
-                            </div>
-                            <div class="reviews__photo-wrapper d-flex justify-content-between align-items-center">
-                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">
-                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">
-                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">
-                                <span>все фото</span>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <div class="reviews__swiper-button-next"></div>
-            <div class="reviews__swiper-button-prev"></div>
-
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-                <a href="">
-                    <img class="reviews__link-img me-md-4" src="image/Group%20119.svg" alt="">
-                </a>
-                <a href="">
-                    <img class="reviews__link-img ms-md-4" src="image/Group%20116.png" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-</section>
-<section class="team">
-    <div class="container position-relative">
-        <div class="row">
-            <div class="col-md-7">
-                <div class="subtitle subtitle-border">Наша команда</div>
-                <div class="team__description">Мы <b>7 лет</b> производим для вас шкафы купе, и за это время мы точно
-                    поняли что вам нужно!
-                </div>
-                <div class="team__description">Широкая линейка внутреннего наполнения почти <b> 800</b> вариантов, и
-                    почти <b> 1700</b> комбинаций дверей купе, позволит вам выбрать шкаф который подходит именно вам.
-                </div>
-                <div class="team__description"> С доводчиком на двери купе, или без него. Под натяжной потолок или под
-                    крашенный. С ящиками или без них. На тонкой системе купе или на классической. Выбор огромный. С
-                    установкой в угол или между стен, или в нишу.
-                </div>
-                <div class="team__description team__paragraph"> Не хотите ждать? Всего 3 дня и шкаф у вас!</div>
-                <div class="team__description  team__paragraph">По вашим размерам? А как по другому!</div>
-                <div class="team__description   team__paragraph"> Крепкий так чтобы навсегда? Конечно!</div>
-
-
-            </div>
-            <div class=" col-lg-12 col-xl-5  img-fluid  d-flex justify-content-xl-end">
-                <div class="team__photo">
-                    <img class=""
-                         src="image/3_1x%203.png" alt="">
-                    <div class="team__borders"></div>
-                </div>
-
-            </div>
-            <!--            <div class="btn-scroll d-flex align-items-center justify-content-center">-->
-            <!--                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffff" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">-->
-            <!--                    <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>-->
-            <!--                </svg>-->
-            <!--            </div>-->
-            <div class="btn-scroll">
-                <img class="" src="image/sticky-arrow.svg" alt="">
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<div class="modal-background modal-call">
-    <div class="modal-wrapper">
-        <div class="modal__btn-close"><img src="image/modal__btn-close.svg" alt=""></div>
-        <div class="modal-title">Мы готовы перезвонить Вам, <br> чтобы согласовать время <br> и дату приезда</div>
-        <form action="">
-            <div class="modal__input-wrapper mt-3">
-                <div class="input-text">Имя</div>
-                <input required class="modal-input" type="text">
-            </div>
-            <div class="modal__input-wrapper mt-3">
-                <div class="input-text">Телефон</div>
-                <input data-mask="+7 (___) ___-____" data-slots="" required class="modal-input" type="text">
-            </div>
-            <div class="modal__consent-text ">Нажимая на кнопку, вы принимаете Положение и Согласие на обработку
-                персональных данных.
-            </div>
-            <button class="button modal__send-btn">Отправить заявку</button>
-        </form>
-    </div>
-</div>
-
-<div  class="modal-background modal-calc">
-
-    <div class="modal-wrapper">
-        <div class="calculator-total-header">
-            <div class="calculator-total-subtitle">Расчет стоимости сформирован</div>
-        </div>
-        <div class="calculator-body">
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="canvas-result-img">
-                                <img class="img-fluid" src="image/Rectangle%2091%20(1).png" alt="">
-                            </div>
-                            <div class="calculator__bold-text calculator__result-list-subtitle ">Выбранные параметры
-                                дверей:
-                            </div>
-                            <ul class="calculator__result-list">
-                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>
-                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>
-                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>
-                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>
-                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>
-                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="canvas-result-img">
-                                <img class="img-fluid" src="image/Rectangle%2091%20(1).png" alt="">
-                            </div>
-                            <div class="calculator__bold-text calculator__result-list-subtitle ">Выбранные параметры
-                                дверей:
-                            </div>
-                            <ul class="calculator__result-list">
-                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>
-                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>
-                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>
-                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>
-                            </ul>
-                        </div>
-
-
-                    </div>
-                    <div class="calculator__prev-steep ">
-                        Вернуться и изменить параметры
-                    </div>
-                </div>
-                <div class="col-md-5 px-5">
-                    <div class="calculator__price-wrapper align-items-center d-flex justify-content-between">
-                        <div class="calculator__price-text">Стоимость</div>
-                        <div class="calculator__price-border"></div>
-                        <div class="calculator__price-result">35 987руб</div>
-                    </div>
-                    <div class="calculator__bold-text mt-4">Выбранные параметры дверей:</div>
-                    <form action="">
-                        <div class="calculator__input-block">
-                            <div class="calculator__input-text">Имя</div>
-                            <input class="calculator__input" type="text">
-                        </div>
-                        <div class="calculator__input-block">
-                            <div class="calculator__input-text">Телефон <b>*</b></div>
-                            <input class="calculator__input" type="text">
-                        </div>
-                        <div class="calculator__input-block">
-                            <div class="calculator__input-text">Электронная почта <b>*</b></div>
-                            <input class="calculator__input" type="text">
-                        </div>
-                        <div class="calculator__bold-text mt-4">Выберите способ оплаты</div>
-                        <div class="calculator__radio-button-wrapper d-flex mt-2">
-                            <input checked name="calculator-type-payment" type="radio" id="cash-btn">
-                            <label for="cash-btn" class="calculator__cash-btn flex-column d-flex align-items-center ">
-                                <svg class="mt-3" width="31" height="27" viewBox="0 0 31 27" fill="#828282" >
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1073 2.53912C14.6597 3.93348 9.29315 6.10188 6.18158 7.3578C2.72353 8.75358 0.451548 9.70276 0.337204 9.79946C0.234367 9.88646 0.117056 10.0164 0.0765992 10.0882C0.0199724 10.1887 0.00259069 12.0922 0.00089491 18.3722C-0.0014065 27.2793 -0.0210896 26.7887 0.344169 26.9413C0.470686 26.9941 3.80053 27.008 13.4946 26.996L26.4755 26.9799L26.6217 26.8076L26.7678 26.6353V22.1357V17.6361L28.7406 16.8473C30.9275 15.9728 31.0495 15.8981 30.9892 15.4711C30.9723 15.3513 29.6334 11.8826 28.0139 7.76289C25.8124 2.16288 25.0306 0.237679 24.9159 0.134411C24.8216 0.0494996 24.688 -0.00225737 24.569 7.56848e-05C24.4626 0.00216316 21.5548 1.14475 18.1073 2.53912ZM26.88 8.2244C28.3451 11.9552 29.5528 15.0439 29.5639 15.0881C29.5773 15.1417 29.1574 15.343 28.3122 15.6885C27.6127 15.9743 26.9791 16.2243 26.9041 16.2439L26.7678 16.2796V13.1984V10.1172L26.5908 9.93773C26.4934 9.839 26.36 9.75827 26.2943 9.75827C26.1946 9.75827 26.0721 9.49696 25.5532 8.17731C24.7809 6.21294 24.7018 6.04907 24.4849 5.96478C24.3915 5.92843 24.0288 5.88582 23.6791 5.87004C22.6488 5.82357 21.9287 5.4865 21.1479 4.68522C20.8265 4.3554 20.734 4.294 20.5586 4.294C20.2527 4.294 7.64849 9.39799 7.44578 9.60392L7.29213 9.76011L5.44719 9.74384L3.6023 9.72757L4.08681 9.53239C4.35329 9.42501 8.98585 7.55494 14.3814 5.37666C19.7769 3.19839 24.197 1.42177 24.2038 1.42864C24.2106 1.43552 25.4148 4.4936 26.88 8.2244ZM20.5344 5.80484C21.1366 6.46178 22.3686 7.02834 23.3751 7.11135L23.8305 7.14893L24.3381 8.42505C24.6173 9.12687 24.833 9.71406 24.8174 9.72996C24.8018 9.7458 21.5073 9.75176 17.4963 9.74316L10.2037 9.72757L15.2305 7.68989C17.9952 6.56922 20.2866 5.65055 20.3224 5.64847C20.3582 5.64644 20.4536 5.7168 20.5344 5.80484ZM25.5566 18.3844V25.7827H13.3833H1.21004V18.3844V10.9862H13.3833H25.5566V18.3844ZM5.63118 12.2933C5.48019 12.3703 5.4444 12.4307 5.08774 13.2095C4.71025 14.034 3.99899 14.6992 3.12966 15.041C2.40314 15.3266 2.45438 15.0868 2.43464 18.2944C2.4155 21.4132 2.41574 21.4154 2.82794 21.5821C2.95403 21.6332 3.26036 21.7745 3.50867 21.8964C4.29733 22.2835 5.04165 23.1787 5.32727 24.0837C5.37451 24.2335 5.4705 24.3614 5.59199 24.4365C5.77726 24.551 5.9971 24.5543 13.4241 24.5545L21.0656 24.5548L21.2392 24.4067C21.3463 24.3152 21.4535 24.1276 21.5192 23.9164C21.6675 23.4392 22.1721 22.701 22.592 22.3468C22.7864 22.1828 23.1309 21.9613 23.3577 21.8545C24.1331 21.4893 24.1911 21.4541 24.2682 21.3008C24.3281 21.1816 24.342 20.5135 24.3302 18.3126L24.315 15.4779L24.1682 15.3195C24.0874 15.2324 23.9913 15.1611 23.9545 15.1611C23.8097 15.1611 22.9783 14.7139 22.6862 14.4789C22.1421 14.0411 21.6062 13.2528 21.465 12.682C21.443 12.5933 21.3441 12.4517 21.2453 12.3674L21.0656 12.2141L13.4241 12.215C7.40326 12.2157 5.75049 12.2323 5.63118 12.2933ZM20.6647 13.8874C21.1077 14.7604 21.8335 15.4962 22.6947 15.9453L23.1335 16.1742L23.1338 18.3957L23.134 20.6171L22.9978 20.6579C22.7094 20.7441 22.0232 21.2017 21.6463 21.5592C21.2589 21.9265 20.684 22.7356 20.532 23.1273L20.4545 23.3268H13.4073H6.36L6.20029 23.0045C5.72808 22.0511 4.89757 21.2096 3.95054 20.7247L3.63258 20.5619L3.63283 18.368L3.63313 16.1742L4.07385 15.9448C4.93403 15.4972 5.73856 14.6837 6.12531 13.8706L6.32766 13.4452L13.3833 13.4439L20.4389 13.4426L20.6647 13.8874ZM12.596 14.7657C11.2936 15.0503 10.1823 16.1624 9.84125 17.5224C9.63751 18.3349 9.78789 19.4125 10.2134 20.1894C10.507 20.7254 11.1225 21.3342 11.6572 21.6176C12.2939 21.9551 12.7114 22.0597 13.4136 22.0577C13.9251 22.0563 14.0996 22.0278 14.5367 21.8743C15.4567 21.5511 16.1715 20.9377 16.6052 20.0991C16.898 19.5328 17.0171 19.0338 17.0171 18.3731C17.0171 17.3176 16.7061 16.5624 15.9539 15.7918C15.5736 15.4023 15.3577 15.2371 15.0108 15.07C14.2208 14.6897 13.4109 14.5877 12.596 14.7657ZM13.88 15.966C14.6112 16.1211 15.26 16.6449 15.6063 17.3596C15.759 17.6748 15.7756 17.7722 15.7756 18.3537C15.7756 18.9514 15.7614 19.0286 15.5822 19.4123C15.1147 20.4127 14.115 20.9579 13.0329 20.8027C11.7869 20.6239 10.8826 19.474 10.9784 18.19C11.0568 17.1398 11.7706 16.2695 12.7777 15.9963C13.1874 15.8852 13.4634 15.8776 13.88 15.966ZM6.29647 17.5709C5.96779 17.7398 5.80275 18.0114 5.80275 18.3833C5.80275 18.9079 6.16825 19.2747 6.69104 19.2747C7.16798 19.2747 7.50901 18.9742 7.59707 18.4765C7.65533 18.1471 7.42937 17.746 7.087 17.5709C6.93838 17.4949 6.7602 17.4328 6.69104 17.4328C6.62187 17.4328 6.4443 17.4949 6.29647 17.5709ZM19.7064 17.5468C19.3406 17.7194 19.1755 18.0237 19.2111 18.4594C19.2363 18.7667 19.2657 18.8283 19.4885 19.039C19.7126 19.2509 19.7701 19.2747 20.0581 19.2744C20.4836 19.2741 20.7429 19.1116 20.9029 18.7449C21.2437 17.9637 20.4682 17.1872 19.7064 17.5468ZM6.85268 18.1235C6.99767 18.2419 7.02377 18.3883 6.9253 18.5309C6.82664 18.6736 6.60492 18.7023 6.49118 18.587C6.38223 18.4766 6.40276 18.185 6.52449 18.1131C6.66615 18.0294 6.7404 18.0318 6.85268 18.1235ZM20.2875 18.1695C20.4334 18.3174 20.4411 18.4349 20.3135 18.5643C20.2006 18.6788 19.9776 18.6904 19.8757 18.587C19.7601 18.4698 19.7912 18.2463 19.9377 18.1423C20.1109 18.0193 20.1417 18.0217 20.2875 18.1695Z" />
-                                </svg>
-                                <div class="calculator__input-text mt-1">Наличные</div>
-
-                            </label>
-                            <input name="calculator-type-payment" type="radio" id="onlain-btn">
-                            <label for="onlain-btn" class="calculator__onlain-btn calculator__cash-btn flex-column d-flex align-items-center">
-                                <svg class="mt-3" width="27" height="27" viewBox="0 0 27 27" fill="#828282">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0309 0.0340522C15.3959 0.167604 15.5158 0.0586413 10.5165 5.04924L5.82196 9.73565L3.87031 9.75322C2.00343 9.77 1.90489 9.77586 1.60218 9.88856C0.933342 10.1376 0.4103 10.6476 0.14171 11.3127L0.0197586 11.6148L0.0039872 18.1842C-0.00735347 22.8962 0.0049894 24.8414 0.0475565 25.0642C0.224207 25.9873 0.966995 26.746 1.88169 26.9376C2.27956 27.021 24.716 27.0207 25.1117 26.9373C26.0068 26.7487 26.7544 26.0011 26.9415 25.1072C26.9825 24.9111 27 22.8921 27 18.351C27 12.8663 26.9883 11.8294 26.9236 11.5809C26.8571 11.3254 26.8569 11.2506 26.9229 11.0026C27.0661 10.4647 26.9983 9.89875 26.7246 9.34581C26.5887 9.07142 26.0043 8.46408 22.3399 4.78905C20.0146 2.45693 17.993 0.47117 17.8475 0.376137C17.702 0.281158 17.4647 0.16275 17.32 0.113044C17.006 0.00508342 16.3575 -0.0346498 16.0309 0.0340522ZM16.8954 1.66712C17.0322 1.73371 17.7497 2.41213 18.8767 3.54039L20.6434 5.30922L18.4285 7.52542L16.2137 9.74156H12.1256H8.03761L12.0456 5.73183C14.25 3.52646 16.1251 1.68675 16.2125 1.64364C16.4301 1.53616 16.6413 1.54344 16.8954 1.66712ZM22.3177 6.9835C22.6011 7.26591 22.833 7.52098 22.833 7.55027C22.833 7.57961 22.3525 8.08464 21.7653 8.67256L20.6976 9.74156H19.5898H18.4819L20.1165 8.1058C21.0155 7.20613 21.7626 6.47003 21.7768 6.47003C21.7909 6.47003 22.0344 6.7011 22.3177 6.9835ZM24.5746 9.2465L25.1275 9.80678L24.8374 9.77464C24.6778 9.75696 24.1798 9.74224 23.7307 9.74203L22.9141 9.74156L23.4396 9.21389C23.7286 8.92368 23.9778 8.68623 23.9934 8.68623C24.0089 8.68623 24.2705 8.93834 24.5746 9.2465ZM25.028 11.4597C25.1082 11.5196 25.2226 11.6341 25.2824 11.7142C25.3907 11.8593 25.3913 11.8884 25.405 18.3249L25.4188 24.7898L25.3 25.0014C25.23 25.126 25.1004 25.2542 24.9849 25.3131C24.7942 25.4105 24.4798 25.4132 13.4928 25.4132H2.19674L1.98634 25.2949C1.86285 25.2255 1.73457 25.0956 1.67587 24.9804C1.57923 24.791 1.5758 24.5642 1.5758 18.3957C1.5758 13.1016 1.5882 11.978 1.64812 11.8373C1.73832 11.6256 1.93712 11.4387 2.13593 11.3789C2.22011 11.3536 7.32922 11.3371 13.5852 11.342L24.8824 11.3509L25.028 11.4597ZM4.06405 13.5339C3.71803 13.6557 3.41283 13.9445 3.26377 14.2911C3.15764 14.5378 3.15268 14.6224 3.16819 15.9061C3.1837 17.1869 3.19098 17.2727 3.30148 17.4794C3.44928 17.7558 3.78291 18.0437 4.04744 18.1229C4.18379 18.1638 4.79386 18.1838 5.88083 18.183C7.34678 18.182 7.53118 18.1722 7.72292 18.0851C7.98792 17.9646 8.36148 17.5477 8.43206 17.2937C8.46122 17.1885 8.48522 16.514 8.48538 15.7948C8.4857 14.3951 8.46982 14.2915 8.20028 13.938C8.13213 13.8486 7.94894 13.7048 7.79313 13.6185L7.50987 13.4616L5.92746 13.4483C4.49489 13.4363 4.31845 13.4444 4.06405 13.5339ZM6.90328 15.8097V16.6012H5.82196H4.74064V15.8097V15.0182H5.82196H6.90328V15.8097ZM3.10548 22.2472V23.0387H4.95163H6.79779V22.2472V21.4557H4.95163H3.10548V22.2472ZM8.80218 22.2472V23.0387H10.6483H12.4945V22.2472V21.4557H10.6483H8.80218V22.2472ZM14.4989 22.2472V23.0387H16.345H18.1912V22.2472V21.4557H16.345H14.4989V22.2472ZM20.1956 22.2472V23.0387H22.0418H23.8879V22.2472V21.4557H22.0418H20.1956V22.2472Z" />
-                                </svg>
-
-                                <div class="calculator__input-text mt-1">Онлайн на сайте</div>
-                            </label>
-                        </div>
-                        <div class="calculator__agreement-text">Нажимая на кнопку, вы принимаете Положение и Согласие  на обработку персональных данных.</div>
-                        <button class="button calculator__order-btn">Оформить заявку</button>
-                    </form>
-                    <div class="calculator__help-block">
-                        <div class="calculator__bold-text">Нужна помощь?</div>
-                        <div class="calculator__help-text">Готовы ответить на все Ваши вопросы. <br>
-                            Звоните или пишите на email.</div>
-                        <div class="calculator__help-info mt-3 d-flex justify-content-between">
-                            <div class="calculator__contacts"><a href="">+ 7(999) 999-99-99</a> </div>
-                            <div class="calculator__contacts"><a href="">shkafella@gmail.com</a></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-</div>
-<footer class="footer">
-    <div class="container">
-
-
-        <div class="row">
-            <div class="col-md-3">
-                <div class="footer__logo">
-                    <img class="img-fluid" src="image/logo_shkafella%20(1)%201.svg" alt="">
-                </div>
-                <div class="footer__text mt-2">Новосибирск</div>
-                <div class="footer__text footer__mail">info@shkafella.ru</div>
-                <div class="footer__icon-wrapper d-flex justify-content-between">
-                    <div class="header__icon d-flex align-items-center justify-content-center me-4">
-                        <svg width="27" height="17" fill="#343434">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M0.426708 0.0710977C0.339594 0.108006 0.208922 0.199597 0.136327 0.274622C-0.483347 0.915054 1.08223 4.73902 3.35893 8.14591C4.49606 9.84762 5.3936 10.9506 6.39991 11.8832C7.78677 13.1684 9.24079 14.0429 10.8293 14.5471C11.8372 14.8671 12.3841 14.9586 13.4675 14.9885C14.7829 15.0248 15.3344 14.9092 15.6266 14.5357C15.733 14.3997 15.7389 14.3215 15.7655 12.6979C15.7891 11.2598 15.8068 10.9732 15.8818 10.8129C15.9933 10.5743 16.1625 10.5097 16.6142 10.5332C17.4811 10.5782 18.6996 11.4567 20.6463 13.44C21.2176 14.0221 21.8006 14.5792 21.9419 14.6781C22.4113 15.0068 22.4507 15.0115 24.5608 14.9948C26.4242 14.9801 26.4586 14.978 26.6478 14.8657C27.09 14.6035 27.1147 14.162 26.7283 13.4283C26.2783 12.5738 25.2785 11.417 23.4073 9.58578C22.8095 9.00069 22.2826 8.45235 22.2365 8.36721C22.1903 8.28211 22.1525 8.10981 22.1525 7.98443C22.1525 7.78171 22.1999 7.69052 22.5787 7.16368C25.052 3.72411 26.1222 1.99546 26.3775 1.02804C26.5206 0.485649 26.4615 0.280312 26.1143 0.113293C25.8836 0.00236656 25.841 0 24.0613 0C22.8348 0 22.1775 0.018983 22.0394 0.0584593C21.7129 0.151712 21.4468 0.4073 21.2494 0.817068C20.2821 2.82552 19.2168 4.5579 18.19 5.79178C17.744 6.32773 17.0054 7.0085 16.7184 7.14812C16.26 7.37113 15.936 7.25311 15.8221 6.82149C15.7833 6.67446 15.7638 5.60684 15.763 3.59048C15.7619 0.741036 15.7564 0.567723 15.6615 0.368378C15.4809 -0.0109767 15.5708 -1.10647e-07 12.6386 0.000201299C10.121 0.000352356 10.03 0.00372612 9.86094 0.102014C9.6479 0.225881 9.51311 0.506898 9.55783 0.734087C9.57557 0.824269 9.73375 1.07548 9.90935 1.29239C10.3088 1.78585 10.4638 2.07215 10.5935 2.55569C10.6878 2.90719 10.6957 3.12895 10.6953 5.43353C10.6952 6.99646 10.6746 8.00059 10.6405 8.11786C10.4494 8.77435 9.68349 8.47415 8.75501 7.37874C7.54142 5.94707 6.38982 3.85367 5.25971 1.02497C5.05048 0.501308 4.83649 0.219939 4.55477 0.0979354C4.35066 0.00956694 4.18973 0.00226571 2.45938 0.00307134C1.01344 0.00372593 0.54888 0.0192851 0.426708 0.0710977Z"></path>
-                        </svg>
-
-                    </div>
-                    <div class="header__icon d-flex align-items-center justify-content-center">
-                        <svg width="20" height="17" fill="#343434">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M18.9264 0.0532133C18.819 0.0819544 16.8059 0.849075 14.4529 1.75798C12.0998 2.66684 8.05605 4.22871 5.46665 5.22876C2.87726 6.22885 0.660911 7.09531 0.541434 7.15426C0.303886 7.27145 0.0520766 7.51769 0.0130061 7.67098C-0.0516945 7.92492 0.129788 8.24826 0.45083 8.45103C0.667397 8.58781 5.01207 10.051 5.12194 10.0242C5.15796 10.0154 7.74059 8.41155 10.8611 6.46016C13.9816 4.50877 16.5835 2.89542 16.6432 2.87495C16.794 2.82321 16.996 2.8496 17.0456 2.92755C17.157 3.10284 17.3657 2.91001 10.2242 9.22996C8.01846 11.1819 7.85925 11.3312 7.92067 11.3894C7.957 11.4238 9.60421 12.6701 11.5812 14.1589C14.2652 16.1803 15.2252 16.8829 15.371 16.9327C15.6547 17.0297 15.9917 17.0213 16.2306 16.9112C16.4153 16.8261 16.6997 16.5656 16.7908 16.398C16.835 16.3167 20.0014 0.645194 20 0.515032C19.9982 0.352821 19.8567 0.125739 19.7167 0.0602927C19.5506 -0.0172735 19.2016 -0.0203899 18.9264 0.0532133Z"></path>
-                        </svg>
-
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="footer__text footer__list-subtitle">Каталог</div>
-                <ul>
-                    <li class="footer__list-text"><a href="#">Шкафы-купе</a></li>
-                    <li class="footer__list-text"><a href="#">Подобрать шкаф</a></li>
-                    <li class="footer__list-text"><a href="#">Мебель на заказ</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <div class="footer__text footer__list-subtitle">Информация для покупателей</div>
-                <ul>
-                    <li class="footer__list-text"><a href="#">Шкафы-купе</a></li>
-                    <li class="footer__list-text"><a href="#">Подобрать шкаф</a></li>
-                    <li class="footer__list-text"><a href="#">Мебель на заказ</a></li>
-                    <li class="footer__list-text"><a href="#">Шкафы-купе</a></li>
-                    <li class="footer__list-text"><a href="#">Подобрать шкаф</a></li>
-                    <li class="footer__list-text"><a href="#">Мебель на заказ</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 d-flex align-items-end flex-column">
-                <button class="button header__call-button d-flex align-items-center call-btn">Заказать звонок
-                </button>
-                <div class="footer__text mt-3">Ежедневно с 09.00 по 22.00</div>
-
-                <div class="footer__number"><a href="tel:79999999999">+ 7(999) 999-99-99</a></div>
-                <div class="footer__question">Задать вопрос</div>
-            </div>
-        </div>
-    </div>
-    <div class="footer__bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2">
-                    <div class="footer__bottom-text">Copyright © 2022 Шкафелла.
-                        Все права защищены.
-                    </div>
-                </div>
-                <div class="col-lg-10 d-flex justify-content-end">
-                    <div class="footer__bottom-text ">* Сайт shkafella54.ru не является
-                        публичной
-                        офертой ни при каких условиях и носит исключительно информационный характер. <br> Владельцы
-                        сайта
-                        shkafella54.ru оставляет за собой право изменять комплектацию, условия сервиса, акции и цены в
-                        любой
-                        период времени. Изображения изделий в каталоге и на сайте, в том числе цвет, текстуры и рисунки
-                        на
-                        мебели и другие элементы отличаются от оригинала.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+<!--<section class="calculator">-->
+<!--    <div class="container">-->
+<!--        <div class="subtitle mt-5">Сделайте расчет шкафа <span>оnline</span></div>-->
+<!--        <div data-tab-active="1" class="calculator-header d-flex">-->
+<!--            <div class="calculator-header__item">Размер шкафа</div>-->
+<!--            <div class="calculator-header__item">Внутреннее наполнение</div>-->
+<!--            <div class="calculator-header__item">Фасад</div>-->
+
+<!--        </div>-->
+<!--        <div class="calculator-content">-->
+<!--            <div class="row ">-->
+<!--                <div class="col-md-7 ">-->
+<!--                    <div class="calculator__content-block">-->
+<!--                        <div class="calculator__bold-text">Укажите размеры шкафа:</div>-->
+<!--                        <div class="row calculator__border">-->
+<!--                            <div class="col-4 d-flex  align-items-center mt-3">-->
+<!--                                <div class="calculator__input-text calculator__input-size">Ширина</div>-->
+<!--                                <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">-->
+<!--                                <div class="calculator__input-text calculator__input-size">мм</div>-->
+<!--                            </div>-->
+<!--                            <div class="col-4 d-flex  align-items-center mt-3">-->
+<!--                                <div class="calculator__input-text calculator__input-size">Высота</div>-->
+<!--                                <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">-->
+<!--                                <div class="calculator__input-text calculator__input-size">мм</div>-->
+<!--                            </div>-->
+<!--                            <div class="col-4 d-flex  align-items-center mt-3">-->
+<!--                                <div class="calculator__input-text calculator__input-size">Глубина</div>-->
+<!--                                <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">-->
+<!--                                <div class="calculator__input-text calculator__input-size">мм</div>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                        <div class="calculator__bold-text mt-4">Параметры шкафа:</div>-->
+<!--                        <div class="row calculator__border">-->
+<!--                            <div class="col-12 d-flex justify-content-between">-->
+<!--                                <input class="calculator__checkbox " name="cabinet-parameters" id="coupe" type="radio">-->
+<!--                                <label for="coupe">Шкаф-купе</label>-->
+<!--                                <input class="calculator__checkbox" name="cabinet-parameters" id="coupe1" type="radio">-->
+<!--                                <label for="coupe1">Только двери</label>-->
+<!--                                <input class="calculator__checkbox" name="cabinet-parameters" id="coupe2" type="radio">-->
+<!--                                <label for="coupe2">Только внутреннее наполнение</label>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                        <div class="calculator__bold-text mt-4">Количество секций шкафа:</div>-->
+<!--                        <div class="row calculator__border">-->
+<!--                            <div class="col-12 d-flex ">-->
+<!--                                <input class="calculator__checkbox" name="section-amount" id="section2" type="radio">-->
+<!--                                <label class="me-3" for="section2">Две секции</label>-->
+<!--                                <input class="calculator__checkbox" name="section-amount" id="section3" type="radio">-->
+<!--                                <label class="me-3" for="section3">Три секции</label>-->
+<!--                                <input class="calculator__checkbox" name="section-amount" id="section4" type="radio">-->
+<!--                                <label class="me-3" for="section4">Четыре секции</label>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                        <div class="calculator__bold-text mt-4">Расположение в пространстве:</div>-->
+<!--                        <div class="row calculator__border">-->
+<!--                            <div class="col-12 d-flex justify-content-between">-->
+<!--                                <input class="calculator__checkbox " name="location" id="location1" type="radio">-->
+<!--                                <label for="location1">Левый угол</label>-->
+<!--                                <input class="calculator__checkbox " name="location" id="location2" type="radio">-->
+<!--                                <label for="location2">Правый угол</label>-->
+<!--                                <input class="calculator__checkbox" name="location" id="location3" type="radio">-->
+<!--                                <label for="location3">Между стен</label>-->
+<!--                                <input class="calculator__checkbox" name="location" id="location4" type="radio">-->
+<!--                                <label for="location4">Отдельно стоящий шкаф</label>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-12 d-flex">-->
+<!--                                <input class="calculator__switch" type="checkbox" id="stretch-ceiling">-->
+<!--                                <label class="me-5" for="stretch-ceiling">Потолок натяжной</label>-->
+<!--                                <input class="calculator__switch" type="checkbox" id="zakladnaia">-->
+<!--                                <label for="zakladnaia">Требуется закладная</label>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-12 d-flex justify-content-end mt-5">-->
+<!--                                <div class="calculator__prev">-->
+<!--                                    <svg width="26" height="12" viewBox="0 0 26 12" fill="#828282">-->
+<!--                                        <path d="M25 6.75049C25.4142 6.75049 25.75 6.4147 25.75 6.00049C25.75 5.58627 25.4142 5.25049 25 5.25049L25 6.75049ZM0.469669 5.47016C0.176777 5.76305 0.176777 6.23792 0.469669 6.53082L5.24264 11.3038C5.53553 11.5967 6.01041 11.5967 6.3033 11.3038C6.59619 11.0109 6.59619 10.536 6.3033 10.2431L2.06066 6.00049L6.3033 1.75785C6.59619 1.46495 6.59619 0.990079 6.3033 0.697186C6.01041 0.404292 5.53553 0.404292 5.24264 0.697186L0.469669 5.47016ZM25 5.25049L1 5.25049L1 6.75049L25 6.75049L25 5.25049Z"/>-->
+<!--                                    </svg>-->
+<!--                                </div>-->
+<!--                                <div class="calculator__next">Далее</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-5 ">-->
+<!--                    <img class="img-fluid calculator__preview-img" src="image/calculator__doors-img.png">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="calculator-content">-->
+<!--            <div class="container">-->
+<!--                <div class="row ">-->
+<!--                    <div class="col-4"></div>-->
+<!--                    <div class="col-8">-->
+<!--                        <div class="canvas-block">-->
+<!--                            <canvas width="1000" height="650"></canvas>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        <div class="calculator-content"></div>-->
+
+
+<!--    </div>-->
+<!--</section>-->
+<!--<section class="advantage">-->
+<!--    <div class="container">-->
+<!--        <div class="subtitle subtitle-border">Преимущества наших шкафов</div>-->
+<!--        <div class="row mt-5 advantage__card-wrapper">-->
+
+
+<!--            <div class="col-md-3 h-100">-->
+<!--                <div class="card  ">-->
+<!--                    <img src="image/card-img.png" class="card-img-top" alt="...">-->
+<!--                    <div class="card-body ">-->
+<!--                        <h5 class="card-title">Надежная система купе</h5>-->
+
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <p class="card-text ">Рафиксы, футорки, П-образки - делают наши шкафы не только крепкими и-->
+<!--                            надежными, но и красивыми. Если у вас шкаф с внешней стойкой - вы не увидите снаружи-->
+<!--                            никакого крепежа - весь крепеж скрыт, и прячется внутри шкафа ittie wti4eqtiq43-tiq3t-->
+<!--                            rptietie oti340958itp849 435834er optue4ue uu439 u346u </p>-->
+<!--                    </div>-->
+
+
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-3 h-100">-->
+<!--                <div class="card  ">-->
+<!--                    <img src="image/card-img.png" class="card-img-top" alt="...">-->
+<!--                    <div class="card-body ">-->
+<!--                        <h5 class="card-title">Надежная система купе</h5>-->
+
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <p class="card-text ">Рафиксы, футорки, П-образки - делают наши шкафы не только крепкими и-->
+<!--                            надежными, но и красивыми. Если у вас шкаф с внешней стойкой - вы не увидите снаружи-->
+<!--                            никакого крепежа - весь крепеж скрыт, и прячется внутри шкафа ittie wti4eqtiq43-tiq3t-->
+<!--                            rptietie oti340958itp849 435834er optue4ue uu439 u346u </p>-->
+<!--                    </div>-->
+
+
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-3 h-100">-->
+<!--                <div class="card  ">-->
+<!--                    <img src="image/card-img.png" class="card-img-top" alt="...">-->
+<!--                    <div class="card-body ">-->
+<!--                        <h5 class="card-title">Надежная система купе</h5>-->
+
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <p class="card-text ">Рафиксы, футорки, П-образки - делают наши шкафы не только крепкими и-->
+<!--                            надежными, но и красивыми. Если у вас шкаф с внешней стойкой - вы не увидите снаружи-->
+<!--                            никакого крепежа - весь крепеж скрыт, и прячется внутри шкафа ittie wti4eqtiq43-tiq3t-->
+<!--                            rptietie oti340958itp849 435834er optue4ue uu439 u346u </p>-->
+<!--                    </div>-->
+
+
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-3 h-100">-->
+<!--                <div class="card  ">-->
+<!--                    <img src="image/card-img.png" class="card-img-top" alt="...">-->
+<!--                    <div class="card-body ">-->
+<!--                        <h5 class="card-title">Надежная система купе</h5>-->
+
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <p class="card-text ">Рафиксы, футорки, П-образки - делают наши шкафы не только крепкими и-->
+<!--                            надежными, но и красивыми. Если у вас шкаф с внешней стойкой - вы не увидите снаружи-->
+<!--                            никакого крепежа - весь крепеж скрыт, и прячется внутри шкафа ittie wti4eqtiq43-tiq3t-->
+<!--                            rptietie oti340958itp849 435834er optue4ue uu439 u346u </p>-->
+<!--                    </div>-->
+
+
+<!--                </div>-->
+<!--            </div>-->
+
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</section>-->
+<!--<section class="design">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-5">-->
+<!--                <div class="subtitle design__subtitle">Бесплатный дизайн проект</div>-->
+<!--                <div class="design__descr mt-3">Заполните форму и получите индивидуальный проект шкафа по Вашим-->
+<!--                    размерам-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-7 d-flex align-items-center justify-content-center">-->
+<!--                <button class="button design__button d-flex align-items-center justify-content-center">Пригласить-->
+<!--                    замерщика-->
+<!--                </button>-->
+<!--                <img class="design-img" src="image/tap%201%20(Traced).png" alt="">-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<!--<section class="additional-services">-->
+<!--    <div class="container">-->
+<!--        <div class="subtitle">У нас также можно заказать <span>кухню</span> и другую <span>мебель</span></div>-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-4 d-flex justify-content-center">-->
+<!--                <div class="additional-services__block d-flex flex-column">-->
+<!--                    <img class="img-fluid additional-services__img" src="image/servis.png" alt="">-->
+<!--                    <div class="additional-services__sub-text">Кухни</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 d-flex justify-content-center">-->
+<!--                <div class="additional-services__block d-flex flex-column">-->
+<!--                    <img class="img-fluid additional-services__img" src="image/servis.png" alt="">-->
+<!--                    <div class="additional-services__sub-text">Кухни</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 d-flex justify-content-center">-->
+<!--                <div class="additional-services__block d-flex flex-column">-->
+<!--                    <img class="img-fluid additional-services__img" src="image/servis.png" alt="">-->
+<!--                    <div class="additional-services__sub-text">Кухни</div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="subtitle"></div>-->
+<!--</section>-->
+<!--<section class="projects">-->
+<!--    <div class="container">-->
+<!--        <div class="subtitle subtitle-border">Заказанные проекты</div>-->
+<!--        <div class=" projects-cards">-->
+
+<!--            <div class="swiper projects__swiper">-->
+<!--                <div class="swiper-wrapper">-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="row m-0 projects__card-wrapper ">-->
+<!--                            <div class="col-md-6 d-flex justify-content-start ps-0">-->
+<!--                                <div class="card h-100">-->
+
+<!--                                    <img src="image/projects.png" class="card-img-top" alt="...">-->
+<!--                                    <div class="card-body">-->
+<!--                                        <h5 class="card-title">Шкаф купе с белым стеклом</h5>-->
+<!--                                        <p class="card-text">Встроенный шкаф купе с красивыми белыми дверьми из белого-->
+<!--                                            стекла. Внутри 3 sf dsf sdf sdf dsf dsf-->
+<!--                                            ящика и полки, и 2 отсека со штангами</p>-->
+<!--                                    </div>-->
+<!--                                    <ul class="list-group list-group-flush">-->
+<!--                                        <li class="list-group-item"><span> Материал:</span>&nbsp; ЛДСП "EGGER"</li>-->
+<!--                                        <li class="list-group-item"><span> Кромка:&nbsp;</span> ПВХ "REHAU"</li>-->
+<!--                                        <li class="list-group-item"><span> Профиль:&nbsp;</span> Алюм. Система "MODUS"-->
+<!--                                        </li>-->
+<!--                                        <li class="list-group-item"><span> Фурнитура: &nbsp;</span> "GTV"</li>-->
+
+<!--                                    </ul>-->
+<!--                                    <div class="card-footer">-->
+<!--                                        <div class="row">-->
+<!--                                            <div class="col-6">-->
+<!--                                                <div class="card-footer__price">Цена 95 000 руб.</div>-->
+<!--                                            </div>-->
+<!--                                            <div class="col-6">-->
+<!--                                                <button class="button card-footer__button">Заказать такой же</button>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="projects-cards__border"></div>-->
+<!--                                </div>-->
+
+<!--                            </div>-->
+<!--                            <div class="col-md-6 d-flex justify-content-end ps-0">-->
+<!--                                <div class="card h-100">-->
+
+<!--                                    <img src="image/projects.png" class="card-img-top" alt="...">-->
+<!--                                    <div class="card-body">-->
+<!--                                        <h5 class="card-title">Шкаф купе с белым стеклом</h5>-->
+<!--                                        <p class="card-text">Встроенный шкаф купе с красивыми белыми дверьми из белого-->
+<!--                                            стекла. Внутри 3-->
+<!--                                            ящика и полки, и 2 отсека со штангами</p>-->
+<!--                                    </div>-->
+<!--                                    <ul class="list-group list-group-flush">-->
+<!--                                        <li class="list-group-item"><span> Материал:</span>&nbsp; ЛДСП "EGGER"</li>-->
+<!--                                        <li class="list-group-item"><span> Кромка:&nbsp;</span> ПВХ "REHAU"</li>-->
+<!--                                        <li class="list-group-item"><span> Профиль:&nbsp;</span> Алюм. Система "MODUS"-->
+<!--                                        </li>-->
+<!--                                        <li class="list-group-item"><span> Фурнитура: &nbsp;</span> "GTV"</li>-->
+
+<!--                                    </ul>-->
+<!--                                    <div class="card-footer">-->
+<!--                                        <div class="row">-->
+<!--                                            <div class="col-6">-->
+<!--                                                <div class="card-footer__price">Цена 95 000 руб.</div>-->
+<!--                                            </div>-->
+<!--                                            <div class="col-6">-->
+<!--                                                <button class="button card-footer__button">Заказать такой же</button>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="projects-cards__border"></div>-->
+<!--                                </div>-->
+
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                        <div style="height: 10px; width: 100%"></div>-->
+<!--                    </div>-->
+
+
+<!--                </div>-->
+
+
+<!--            </div>-->
+<!--            <div class="swiper-navigation">-->
+<!--                <div id="project__swiperPrev"></div>-->
+<!--                <div id="project__swiperNext"></div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<!--<section class="send">-->
+<!--    <div class="send-wrapper">-->
+<!--        <div class="container">-->
+<!--            <div class="subtitle text-center">Есть свой проект?</div>-->
+<!--            <div class="send__descr text-center mt-2">Отправьте нам на просчет. <br>-->
+<!--                Заполните форму, наш менеджер свяжется с Вами и сделает перерасчет стоимости мебели-->
+<!--            </div>-->
+<!--            <form>-->
+<!--                <div class="row send__form-wrapper d-flex align-items-end h-100">-->
+
+<!--                    <div class="col-lg-4">-->
+<!--                        <div class="modal__input-wrapper mt-3">-->
+<!--                            <div class="input-text">Телефон</div>-->
+<!--                            <input required="" class="modal-input send__input" type="text">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4">-->
+<!--                        <div class="modal__input-wrapper mt-3">-->
+<!--                            <div class="input-text">Электронная почта</div>-->
+<!--                            <input required="" class="modal-input send__input" type="text">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4">-->
+<!--                        <div class="modal__input-wrapper d-flex align-items-end h-100 mt-3  ">-->
+
+<!--                            <input id="send-project" required="" class="modal-input" type="file">-->
+<!--                            <label class="send__input-file d-flex  align-items-center justify-content-center"-->
+<!--                                   for="send-project"><span>Прикрепить файл</span> </label>-->
+<!--                            <label for="send-project" class="send__progres-btn">-->
+<!--                                <div class="send__progres"></div>-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-12">-->
+<!--                        <div class="modal__input-wrapper h-100 mt-3  ">-->
+<!--                            <div class="input-text">Описание проекта</div>-->
+<!--                            <textarea class="send__descr-project"></textarea>-->
+
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                    <div class="col-12">-->
+<!--                        <div class="send__personal-message">Нажимая на кнопку, вы принимаете Положение и Согласие на-->
+<!--                            обработку персональных данных.-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                    <div class="col-12">-->
+<!--                        <button type="submit" class="button send__button">Отправить заявку</button>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<!--<section class="reviews">-->
+<!--    <div class="container">-->
+<!--        <div class="subtitle subtitle-border">Отзывы наших клиентов</div>-->
+
+<!--    </div>-->
+<!--    <div class="container-fluid">-->
+<!--        <div class="reviews__swiper-wrapper">-->
+<!--            <div class="swiper reviews-swiper">-->
+<!--                <div class="swiper-wrapper">-->
+<!--                    <div class="swiper-slide ">-->
+<!--                        &lt;!&ndash;                        <img class="reviews__preview-img" src="https://i.ytimg.com/vi/MzYZSooe6pM/maxresdefault.jpg"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                             alt="">&ndash;&gt;-->
+<!--                        <div class="embed-responsive embed-responsive-1by1">-->
+<!--                            <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="reviews-wrapper">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-7 d-flex align-items-center">-->
+<!--                                    <img class="reviews__user" src="image/user.png" alt="">-->
+<!--                                    <div class="reviews__info-user d-flex flex-column justify-content-center">-->
+<!--                                        <div class="reviews__username">raa79.profi</div>-->
+<!--                                        <div class="reviews__date">22 мая в 22:17</div>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-5 d-flex ">-->
+<!--                                    <div class="grade-img">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="reviews__description">-->
+<!--                                Заказывали шкаф купе. Обзвонил миллион фирм ,за сумасшедшие деньги срок ожидания от-->
+<!--                                30,до 45 дней ....шок. И вот они ....спасатели, 3 дня и ... <span>подробнее</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="reviews-wrapper">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-7 d-flex align-items-center">-->
+<!--                                    <img class="reviews__user" src="image/user.png" alt="">-->
+<!--                                    <div class="reviews__info-user d-flex flex-column justify-content-center">-->
+<!--                                        <div class="reviews__username">raa79.profi</div>-->
+<!--                                        <div class="reviews__date">22 мая в 22:17</div>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-5 d-flex ">-->
+<!--                                    <div class="grade-img">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="reviews__description">-->
+<!--                                Заказывали шкаф купе. Обзвонил миллион фирм ,за сумасшедшие деньги ...-->
+<!--                                <span>подробнее</span>-->
+<!--                            </div>-->
+<!--                            <div class="reviews__photo-wrapper d-flex justify-content-between align-items-center">-->
+<!--                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">-->
+<!--                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">-->
+<!--                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">-->
+<!--                                <span>все фото</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide ">-->
+<!--                        &lt;!&ndash;                        <img class="reviews__preview-img" src="https://i.ytimg.com/vi/MzYZSooe6pM/maxresdefault.jpg"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                             alt="">&ndash;&gt;-->
+<!--                        <div class="embed-responsive embed-responsive-1by1">-->
+<!--                            <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="reviews-wrapper">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-7 d-flex align-items-center">-->
+<!--                                    <img class="reviews__user" src="image/user.png" alt="">-->
+<!--                                    <div class="reviews__info-user d-flex flex-column justify-content-center">-->
+<!--                                        <div class="reviews__username">raa79.profi</div>-->
+<!--                                        <div class="reviews__date">22 мая в 22:17</div>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-5 d-flex ">-->
+<!--                                    <div class="grade-img">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="reviews__description">-->
+<!--                                Заказывали шкаф купе. Обзвонил миллион фирм ,за сумасшедшие деньги срок ожидания от-->
+<!--                                30,до 45 дней ....шок. И вот они ....спасатели, 3 дня и ... <span>подробнее</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="reviews-wrapper">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-7 d-flex align-items-center">-->
+<!--                                    <img class="reviews__user" src="image/user.png" alt="">-->
+<!--                                    <div class="reviews__info-user d-flex flex-column justify-content-center">-->
+<!--                                        <div class="reviews__username">raa79.profi</div>-->
+<!--                                        <div class="reviews__date">22 мая в 22:17</div>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-5 d-flex ">-->
+<!--                                    <div class="grade-img">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                        <img src="image/Star%201.png" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="reviews__description">-->
+<!--                                Заказывали шкаф купе. Обзвонил миллион фирм ,за сумасшедшие деньги ...-->
+<!--                                <span>подробнее</span>-->
+<!--                            </div>-->
+<!--                            <div class="reviews__photo-wrapper d-flex justify-content-between align-items-center">-->
+<!--                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">-->
+<!--                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">-->
+<!--                                <img class="reviews__photo" src="image/Rectangle%20108.png" alt="">-->
+<!--                                <span>все фото</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="reviews__swiper-button-next"></div>-->
+<!--            <div class="reviews__swiper-button-prev"></div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-12 d-flex justify-content-center">-->
+<!--                <a href="">-->
+<!--                    <img class="reviews__link-img me-md-4" src="image/Group%20119.svg" alt="">-->
+<!--                </a>-->
+<!--                <a href="">-->
+<!--                    <img class="reviews__link-img ms-md-4" src="image/Group%20116.png" alt="">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+<!--</section>-->
+<!--<section class="team">-->
+<!--    <div class="container position-relative">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-7">-->
+<!--                <div class="subtitle subtitle-border">Наша команда</div>-->
+<!--                <div class="team__description">Мы <b>7 лет</b> производим для вас шкафы купе, и за это время мы точно-->
+<!--                    поняли что вам нужно!-->
+<!--                </div>-->
+<!--                <div class="team__description">Широкая линейка внутреннего наполнения почти <b> 800</b> вариантов, и-->
+<!--                    почти <b> 1700</b> комбинаций дверей купе, позволит вам выбрать шкаф который подходит именно вам.-->
+<!--                </div>-->
+<!--                <div class="team__description"> С доводчиком на двери купе, или без него. Под натяжной потолок или под-->
+<!--                    крашенный. С ящиками или без них. На тонкой системе купе или на классической. Выбор огромный. С-->
+<!--                    установкой в угол или между стен, или в нишу.-->
+<!--                </div>-->
+<!--                <div class="team__description team__paragraph"> Не хотите ждать? Всего 3 дня и шкаф у вас!</div>-->
+<!--                <div class="team__description  team__paragraph">По вашим размерам? А как по другому!</div>-->
+<!--                <div class="team__description   team__paragraph"> Крепкий так чтобы навсегда? Конечно!</div>-->
+
+
+<!--            </div>-->
+<!--            <div class=" col-lg-12 col-xl-5  img-fluid  d-flex justify-content-xl-end">-->
+<!--                <div class="team__photo">-->
+<!--                    <img class=""-->
+<!--                         src="image/3_1x%203.png" alt="">-->
+<!--                    <div class="team__borders"></div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--            &lt;!&ndash;            <div class="btn-scroll d-flex align-items-center justify-content-center">&ndash;&gt;-->
+<!--            &lt;!&ndash;                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffff" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">&ndash;&gt;-->
+<!--            &lt;!&ndash;                    <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>&ndash;&gt;-->
+<!--            &lt;!&ndash;                </svg>&ndash;&gt;-->
+<!--            &lt;!&ndash;            </div>&ndash;&gt;-->
+<!--            <div class="btn-scroll">-->
+<!--                <img class="" src="image/sticky-arrow.svg" alt="">-->
+<!--            </div>-->
+
+<!--        </div>-->
+
+<!--    </div>-->
+
+<!--</section>-->
+<!--<div class="modal-background modal-call">-->
+<!--    <div class="modal-wrapper">-->
+<!--        <div class="modal__btn-close"><img src="image/modal__btn-close.svg" alt=""></div>-->
+<!--        <div class="modal-title">Мы готовы перезвонить Вам, <br> чтобы согласовать время <br> и дату приезда</div>-->
+<!--        <form action="">-->
+<!--            <div class="modal__input-wrapper mt-3">-->
+<!--                <div class="input-text">Имя</div>-->
+<!--                <input required class="modal-input" type="text">-->
+<!--            </div>-->
+<!--            <div class="modal__input-wrapper mt-3">-->
+<!--                <div class="input-text">Телефон</div>-->
+<!--                <input data-mask="+7 (___) ___-____" data-slots="" required class="modal-input" type="text">-->
+<!--            </div>-->
+<!--            <div class="modal__consent-text ">Нажимая на кнопку, вы принимаете Положение и Согласие на обработку-->
+<!--                персональных данных.-->
+<!--            </div>-->
+<!--            <button class="button modal__send-btn">Отправить заявку</button>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="modal-background modal-calc">-->
+
+<!--    <div class="modal-wrapper">-->
+<!--        &lt;!&ndash;        <div class="calculator-total-header">&ndash;&gt;-->
+<!--        &lt;!&ndash;            <div class="calculator-total-subtitle">Расчет стоимости сформирован</div>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </div>&ndash;&gt;-->
+<!--        <div class="calculator-body">-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-7">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-6">-->
+<!--                            <div class="canvas-result-img">-->
+<!--                                <img class="img-fluid" src="image/Rectangle%2091%20(1).png" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="calculator__bold-text calculator__result-list-subtitle ">Выбранные параметры-->
+<!--                                дверей:-->
+<!--                            </div>-->
+<!--                            <ul class="calculator__result-list">-->
+<!--                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>-->
+<!--                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>-->
+<!--                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>-->
+<!--                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>-->
+<!--                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>-->
+<!--                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="col-md-6">-->
+<!--                            <div class="canvas-result-img">-->
+<!--                                <img class="img-fluid" src="image/Rectangle%2091%20(1).png" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="calculator__bold-text calculator__result-list-subtitle ">Выбранные параметры-->
+<!--                                дверей:-->
+<!--                            </div>-->
+<!--                            <ul class="calculator__result-list">-->
+<!--                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>-->
+<!--                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>-->
+<!--                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>-->
+<!--                                <li class="calculator__list-item">дверь №1: дсп белый вставка белая</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+
+
+<!--                    </div>-->
+<!--                    <div class="calculator__prev-steep ">-->
+<!--                        Вернуться и изменить параметры-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-5 px-5">-->
+<!--                    <div class="calculator__price-wrapper align-items-center d-flex justify-content-between">-->
+<!--                        <div class="calculator__price-text">Стоимость</div>-->
+<!--                        <div class="calculator__price-border"></div>-->
+<!--                        <div class="calculator__price-result">35 987руб</div>-->
+<!--                    </div>-->
+<!--                    <div class="calculator__bold-text mt-4">Выбранные параметры дверей:</div>-->
+<!--                    <form action="">-->
+<!--                        <div class="calculator__input-block">-->
+<!--                            <div class="calculator__input-text">Имя</div>-->
+<!--                            <input class="calculator__input" type="text">-->
+<!--                        </div>-->
+<!--                        <div class="calculator__input-block">-->
+<!--                            <div class="calculator__input-text">Телефон <b>*</b></div>-->
+<!--                            <input class="calculator__input" type="text">-->
+<!--                        </div>-->
+<!--                        <div class="calculator__input-block">-->
+<!--                            <div class="calculator__input-text">Электронная почта <b>*</b></div>-->
+<!--                            <input class="calculator__input" type="text">-->
+<!--                        </div>-->
+<!--                        <div class="calculator__bold-text mt-4">Выберите способ оплаты</div>-->
+<!--                        <div class="calculator__radio-button-wrapper d-flex mt-2">-->
+<!--                            <input checked name="calculator-type-payment" type="radio" id="cash-btn">-->
+<!--                            <label for="cash-btn" class="calculator__cash-btn flex-column d-flex align-items-center ">-->
+<!--                                <svg class="mt-3" width="31" height="27" viewBox="0 0 31 27" fill="#828282">-->
+<!--                                    <path fill-rule="evenodd" clip-rule="evenodd"-->
+<!--                                          d="M18.1073 2.53912C14.6597 3.93348 9.29315 6.10188 6.18158 7.3578C2.72353 8.75358 0.451548 9.70276 0.337204 9.79946C0.234367 9.88646 0.117056 10.0164 0.0765992 10.0882C0.0199724 10.1887 0.00259069 12.0922 0.00089491 18.3722C-0.0014065 27.2793 -0.0210896 26.7887 0.344169 26.9413C0.470686 26.9941 3.80053 27.008 13.4946 26.996L26.4755 26.9799L26.6217 26.8076L26.7678 26.6353V22.1357V17.6361L28.7406 16.8473C30.9275 15.9728 31.0495 15.8981 30.9892 15.4711C30.9723 15.3513 29.6334 11.8826 28.0139 7.76289C25.8124 2.16288 25.0306 0.237679 24.9159 0.134411C24.8216 0.0494996 24.688 -0.00225737 24.569 7.56848e-05C24.4626 0.00216316 21.5548 1.14475 18.1073 2.53912ZM26.88 8.2244C28.3451 11.9552 29.5528 15.0439 29.5639 15.0881C29.5773 15.1417 29.1574 15.343 28.3122 15.6885C27.6127 15.9743 26.9791 16.2243 26.9041 16.2439L26.7678 16.2796V13.1984V10.1172L26.5908 9.93773C26.4934 9.839 26.36 9.75827 26.2943 9.75827C26.1946 9.75827 26.0721 9.49696 25.5532 8.17731C24.7809 6.21294 24.7018 6.04907 24.4849 5.96478C24.3915 5.92843 24.0288 5.88582 23.6791 5.87004C22.6488 5.82357 21.9287 5.4865 21.1479 4.68522C20.8265 4.3554 20.734 4.294 20.5586 4.294C20.2527 4.294 7.64849 9.39799 7.44578 9.60392L7.29213 9.76011L5.44719 9.74384L3.6023 9.72757L4.08681 9.53239C4.35329 9.42501 8.98585 7.55494 14.3814 5.37666C19.7769 3.19839 24.197 1.42177 24.2038 1.42864C24.2106 1.43552 25.4148 4.4936 26.88 8.2244ZM20.5344 5.80484C21.1366 6.46178 22.3686 7.02834 23.3751 7.11135L23.8305 7.14893L24.3381 8.42505C24.6173 9.12687 24.833 9.71406 24.8174 9.72996C24.8018 9.7458 21.5073 9.75176 17.4963 9.74316L10.2037 9.72757L15.2305 7.68989C17.9952 6.56922 20.2866 5.65055 20.3224 5.64847C20.3582 5.64644 20.4536 5.7168 20.5344 5.80484ZM25.5566 18.3844V25.7827H13.3833H1.21004V18.3844V10.9862H13.3833H25.5566V18.3844ZM5.63118 12.2933C5.48019 12.3703 5.4444 12.4307 5.08774 13.2095C4.71025 14.034 3.99899 14.6992 3.12966 15.041C2.40314 15.3266 2.45438 15.0868 2.43464 18.2944C2.4155 21.4132 2.41574 21.4154 2.82794 21.5821C2.95403 21.6332 3.26036 21.7745 3.50867 21.8964C4.29733 22.2835 5.04165 23.1787 5.32727 24.0837C5.37451 24.2335 5.4705 24.3614 5.59199 24.4365C5.77726 24.551 5.9971 24.5543 13.4241 24.5545L21.0656 24.5548L21.2392 24.4067C21.3463 24.3152 21.4535 24.1276 21.5192 23.9164C21.6675 23.4392 22.1721 22.701 22.592 22.3468C22.7864 22.1828 23.1309 21.9613 23.3577 21.8545C24.1331 21.4893 24.1911 21.4541 24.2682 21.3008C24.3281 21.1816 24.342 20.5135 24.3302 18.3126L24.315 15.4779L24.1682 15.3195C24.0874 15.2324 23.9913 15.1611 23.9545 15.1611C23.8097 15.1611 22.9783 14.7139 22.6862 14.4789C22.1421 14.0411 21.6062 13.2528 21.465 12.682C21.443 12.5933 21.3441 12.4517 21.2453 12.3674L21.0656 12.2141L13.4241 12.215C7.40326 12.2157 5.75049 12.2323 5.63118 12.2933ZM20.6647 13.8874C21.1077 14.7604 21.8335 15.4962 22.6947 15.9453L23.1335 16.1742L23.1338 18.3957L23.134 20.6171L22.9978 20.6579C22.7094 20.7441 22.0232 21.2017 21.6463 21.5592C21.2589 21.9265 20.684 22.7356 20.532 23.1273L20.4545 23.3268H13.4073H6.36L6.20029 23.0045C5.72808 22.0511 4.89757 21.2096 3.95054 20.7247L3.63258 20.5619L3.63283 18.368L3.63313 16.1742L4.07385 15.9448C4.93403 15.4972 5.73856 14.6837 6.12531 13.8706L6.32766 13.4452L13.3833 13.4439L20.4389 13.4426L20.6647 13.8874ZM12.596 14.7657C11.2936 15.0503 10.1823 16.1624 9.84125 17.5224C9.63751 18.3349 9.78789 19.4125 10.2134 20.1894C10.507 20.7254 11.1225 21.3342 11.6572 21.6176C12.2939 21.9551 12.7114 22.0597 13.4136 22.0577C13.9251 22.0563 14.0996 22.0278 14.5367 21.8743C15.4567 21.5511 16.1715 20.9377 16.6052 20.0991C16.898 19.5328 17.0171 19.0338 17.0171 18.3731C17.0171 17.3176 16.7061 16.5624 15.9539 15.7918C15.5736 15.4023 15.3577 15.2371 15.0108 15.07C14.2208 14.6897 13.4109 14.5877 12.596 14.7657ZM13.88 15.966C14.6112 16.1211 15.26 16.6449 15.6063 17.3596C15.759 17.6748 15.7756 17.7722 15.7756 18.3537C15.7756 18.9514 15.7614 19.0286 15.5822 19.4123C15.1147 20.4127 14.115 20.9579 13.0329 20.8027C11.7869 20.6239 10.8826 19.474 10.9784 18.19C11.0568 17.1398 11.7706 16.2695 12.7777 15.9963C13.1874 15.8852 13.4634 15.8776 13.88 15.966ZM6.29647 17.5709C5.96779 17.7398 5.80275 18.0114 5.80275 18.3833C5.80275 18.9079 6.16825 19.2747 6.69104 19.2747C7.16798 19.2747 7.50901 18.9742 7.59707 18.4765C7.65533 18.1471 7.42937 17.746 7.087 17.5709C6.93838 17.4949 6.7602 17.4328 6.69104 17.4328C6.62187 17.4328 6.4443 17.4949 6.29647 17.5709ZM19.7064 17.5468C19.3406 17.7194 19.1755 18.0237 19.2111 18.4594C19.2363 18.7667 19.2657 18.8283 19.4885 19.039C19.7126 19.2509 19.7701 19.2747 20.0581 19.2744C20.4836 19.2741 20.7429 19.1116 20.9029 18.7449C21.2437 17.9637 20.4682 17.1872 19.7064 17.5468ZM6.85268 18.1235C6.99767 18.2419 7.02377 18.3883 6.9253 18.5309C6.82664 18.6736 6.60492 18.7023 6.49118 18.587C6.38223 18.4766 6.40276 18.185 6.52449 18.1131C6.66615 18.0294 6.7404 18.0318 6.85268 18.1235ZM20.2875 18.1695C20.4334 18.3174 20.4411 18.4349 20.3135 18.5643C20.2006 18.6788 19.9776 18.6904 19.8757 18.587C19.7601 18.4698 19.7912 18.2463 19.9377 18.1423C20.1109 18.0193 20.1417 18.0217 20.2875 18.1695Z"/>-->
+<!--                                </svg>-->
+<!--                                <div class="calculator__input-text mt-1">Наличные</div>-->
+
+<!--                            </label>-->
+<!--                            <input name="calculator-type-payment" type="radio" id="onlain-btn">-->
+<!--                            <label for="onlain-btn"-->
+<!--                                   class="calculator__onlain-btn calculator__cash-btn flex-column d-flex align-items-center">-->
+<!--                                <svg class="mt-3" width="27" height="27" viewBox="0 0 27 27" fill="#828282">-->
+<!--                                    <path fill-rule="evenodd" clip-rule="evenodd"-->
+<!--                                          d="M16.0309 0.0340522C15.3959 0.167604 15.5158 0.0586413 10.5165 5.04924L5.82196 9.73565L3.87031 9.75322C2.00343 9.77 1.90489 9.77586 1.60218 9.88856C0.933342 10.1376 0.4103 10.6476 0.14171 11.3127L0.0197586 11.6148L0.0039872 18.1842C-0.00735347 22.8962 0.0049894 24.8414 0.0475565 25.0642C0.224207 25.9873 0.966995 26.746 1.88169 26.9376C2.27956 27.021 24.716 27.0207 25.1117 26.9373C26.0068 26.7487 26.7544 26.0011 26.9415 25.1072C26.9825 24.9111 27 22.8921 27 18.351C27 12.8663 26.9883 11.8294 26.9236 11.5809C26.8571 11.3254 26.8569 11.2506 26.9229 11.0026C27.0661 10.4647 26.9983 9.89875 26.7246 9.34581C26.5887 9.07142 26.0043 8.46408 22.3399 4.78905C20.0146 2.45693 17.993 0.47117 17.8475 0.376137C17.702 0.281158 17.4647 0.16275 17.32 0.113044C17.006 0.00508342 16.3575 -0.0346498 16.0309 0.0340522ZM16.8954 1.66712C17.0322 1.73371 17.7497 2.41213 18.8767 3.54039L20.6434 5.30922L18.4285 7.52542L16.2137 9.74156H12.1256H8.03761L12.0456 5.73183C14.25 3.52646 16.1251 1.68675 16.2125 1.64364C16.4301 1.53616 16.6413 1.54344 16.8954 1.66712ZM22.3177 6.9835C22.6011 7.26591 22.833 7.52098 22.833 7.55027C22.833 7.57961 22.3525 8.08464 21.7653 8.67256L20.6976 9.74156H19.5898H18.4819L20.1165 8.1058C21.0155 7.20613 21.7626 6.47003 21.7768 6.47003C21.7909 6.47003 22.0344 6.7011 22.3177 6.9835ZM24.5746 9.2465L25.1275 9.80678L24.8374 9.77464C24.6778 9.75696 24.1798 9.74224 23.7307 9.74203L22.9141 9.74156L23.4396 9.21389C23.7286 8.92368 23.9778 8.68623 23.9934 8.68623C24.0089 8.68623 24.2705 8.93834 24.5746 9.2465ZM25.028 11.4597C25.1082 11.5196 25.2226 11.6341 25.2824 11.7142C25.3907 11.8593 25.3913 11.8884 25.405 18.3249L25.4188 24.7898L25.3 25.0014C25.23 25.126 25.1004 25.2542 24.9849 25.3131C24.7942 25.4105 24.4798 25.4132 13.4928 25.4132H2.19674L1.98634 25.2949C1.86285 25.2255 1.73457 25.0956 1.67587 24.9804C1.57923 24.791 1.5758 24.5642 1.5758 18.3957C1.5758 13.1016 1.5882 11.978 1.64812 11.8373C1.73832 11.6256 1.93712 11.4387 2.13593 11.3789C2.22011 11.3536 7.32922 11.3371 13.5852 11.342L24.8824 11.3509L25.028 11.4597ZM4.06405 13.5339C3.71803 13.6557 3.41283 13.9445 3.26377 14.2911C3.15764 14.5378 3.15268 14.6224 3.16819 15.9061C3.1837 17.1869 3.19098 17.2727 3.30148 17.4794C3.44928 17.7558 3.78291 18.0437 4.04744 18.1229C4.18379 18.1638 4.79386 18.1838 5.88083 18.183C7.34678 18.182 7.53118 18.1722 7.72292 18.0851C7.98792 17.9646 8.36148 17.5477 8.43206 17.2937C8.46122 17.1885 8.48522 16.514 8.48538 15.7948C8.4857 14.3951 8.46982 14.2915 8.20028 13.938C8.13213 13.8486 7.94894 13.7048 7.79313 13.6185L7.50987 13.4616L5.92746 13.4483C4.49489 13.4363 4.31845 13.4444 4.06405 13.5339ZM6.90328 15.8097V16.6012H5.82196H4.74064V15.8097V15.0182H5.82196H6.90328V15.8097ZM3.10548 22.2472V23.0387H4.95163H6.79779V22.2472V21.4557H4.95163H3.10548V22.2472ZM8.80218 22.2472V23.0387H10.6483H12.4945V22.2472V21.4557H10.6483H8.80218V22.2472ZM14.4989 22.2472V23.0387H16.345H18.1912V22.2472V21.4557H16.345H14.4989V22.2472ZM20.1956 22.2472V23.0387H22.0418H23.8879V22.2472V21.4557H22.0418H20.1956V22.2472Z"/>-->
+<!--                                </svg>-->
+
+<!--                                <div class="calculator__input-text mt-1">Онлайн на сайте</div>-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                        <div class="calculator__agreement-text">Нажимая на кнопку, вы принимаете Положение и Согласие на-->
+<!--                            обработку персональных данных.-->
+<!--                        </div>-->
+<!--                        <button class="button calculator__order-btn">Оформить заявку</button>-->
+<!--                    </form>-->
+<!--                    <div class="calculator__help-block">-->
+<!--                        <div class="calculator__bold-text">Нужна помощь?</div>-->
+<!--                        <div class="calculator__help-text">Готовы ответить на все Ваши вопросы. <br>-->
+<!--                            Звоните или пишите на email.-->
+<!--                        </div>-->
+<!--                        <div class="calculator__help-info mt-3 d-flex justify-content-between">-->
+<!--                            <div class="calculator__contacts"><a href="">+ 7(999) 999-99-99</a></div>-->
+<!--                            <div class="calculator__contacts"><a href="">shkafella@gmail.com</a></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--    </div>-->
+
+
+<!--</div>-->
+<!--<footer class="footer">-->
+<!--    <div class="container">-->
+
+
+<!--        <div class="row">-->
+<!--            <div class="col-md-3">-->
+<!--                <div class="footer__logo">-->
+<!--                    <img class="img-fluid" src="image/logo_shkafella%20(1)%201.svg" alt="">-->
+<!--                </div>-->
+<!--                <div class="footer__text mt-2">Новосибирск</div>-->
+<!--                <div class="footer__text footer__mail">info@shkafella.ru</div>-->
+<!--                <div class="footer__icon-wrapper d-flex justify-content-between">-->
+<!--                    <div class="header__icon d-flex align-items-center justify-content-center me-4">-->
+<!--                        <svg width="27" height="17" fill="#343434">-->
+<!--                            <path fill-rule="evenodd" clip-rule="evenodd"-->
+<!--                                  d="M0.426708 0.0710977C0.339594 0.108006 0.208922 0.199597 0.136327 0.274622C-0.483347 0.915054 1.08223 4.73902 3.35893 8.14591C4.49606 9.84762 5.3936 10.9506 6.39991 11.8832C7.78677 13.1684 9.24079 14.0429 10.8293 14.5471C11.8372 14.8671 12.3841 14.9586 13.4675 14.9885C14.7829 15.0248 15.3344 14.9092 15.6266 14.5357C15.733 14.3997 15.7389 14.3215 15.7655 12.6979C15.7891 11.2598 15.8068 10.9732 15.8818 10.8129C15.9933 10.5743 16.1625 10.5097 16.6142 10.5332C17.4811 10.5782 18.6996 11.4567 20.6463 13.44C21.2176 14.0221 21.8006 14.5792 21.9419 14.6781C22.4113 15.0068 22.4507 15.0115 24.5608 14.9948C26.4242 14.9801 26.4586 14.978 26.6478 14.8657C27.09 14.6035 27.1147 14.162 26.7283 13.4283C26.2783 12.5738 25.2785 11.417 23.4073 9.58578C22.8095 9.00069 22.2826 8.45235 22.2365 8.36721C22.1903 8.28211 22.1525 8.10981 22.1525 7.98443C22.1525 7.78171 22.1999 7.69052 22.5787 7.16368C25.052 3.72411 26.1222 1.99546 26.3775 1.02804C26.5206 0.485649 26.4615 0.280312 26.1143 0.113293C25.8836 0.00236656 25.841 0 24.0613 0C22.8348 0 22.1775 0.018983 22.0394 0.0584593C21.7129 0.151712 21.4468 0.4073 21.2494 0.817068C20.2821 2.82552 19.2168 4.5579 18.19 5.79178C17.744 6.32773 17.0054 7.0085 16.7184 7.14812C16.26 7.37113 15.936 7.25311 15.8221 6.82149C15.7833 6.67446 15.7638 5.60684 15.763 3.59048C15.7619 0.741036 15.7564 0.567723 15.6615 0.368378C15.4809 -0.0109767 15.5708 -1.10647e-07 12.6386 0.000201299C10.121 0.000352356 10.03 0.00372612 9.86094 0.102014C9.6479 0.225881 9.51311 0.506898 9.55783 0.734087C9.57557 0.824269 9.73375 1.07548 9.90935 1.29239C10.3088 1.78585 10.4638 2.07215 10.5935 2.55569C10.6878 2.90719 10.6957 3.12895 10.6953 5.43353C10.6952 6.99646 10.6746 8.00059 10.6405 8.11786C10.4494 8.77435 9.68349 8.47415 8.75501 7.37874C7.54142 5.94707 6.38982 3.85367 5.25971 1.02497C5.05048 0.501308 4.83649 0.219939 4.55477 0.0979354C4.35066 0.00956694 4.18973 0.00226571 2.45938 0.00307134C1.01344 0.00372593 0.54888 0.0192851 0.426708 0.0710977Z"></path>-->
+<!--                        </svg>-->
+
+<!--                    </div>-->
+<!--                    <div class="header__icon d-flex align-items-center justify-content-center">-->
+<!--                        <svg width="20" height="17" fill="#343434">-->
+<!--                            <path fill-rule="evenodd" clip-rule="evenodd"-->
+<!--                                  d="M18.9264 0.0532133C18.819 0.0819544 16.8059 0.849075 14.4529 1.75798C12.0998 2.66684 8.05605 4.22871 5.46665 5.22876C2.87726 6.22885 0.660911 7.09531 0.541434 7.15426C0.303886 7.27145 0.0520766 7.51769 0.0130061 7.67098C-0.0516945 7.92492 0.129788 8.24826 0.45083 8.45103C0.667397 8.58781 5.01207 10.051 5.12194 10.0242C5.15796 10.0154 7.74059 8.41155 10.8611 6.46016C13.9816 4.50877 16.5835 2.89542 16.6432 2.87495C16.794 2.82321 16.996 2.8496 17.0456 2.92755C17.157 3.10284 17.3657 2.91001 10.2242 9.22996C8.01846 11.1819 7.85925 11.3312 7.92067 11.3894C7.957 11.4238 9.60421 12.6701 11.5812 14.1589C14.2652 16.1803 15.2252 16.8829 15.371 16.9327C15.6547 17.0297 15.9917 17.0213 16.2306 16.9112C16.4153 16.8261 16.6997 16.5656 16.7908 16.398C16.835 16.3167 20.0014 0.645194 20 0.515032C19.9982 0.352821 19.8567 0.125739 19.7167 0.0602927C19.5506 -0.0172735 19.2016 -0.0203899 18.9264 0.0532133Z"></path>-->
+<!--                        </svg>-->
+
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-3">-->
+<!--                <div class="footer__text footer__list-subtitle">Каталог</div>-->
+<!--                <ul>-->
+<!--                    <li class="footer__list-text"><a href="#">Шкафы-купе</a></li>-->
+<!--                    <li class="footer__list-text"><a href="#">Подобрать шкаф</a></li>-->
+<!--                    <li class="footer__list-text"><a href="#">Мебель на заказ</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <div class="col-md-3">-->
+<!--                <div class="footer__text footer__list-subtitle">Информация для покупателей</div>-->
+<!--                <ul>-->
+<!--                    <li class="footer__list-text"><a href="#">Шкафы-купе</a></li>-->
+<!--                    <li class="footer__list-text"><a href="#">Подобрать шкаф</a></li>-->
+<!--                    <li class="footer__list-text"><a href="#">Мебель на заказ</a></li>-->
+<!--                    <li class="footer__list-text"><a href="#">Шкафы-купе</a></li>-->
+<!--                    <li class="footer__list-text"><a href="#">Подобрать шкаф</a></li>-->
+<!--                    <li class="footer__list-text"><a href="#">Мебель на заказ</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <div class="col-md-3 d-flex align-items-end flex-column">-->
+<!--                <button class="button header__call-button d-flex align-items-center call-btn">Заказать звонок-->
+<!--                </button>-->
+<!--                <div class="footer__text mt-3">Ежедневно с 09.00 по 22.00</div>-->
+
+<!--                <div class="footer__number"><a href="tel:79999999999">+ 7(999) 999-99-99</a></div>-->
+<!--                <div class="footer__question">Задать вопрос</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="footer__bottom">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-2">-->
+<!--                    <div class="footer__bottom-text">Copyright © 2022 Шкафелла.-->
+<!--                        Все права защищены.-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-10 d-flex justify-content-end">-->
+<!--                    <div class="footer__bottom-text ">* Сайт shkafella54.ru не является-->
+<!--                        публичной-->
+<!--                        офертой ни при каких условиях и носит исключительно информационный характер. <br> Владельцы-->
+<!--                        сайта-->
+<!--                        shkafella54.ru оставляет за собой право изменять комплектацию, условия сервиса, акции и цены в-->
+<!--                        любой-->
+<!--                        период времени. Изображения изделий в каталоге и на сайте, в том числе цвет, текстуры и рисунки-->
+<!--                        на-->
+<!--                        мебели и другие элементы отличаются от оригинала.-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
 <script src="lib2/modal.js"></script>
 <script src="lib2/swiper-bundle.min.js"></script>
 <script src="lib2/slider-settings.js"></script>
