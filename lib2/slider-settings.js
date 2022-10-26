@@ -29,7 +29,8 @@ let mainSwiper = new Swiper(".main-swiper", {
 });
 
 let cardsSwiper = new Swiper(".projects__swiper", {
-
+    slidesPerView: 2,
+    spaceBetween: 20,
 
     navigation: {
         nextEl: "#project__swiperNext",
@@ -37,9 +38,20 @@ let cardsSwiper = new Swiper(".projects__swiper", {
     },
 
     loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
+    // autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false,
+    // },
+    breakpoints: {
+        // mobile + tablet - 320-990
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+        },
+        // desktop >= 991
+        768: {
+            slidesPerView: 2
+        }
     },
     on: {
         init() {
@@ -56,7 +68,7 @@ let cardsSwiper = new Swiper(".projects__swiper", {
 
 let reviewsSwiper = new Swiper(".reviews-swiper", {
     slidesPerView: 3,
-    spaceBetween: 50,
+    spaceBetween: 45,
     slidesPerGroup: 3,
 
 
@@ -64,23 +76,41 @@ let reviewsSwiper = new Swiper(".reviews-swiper", {
         nextEl: ".reviews__swiper-button-next",
         prevEl: ".reviews__swiper-button-prev",
     },
+    breakpoints: {
+        // mobile + tablet - 320-990
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 60,
+            slidesPerGroup: 1,
+        },
+        // desktop >= 991
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+
+        },
+        1199: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        }
+    },
 
     loop: true,
-    autoplay: {
-        delay: 10000,
-        disableOnInteraction: false,
-    },
-    on: {
-        init() {
-            this.el.addEventListener('mouseenter', () => {
-                this.autoplay.stop();
-            });
-
-            this.el.addEventListener('mouseleave', () => {
-                this.autoplay.start();
-            });
-        }
-    }
+    // autoplay: {
+    //     delay: 10000,
+    //     disableOnInteraction: false,
+    // },
+    // on: {
+    //     init() {
+    //         this.el.addEventListener('mouseenter', () => {
+    //             this.autoplay.stop();
+    //         });
+    //
+    //         this.el.addEventListener('mouseleave', () => {
+    //             this.autoplay.start();
+    //         });
+    //     }
+    // }
 });
 
 var swiper = new Swiper(".card-product__swiper", {
@@ -100,10 +130,10 @@ var cardsProductsSwiper = new Swiper(".cards-swiper__also-buy", {
     spaceBetween: 30,
     slidesPerGroup: 3,
     navigation: {
-        nextEl:  ".also-buy-button-next",
+        nextEl: ".also-buy-button-next",
         prevEl: ".also-buy-button-prev",
     },
-    loop : true
+    loop: true
 });
 
 var cardsProductsSwiper2 = new Swiper(".cards-swiper__similar-product", {
@@ -112,14 +142,15 @@ var cardsProductsSwiper2 = new Swiper(".cards-swiper__similar-product", {
     spaceBetween: 30,
     slidesPerGroup: 3,
     navigation: {
-        nextEl:  ".similar-products-button-next",
+        nextEl: ".similar-products-button-next",
         prevEl: ".similar-products-button-prev",
     },
-    loop : true
+    loop: true
 });
 
 function setHeightCard(selector) {   // функция которая делает все карточки в слайдере одинаковой высоты
     let swiper = document.querySelector(selector);
+    // console.log(pro)
     let cards = swiper.querySelectorAll('.card')
     let maxHeight = 0
     cards.forEach(item => {
@@ -132,5 +163,6 @@ function setHeightCard(selector) {   // функция которая делае
     })
 }
 
-setHeightCard('.cards-swiper__also-buy')
-setHeightCard('.cards-swiper__similar-product')
+// setHeightCard('.cards-swiper__also-buy')
+// setHeightCard('.cards-swiper__similar-product')
+setHeightCard('.projects__swiper')

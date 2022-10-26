@@ -862,7 +862,7 @@ a:hover {
 .additional-services__sub-text {
     position: relative;
     margin-top: 280px;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .additional-services__sub-text:after {
@@ -871,7 +871,9 @@ a:hover {
     width: 60px;
     height: 2px;
     left: -75px;
-    top: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     background-color: var(--orange);
 }
 
@@ -1253,6 +1255,7 @@ a:hover {
     bottom: 0;
     right: 0;
     margin: auto;
+    z-index: 10;
 }
 
 .reviews__swiper-button-prev {
@@ -1264,6 +1267,7 @@ a:hover {
     bottom: 0;
     left: 0;
     margin: auto;
+    z-index: 10;
 }
 
 .reviews__video {
@@ -1314,7 +1318,7 @@ a:hover {
 }
 
 .grade-img {
-    margin-top: 5px;
+    /*margin-top: 5px;*/
 }
 
 .reviews__info-user {
@@ -1411,7 +1415,7 @@ a:hover {
     position: relative;
     margin-right: 15px;
     max-width: 490px;
-    width: 100%;
+    /*width: 100%;*/
     height: 487px;
 
 }
@@ -2720,7 +2724,9 @@ input.calculator__checkbox:checked + label:after {
 .calculator__preview-img {
     border-radius: 8px;
 }
-
+.projects__swiper {
+    padding-bottom: 10px;
+}
 .burger {
     width: 46px;
     height: 46px;
@@ -2797,6 +2803,9 @@ input.calculator__checkbox:checked + label:after {
     color: #000000;
     position: relative;
 }
+.btn-scroll {
+    right: 30px;
+}
 .burger-prev-steep:before {
     position: absolute;
     left: -12px;
@@ -2864,6 +2873,17 @@ input.calculator__checkbox:checked + label:after {
 .calc-link__wrapper:hover .calc-link__button {
     background-color: #62A51D;
 }
+.team__photo:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    right: -10px;
+    z-index: -1;
+    background-color: var(--orange);
+    border-radius: 8px;
+}
 
 
 @media (max-width: 1399px) {
@@ -2901,6 +2921,41 @@ input.calculator__checkbox:checked + label:after {
     .additional-services {
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+    .card-footer__price {
+        font-size: 20px;
+    }
+    .card-footer__button {
+        font-size: 15px;
+    }
+    .projects-cards .card-title {
+        font-size: 20px;
+    }
+    #project__swiperNext {
+        right: -25px;
+    }
+    #project__swiperPrev {
+     left: -30px;
+    }
+
+    .reviews__swiper-button-prev {
+        left: -5px;
+    }
+    .reviews__swiper-button-next {
+        right: -5px;
+    }
+    .team__photo {
+        font-size: 14px;
+        top: 12px;
+        right: -10px;
+        height: 305px;
+    }
+    /*.team__photo img {*/
+    /*    width: 307px;*/
+    /*    height: 307px;*/
+    /*}*/
+    .team__photo {
+        height: 358px;
     }
 
 }
@@ -3018,11 +3073,49 @@ input.calculator__checkbox:checked + label:after {
     }
     .additional-services__sub-text {
         margin-top: 150px;
-        padding-bottom: 16px;
+        margin-bottom: 16px;
         margin-left: 80px;
+        font-size: 18px;
     }
-
-
+    .projects-cards .card-title:before {
+      width: 30px;
+    }
+    .projects-cards .card-title {
+        padding-left: 40px;
+    }
+    .card-footer__button {
+        font-size: 14px;
+    }
+    .card-footer__price {
+        font-size: 16px;
+    }
+    .projects-cards .card-text {
+        font-size: 14px;
+    }
+    .projects-cards .list-group-item {
+        font-size: 14px;
+    }
+    .projects-cards .card-footer {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .send-wrapper {
+        background-size: 1000%;
+    }
+    .reviews-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .team__photo {
+        font-size: 14px;
+        top: 12px;
+        right: -10px;
+        height: 305px;
+    }
+    .team__photo img {
+        width: 307px;
+        height: 307px;
+    }
 
 }
 
@@ -3060,6 +3153,11 @@ input.calculator__checkbox:checked + label:after {
     .additional-services__sub-text {
         margin-top: 350px;
     }
+    .send__descr {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
 }
 
 @media (max-width: 575px) {
@@ -3111,11 +3209,28 @@ input.calculator__checkbox:checked + label:after {
     }
     .additional-services__sub-text {
         margin-top: 10px;
-        padding-bottom: 16px;
+        margin-bottom: 16px;
 
     }
     .additional-services__subtitle {
         padding-left: 20px;
+    }
+    .projects__swiper {
+        margin-left: 5px;
+    }
+    .send__form-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /*.projects-cards .card-title {*/
+    /*    font-size: 18px;*/
+    /*}*/
+    /*.send__descr {*/
+    /*    padding-left: 0;*/
+    /*    padding-right: 0;*/
+    /*}*/
+    .team__photo {
+        margin-top: 15px;
     }
 
 }
