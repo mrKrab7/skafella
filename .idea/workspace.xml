@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="426e97c7-c2c8-43bf-b914-f923b0f0eadc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/arrow-burger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/arrow-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/header-calc-mobile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/arrow__btn-link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/calc-lick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/ruletka.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/Rectangle 108.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Rectangle 108.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib2/additionalFunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/additionalFunctionality.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sitetpl/default/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sitetpl/default/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,28 +89,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "last_opened_file_path": "D:/openServer/OSPanel/domains/Canvas-v2/image",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Subversion",
-    "two.files.diff.last.used.folder": "D:/openServer/OSPanel/domains/Canvas-v2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/openServer/OSPanel/domains/Canvas-v2/image&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Subversion&quot;,
+    &quot;two.files.diff.last.used.folder&quot;: &quot;D:/openServer/OSPanel/domains/Canvas-v2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\openServer\OSPanel\domains\Canvas-v2\image" />
@@ -164,7 +161,8 @@
       <workItem from="1666321346901" duration="7810000" />
       <workItem from="1666341829436" duration="22000" />
       <workItem from="1666344889485" duration="1287000" />
-      <workItem from="1666577791157" duration="28074000" />
+      <workItem from="1666577791157" duration="28098000" />
+      <workItem from="1666749950406" duration="11350000" />
     </task>
     <task id="LOCAL-00001" summary="предварительная загрузка картинок">
       <created>1664512087771</created>
@@ -299,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666341338947</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="калькулятор сраница расчёта">
+      <created>1666609415296</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1666609415296</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

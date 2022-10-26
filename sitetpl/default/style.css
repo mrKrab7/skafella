@@ -627,7 +627,7 @@ a:hover {
     z-index: -1;
     object-fit: cover;
     width: 100%;
-    height: 700px;
+    height: 100%
 
 
 }
@@ -725,7 +725,7 @@ a:hover {
 }
 
 .advantage {
-    padding-top: 106px;
+    /*padding-top: 106px;*/
     padding-bottom: 102px;
 }
 
@@ -764,7 +764,7 @@ a:hover {
 .advantage__card-wrapper .card {
     border: none;
     background-color: white;
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 0 0;
 
     position: relative;
     z-index: 10;
@@ -776,7 +776,7 @@ a:hover {
 
 
 .advantage__card-wrapper .card:hover {
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
     height: 100%;
 }
 
@@ -794,16 +794,16 @@ a:hover {
     font-weight: 400;
     display: none;
     z-index: 10;
-    height: 250px;
+    /*height: 250px;*/
     position: absolute;
     background-color: white;
-    box-shadow: 0px 30px 25px rgb(0 0 0 / 25%);
-    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0 30px 25px rgb(0 0 0 / 25%);
+    border-radius: 0 0 8px 8px;
 
 }
 
 .design {
-
+    position: relative;
     width: 100%;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -967,7 +967,7 @@ a:hover {
     height: 2px;
     background: var(--orange);
     bottom: 0;
-    left: 0px;
+    left: 0;
     top: 0;
     margin: auto;
 }
@@ -1226,7 +1226,7 @@ a:hover {
     height: 230px;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     /*margin-left: 20px;*/
 
@@ -2713,6 +2713,9 @@ input.calculator__checkbox:checked + label:after {
     color: white;
     user-select: none;
 }
+.additional-services__subtitle {
+    padding-left: 10px;
+}
 
 .calculator__preview-img {
     border-radius: 8px;
@@ -2756,6 +2759,10 @@ input.calculator__checkbox:checked + label:after {
 
 
 }
+.burger__item-list a {
+    color: var(--black);
+}
+
 .burger__nav {
     width: 220px;
     margin: 0 auto;
@@ -2806,6 +2813,57 @@ input.calculator__checkbox:checked + label:after {
     position: absolute;
     content: url("../../image/calculator (1) 1 (Traced).svg");
 }
+.calc-link__wrapper {
+    position: relative;
+    width: 80%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #F4F4F4;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+/*.calc-link__wrapper:before {*/
+/*    content: url("../../image/ruletka.png");*/
+/*    position: absolute;*/
+/*    right: 20px;*/
+/*    width: 60px;*/
+/*    height: 60px;*/
+/*}*/
+.calc-link__img {
+    width: 150px;
+    height: 50px;
+}
+.calc-link__subtitle{
+    font-size: 36px;
+    font-weight: 600;
+}
+.calc-link__button {
+    position: relative;
+    width: 170px;
+    height: 35px;
+    color: white;
+    background: #72BE23;
+    border-radius: 59px;
+    margin-top: 25px;
+    text-indent: -20px;
+
+}
+.calc-link__button:before{
+    content: url("../../image/arrow__btn-link.svg");
+    right: 25px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 21px;
+}
+.calc-link__wrapper:hover .calc-link__button {
+    background-color: #62A51D;
+}
 
 
 @media (max-width: 1399px) {
@@ -2830,6 +2888,19 @@ input.calculator__checkbox:checked + label:after {
 
     .header__number {
         font-size: 20px;
+    }
+    .main__advantage__descr {
+        width: 200px;
+    }
+    .additional-services__sub-text {
+        margin-top: 220px;
+    }
+    .advantage{
+        padding-bottom: 50px;
+    }
+    .additional-services {
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
 }
@@ -2858,15 +2929,8 @@ input.calculator__checkbox:checked + label:after {
     }
     .nav__item:first-child {
         padding-left:50px ;
-        /*padding-left: 0;*/
     }
     .nav__item:first-child:before {
-        /*content: url("../../image/header-calc-mobile.png");*/
-        /*width: 44px;*/
-        /*height: 44px;*/
-
-        /*content: '';*/
-
     }
     .header__nav {
         height: 54px;
@@ -2877,15 +2941,7 @@ input.calculator__checkbox:checked + label:after {
         padding-left: 50px;
         margin-left: 40px;
     }
-    /*.header__nav_center-wrapper:before {*/
-    /*    position: absolute;*/
-    /*    content: url("../../image/modal__btn-close.svg");*/
-    /*    color:#BDBDBD ;*/
-    /*    z-index: 1000;*/
-    /*    cursor: pointer;*/
-    /*    right: 0;*/
 
-    /*}*/
     .close-menu-btn {
         position: absolute;
         right: 0;
@@ -2898,6 +2954,75 @@ input.calculator__checkbox:checked + label:after {
     .header__nav .nav__item .nav__item-links {
         font-size: 18px;
     }
+    .main-swiper {
+        height: 350px;
+    }
+    .title {
+        font-size: 36px;
+        padding-top: 70px;
+    }
+    .main__sub-text {
+        margin-top: 10px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 320px;
+    }
+    .main__button {
+        margin-top: 25px;
+        width: 210px;
+    }
+    .main-swiper .swiper-pagination {
+        bottom: 70px;
+    }
+    .main__advantage__descr {
+        width: 100%;
+        max-width: 130px;
+    }
+    .advantage__card-wrapper .card-text {
+        position: relative;
+        box-shadow: none;
+        display: block;
+        height: 250px;
+    }
+    .subtitle {
+        font-size: 24px;
+    }
+    .design__descr {
+        font-size: 14px;
+    }
+    .design {
+        padding: 20px;
+        padding-top: 20px;
+    }
+    .design__button {
+        width: 230px;
+    }
+    .design-img {
+        position: absolute;
+        width: 59px;
+        height: 47px;
+        right: 40px;
+        left: auto;
+        top: 75px;
+    }
+    .advantage__card-wrapper .card:hover {
+        box-shadow: none;
+        height: auto;
+    }
+
+    .advantage__card-wrapper .card:hover .card-text {
+        display: block;
+        left: auto;
+        padding: 0;
+
+    }
+    .additional-services__sub-text {
+        margin-top: 150px;
+        padding-bottom: 16px;
+        margin-left: 80px;
+    }
+
+
 
 }
 
@@ -2919,6 +3044,21 @@ input.calculator__checkbox:checked + label:after {
     }
     .header__call-wrapper {
         max-width: 70px;
+    }
+    .main__advantage__descr {
+        font-size: 11px;
+    }
+    .main__advantage-block {
+        padding: 0;
+    }
+    .design__subtitle {
+        font-size: 22px;
+    }
+    .additional-services__block img {
+        width: calc(100% + 10px);
+    }
+    .additional-services__sub-text {
+        margin-top: 350px;
     }
 }
 
@@ -2953,6 +3093,29 @@ input.calculator__checkbox:checked + label:after {
     }
     .nav-subtitle {
         border-color: #F6B04C;
+    }
+    .design__button {
+        margin-top: 10px;
+    }
+    .design-img {
+        right: 30px;
+        top: auto;
+        bottom: 20px;
+    }
+    .design__subtitle {
+        font-size: 20px;
+    }
+    .additional-services__block img {
+        position: relative;
+        width: 100%;
+    }
+    .additional-services__sub-text {
+        margin-top: 10px;
+        padding-bottom: 16px;
+
+    }
+    .additional-services__subtitle {
+        padding-left: 20px;
     }
 
 }
