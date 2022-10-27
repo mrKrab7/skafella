@@ -117,6 +117,22 @@ var swiper = new Swiper(".card-product__swiper", {
     slidesPerView: 4,
     spaceBetween: 30,
     slidesPerGroup: 4,
+
+    breakpoints: {
+        // mobile + tablet - 320-990
+        320: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            slidesPerGroup: 1,
+        },
+        // desktop >= 991
+        768: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+
+        },
+
+    },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -126,9 +142,28 @@ var swiper = new Swiper(".card-product__swiper", {
 
 var cardsProductsSwiper = new Swiper(".cards-swiper__also-buy", {
 
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
+    // slidesPerView: 3,
+    // spaceBetween: 30,
+    // slidesPerGroup: 3,
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            slidesPerGroup: 2,
+        },
+        // desktop >= 991
+        1200: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 30,
+
+        },
+    },
     navigation: {
         nextEl: ".also-buy-button-next",
         prevEl: ".also-buy-button-prev",
@@ -141,6 +176,26 @@ var cardsProductsSwiper2 = new Swiper(".cards-swiper__similar-product", {
     slidesPerView: 3,
     spaceBetween: 30,
     slidesPerGroup: 3,
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            slidesPerGroup: 2,
+        },
+        // desktop >= 991
+        1200: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 30,
+
+        }
+    },
+
     navigation: {
         nextEl: ".similar-products-button-next",
         prevEl: ".similar-products-button-prev",
@@ -163,6 +218,6 @@ function setHeightCard(selector) {   // функция которая делае
     })
 }
 
-// setHeightCard('.cards-swiper__also-buy')
-// setHeightCard('.cards-swiper__similar-product')
-setHeightCard('.projects__swiper')
+setHeightCard('.cards-swiper__also-buy')
+setHeightCard('.cards-swiper__similar-product')
+// setHeightCard('.projects__swiper')
