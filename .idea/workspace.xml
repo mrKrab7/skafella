@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="426e97c7-c2c8-43bf-b914-f923b0f0eadc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/image/arrow-mobile-prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/arrow-mobile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/question-sign 1 (Traced) (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/youtube.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib2/slider-settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/slider-settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib2/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page2.html" beforeDir="false" afterPath="$PROJECT_DIR$/page2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page3.html" beforeDir="false" afterPath="$PROJECT_DIR$/page3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitetpl/default/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sitetpl/default/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page4.html" beforeDir="false" afterPath="$PROJECT_DIR$/page4.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +159,7 @@
       <workItem from="1666344889485" duration="1287000" />
       <workItem from="1666577791157" duration="28098000" />
       <workItem from="1666749950406" duration="24677000" />
-      <workItem from="1666837090979" duration="24142000" />
+      <workItem from="1666837090979" duration="26066000" />
     </task>
     <task id="LOCAL-00001" summary="предварительная загрузка картинок">
       <created>1664512087771</created>
@@ -317,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666761479758</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="3 страница адаптив">
+      <created>1666867409802</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1666867409802</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +372,8 @@
     <MESSAGE value="test-git" />
     <MESSAGE value="закончил верстать 4 страницу" />
     <MESSAGE value="калькулятор сраница расчёта" />
-    <option name="LAST_COMMIT_MESSAGE" value="калькулятор сраница расчёта" />
+    <MESSAGE value="3 страница адаптив" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 страница адаптив" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
