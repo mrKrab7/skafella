@@ -159,7 +159,8 @@
                         <a class="header__number d-none d-lg-block" href="tel:7999999999">+ 7(999) 999-99-99</a>
                         <button data-type-modal="call"
                                 data-title-modal="Мы готовы перезвонить Вам, <br> чтобы согласовать время и <br> дату приезда"
-                                class="button header__call-button header-round-btn d-flex align-items-center call-btn ms-3">Заказать
+                                class="button header__call-button header-round-btn d-flex align-items-center call-btn ms-3">
+                            Заказать
                             звонок
                         </button>
                     </div>
@@ -352,10 +353,10 @@
         </div>
     </div>
     <div class="container">
-        <a href="">
+        <a class="d-block d-md-none" href="">
             <div class="calc-link__wrapper ">
-                    <div class="subtitle calc-link__subtitle">Сделайте расчет шкафа <span>оnline</span></div>
-                    <button class="button calc-link__button">Перейти</button>
+                <div class="subtitle calc-link__subtitle">Сделайте расчет шкафа <span>оnline</span></div>
+                <button class="button calc-link__button">Перейти</button>
 
 
             </div>
@@ -364,120 +365,466 @@
     </div>
 
 </section>
-<!--<section class="calculator">-->
-<!--    <div class="container">-->
-<!--        <div class="subtitle mt-5">Сделайте расчет шкафа <span>оnline</span></div>-->
-<!--        <div data-tab-active="1" class="calculator-header d-flex">-->
-<!--            <div class="calculator-header__item">Размер шкафа</div>-->
-<!--            <div class="calculator-header__item">Внутреннее наполнение</div>-->
-<!--            <div class="calculator-header__item">Фасад</div>-->
+<section class="calculator">
+    <div class="container">
+        <div class="subtitle mt-5">Сделайте расчет шкафа <span>оnline</span></div>
+        <div data-tab-active="3" class="calculator-header d-flex">
+            <div class="calculator-header__item">Размер шкафа</div>
+            <div class="calculator-header__item">Внутреннее наполнение</div>
+            <div class="calculator-header__item">Фасад</div>
 
-<!--        </div>-->
-<!--        <div class="calculator-content">-->
-<!--            <div class="row ">-->
-<!--                <div class="col-md-7 ">-->
-<!--                    <div class="calculator__content-block">-->
-<!--                        <div class="calculator__bold-text">Укажите размеры шкафа:</div>-->
-<!--                        <div class="row calculator__border">-->
-<!--                            <div class="col-4 d-flex  align-items-center mt-3">-->
-<!--                                <div class="calculator__input-text calculator__input-size">Ширина</div>-->
-<!--                                <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">-->
-<!--                                <div class="calculator__input-text calculator__input-size">мм</div>-->
-<!--                            </div>-->
-<!--                            <div class="col-4 d-flex  align-items-center mt-3">-->
-<!--                                <div class="calculator__input-text calculator__input-size">Высота</div>-->
-<!--                                <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">-->
-<!--                                <div class="calculator__input-text calculator__input-size">мм</div>-->
-<!--                            </div>-->
-<!--                            <div class="col-4 d-flex  align-items-center mt-3">-->
-<!--                                <div class="calculator__input-text calculator__input-size">Глубина</div>-->
-<!--                                <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">-->
-<!--                                <div class="calculator__input-text calculator__input-size">мм</div>-->
-<!--                            </div>-->
+        </div>
 
-<!--                        </div>-->
-<!--                        <div class="calculator__bold-text mt-4">Параметры шкафа:</div>-->
-<!--                        <div class="row calculator__border">-->
-<!--                            <div class="col-12 d-flex justify-content-between">-->
-<!--                                <input class="calculator__checkbox " name="cabinet-parameters" id="coupe" type="radio">-->
-<!--                                <label for="coupe">Шкаф-купе</label>-->
-<!--                                <input class="calculator__checkbox" name="cabinet-parameters" id="coupe1" type="radio">-->
-<!--                                <label for="coupe1">Только двери</label>-->
-<!--                                <input class="calculator__checkbox" name="cabinet-parameters" id="coupe2" type="radio">-->
-<!--                                <label for="coupe2">Только внутреннее наполнение</label>-->
-<!--                            </div>-->
+    </div>
+    <div class="calculator-content">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-7 ">
+                    <div class="calculator__content-block">
+                        <div class="calculator__bold-text">Укажите размеры шкафа:</div>
+                        <div class="row calculator__border">
+                            <div class="col-4 d-flex  align-items-center mt-3">
+                                <div class="calculator__input-text calculator__input-size">Ширина</div>
+                                <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">
+                                <div class="calculator__input-text calculator__input-size">мм</div>
+                            </div>
+                            <div class="col-4 d-flex  align-items-center mt-3">
+                                <div class="calculator__input-text calculator__input-size">Высота</div>
+                                <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">
+                                <div class="calculator__input-text calculator__input-size">мм</div>
+                            </div>
+                            <div class="col-4 d-flex  align-items-center mt-3">
+                                <div class="calculator__input-text calculator__input-size">Глубина</div>
+                                <input inputmode="numeric" maxlength="4" class="calculator__size-input" type="text">
+                                <div class="calculator__input-text calculator__input-size">мм</div>
+                            </div>
 
-<!--                        </div>-->
-<!--                        <div class="calculator__bold-text mt-4">Количество секций шкафа:</div>-->
-<!--                        <div class="row calculator__border">-->
-<!--                            <div class="col-12 d-flex ">-->
-<!--                                <input class="calculator__checkbox" name="section-amount" id="section2" type="radio">-->
-<!--                                <label class="me-3" for="section2">Две секции</label>-->
-<!--                                <input class="calculator__checkbox" name="section-amount" id="section3" type="radio">-->
-<!--                                <label class="me-3" for="section3">Три секции</label>-->
-<!--                                <input class="calculator__checkbox" name="section-amount" id="section4" type="radio">-->
-<!--                                <label class="me-3" for="section4">Четыре секции</label>-->
-<!--                            </div>-->
+                        </div>
+                        <div class="calculator__bold-text mt-4">Параметры шкафа:</div>
+                        <div class="row calculator__border">
+                            <div class="col-12 d-flex justify-content-between">
+                                <input class="calculator__checkbox " name="cabinet-parameters" id="coupe" type="radio">
+                                <label for="coupe">Шкаф-купе</label>
+                                <input class="calculator__checkbox" name="cabinet-parameters" id="coupe1" type="radio">
+                                <label for="coupe1">Только двери</label>
+                                <input class="calculator__checkbox" name="cabinet-parameters" id="coupe2" type="radio">
+                                <label for="coupe2">Только внутреннее наполнение</label>
+                            </div>
 
-<!--                        </div>-->
-<!--                        <div class="calculator__bold-text mt-4">Расположение в пространстве:</div>-->
-<!--                        <div class="row calculator__border">-->
-<!--                            <div class="col-12 d-flex justify-content-between">-->
-<!--                                <input class="calculator__checkbox " name="location" id="location1" type="radio">-->
-<!--                                <label for="location1">Левый угол</label>-->
-<!--                                <input class="calculator__checkbox " name="location" id="location2" type="radio">-->
-<!--                                <label for="location2">Правый угол</label>-->
-<!--                                <input class="calculator__checkbox" name="location" id="location3" type="radio">-->
-<!--                                <label for="location3">Между стен</label>-->
-<!--                                <input class="calculator__checkbox" name="location" id="location4" type="radio">-->
-<!--                                <label for="location4">Отдельно стоящий шкаф</label>-->
-<!--                            </div>-->
+                        </div>
+                        <div class="calculator__bold-text mt-4">Количество секций шкафа:</div>
+                        <div class="row calculator__border">
+                            <div class="col-12 d-flex ">
+                                <input class="calculator__checkbox" name="section-amount" id="section2" type="radio">
+                                <label class="me-3" for="section2">Две секции</label>
+                                <input class="calculator__checkbox" name="section-amount" id="section3" type="radio">
+                                <label class="me-3" for="section3">Три секции</label>
+                                <input class="calculator__checkbox" name="section-amount" id="section4" type="radio">
+                                <label class="me-3" for="section4">Четыре секции</label>
+                            </div>
 
-<!--                        </div>-->
-<!--                        <div class="row">-->
-<!--                            <div class="col-12 d-flex">-->
-<!--                                <input class="calculator__switch" type="checkbox" id="stretch-ceiling">-->
-<!--                                <label class="me-5" for="stretch-ceiling">Потолок натяжной</label>-->
-<!--                                <input class="calculator__switch" type="checkbox" id="zakladnaia">-->
-<!--                                <label for="zakladnaia">Требуется закладная</label>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="row">-->
-<!--                            <div class="col-12 d-flex justify-content-end mt-5">-->
-<!--                                <div class="calculator__prev">-->
-<!--                                    <svg width="26" height="12" viewBox="0 0 26 12" fill="#828282">-->
-<!--                                        <path d="M25 6.75049C25.4142 6.75049 25.75 6.4147 25.75 6.00049C25.75 5.58627 25.4142 5.25049 25 5.25049L25 6.75049ZM0.469669 5.47016C0.176777 5.76305 0.176777 6.23792 0.469669 6.53082L5.24264 11.3038C5.53553 11.5967 6.01041 11.5967 6.3033 11.3038C6.59619 11.0109 6.59619 10.536 6.3033 10.2431L2.06066 6.00049L6.3033 1.75785C6.59619 1.46495 6.59619 0.990079 6.3033 0.697186C6.01041 0.404292 5.53553 0.404292 5.24264 0.697186L0.469669 5.47016ZM25 5.25049L1 5.25049L1 6.75049L25 6.75049L25 5.25049Z"/>-->
-<!--                                    </svg>-->
-<!--                                </div>-->
-<!--                                <div class="calculator__next">Далее</div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-md-5 ">-->
-<!--                    <img class="img-fluid calculator__preview-img" src="image/calculator__doors-img.png">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="calculator-content">-->
-<!--            <div class="container">-->
-<!--                <div class="row ">-->
-<!--                    <div class="col-4"></div>-->
-<!--                    <div class="col-8">-->
-<!--                        <div class="canvas-block">-->
-<!--                            <canvas width="1000" height="650"></canvas>-->
-<!--                        </div>-->
+                        </div>
+                        <div class="calculator__bold-text mt-4">Расположение в пространстве:</div>
+                        <div class="row calculator__border">
+                            <div class="col-12 d-flex justify-content-between">
+                                <input class="calculator__checkbox " name="location" id="location1" type="radio">
+                                <label for="location1">Левый угол</label>
+                                <input class="calculator__checkbox " name="location" id="location2" type="radio">
+                                <label for="location2">Правый угол</label>
+                                <input class="calculator__checkbox" name="location" id="location3" type="radio">
+                                <label for="location3">Между стен</label>
+                                <input class="calculator__checkbox" name="location" id="location4" type="radio">
+                                <label for="location4">Отдельно стоящий шкаф</label>
+                            </div>
 
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex">
+                                <input class="calculator__switch" type="checkbox" id="stretch-ceiling">
+                                <label class="me-5" for="stretch-ceiling">Потолок натяжной</label>
+                                <input class="calculator__switch" type="checkbox" id="zakladnaia">
+                                <label for="zakladnaia">Требуется закладная</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-end mt-5">
+                                <div class="calculator__prev">
+                                    <svg width="26" height="12" viewBox="0 0 26 12" fill="#828282">
+                                        <path d="M25 6.75049C25.4142 6.75049 25.75 6.4147 25.75 6.00049C25.75 5.58627 25.4142 5.25049 25 5.25049L25 6.75049ZM0.469669 5.47016C0.176777 5.76305 0.176777 6.23792 0.469669 6.53082L5.24264 11.3038C5.53553 11.5967 6.01041 11.5967 6.3033 11.3038C6.59619 11.0109 6.59619 10.536 6.3033 10.2431L2.06066 6.00049L6.3033 1.75785C6.59619 1.46495 6.59619 0.990079 6.3033 0.697186C6.01041 0.404292 5.53553 0.404292 5.24264 0.697186L0.469669 5.47016ZM25 5.25049L1 5.25049L1 6.75049L25 6.75049L25 5.25049Z"/>
+                                    </svg>
+                                </div>
+                                <div class="calculator__next">Далее</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 ">
+                    <img class="img-fluid calculator__preview-img" src="image/calculator__doors-img.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="calculator-content">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-lg-4 offset-1">
+                    <div class="calculator__content-block ">
+                        <div class="box-color-wrapper  calculator__border">
+                            <div class="row">
+                                <div class="col-xl-3 d-flex align-items-center">
+                                    <div class="calculator__input-text mt-0">Цвет корпуса:</div>
+                                </div>
+                                <div class="col-xl-9 d-flex justify-content-between">
+                                    <input name="box-color" id="dub" type="radio">
+                                    <label for="dub">
+                                        <img class="img-fluid" src="image/Rectangle%20143.png" alt="">
+                                    </label>
+                                    <input name="box-color" id="dub1" type="radio">
+                                    <label for="dub1">
+                                        <img class="img-fluid" src="image/Rectangle%20143.png" alt="">
+                                    </label>
+                                    <input name="box-color" id="dub2" type="radio">
+                                    <label for="dub2">
+                                        <img class="img-fluid" src="image/Rectangle%20143.png" alt="">
+                                    </label>
+                                    <input name="box-color" id="dub3" type="radio">
+                                    <label for="dub3">
+                                        <img class="img-fluid" src="image/Rectangle%20143.png" alt="">
+                                    </label>
+                                    <input name="box-color" id="dub4" type="radio">
+                                    <label for="dub4">
+                                        <img class="img-fluid" src="image/Rectangle%20143.png" alt="">
+                                    </label>
+                                </div>
+                            </div>
 
-<!--        </div>-->
-<!--        <div class="calculator-content"></div>-->
+
+                        </div>
+                        <div class="row calculator__border">
+                            <div class="col-12 d-flex">
+                                <input class="calculator__switch" type="checkbox" id="stretch-ceiling2">
+                                <label class="me-2" for="stretch-ceiling2">Потолок натяжной</label>
+                                <input class="calculator__switch" type="checkbox" id="zakladnaia2">
+                                <label for="zakladnaia2">Требуется закладная</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="calculator__section-text mt-4">Выбор наполнения (нумерация отсеков начинается
+                                слева):
+                            </div>
+
+                            <div class="calculator__select-wrapper ">
+                                <div class="row">
+                                    <div class="col-2 p-0 d-flex align-items-center">
+                                        <div class="text">Секция 1</div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="select">
+                                            <button class="select-btn-drop">Для гладилки, 3 ящика, 2 штанги</button>
+                                            <ul class="select__list">
+                                                <li class="select__list-item aside-input-text" data-value="1">Для
+                                                    гладилки, 3 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="2">Для
+                                                    гладилки, 4 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="3">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="4">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="5">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+
+                                            </ul>
+                                            <input type="text" name="select-section1" data-active="5"
+                                                   class="select__input-hidden">
+                                        </div>
+                                    </div>
+                                </div>
 
 
-<!--    </div>-->
-<!--</section>-->
+                            </div>
+                            <div class="calculator__select-wrapper ">
+                                <div class="row">
+                                    <div class="col-2 p-0 d-flex align-items-center">
+                                        <div class="text">Секция 1</div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="select">
+                                            <button class="select-btn-drop">Для гладилки, 3 ящика, 2 штанги</button>
+                                            <ul class="select__list">
+                                                <li class="select__list-item aside-input-text" data-value="1">Для
+                                                    гладилки, 3 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="2">Для
+                                                    гладилки, 4 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="3">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="4">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="5">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+
+                                            </ul>
+                                            <input type="text" name="select-section1" data-active="5"
+                                                   class="select__input-hidden">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="calculator__select-wrapper ">
+                                <div class="row">
+                                    <div class="col-2 p-0 d-flex align-items-center">
+                                        <div class="text">Секция 1</div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="select">
+                                            <button class="select-btn-drop">Для гладилки, 3 ящика, 2 штанги</button>
+                                            <ul class="select__list">
+                                                <li class="select__list-item aside-input-text" data-value="1">Для
+                                                    гладилки, 3 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="2">Для
+                                                    гладилки, 4 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="3">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="4">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="5">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+
+                                            </ul>
+                                            <input type="text" name="select-section1" data-active="5"
+                                                   class="select__input-hidden">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="calculator__select-wrapper ">
+                                <div class="row">
+                                    <div class="col-2 p-0 d-flex align-items-center">
+                                        <div class="text">Секция 1</div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="select">
+                                            <button class="select-btn-drop">Для гладилки, 3 ящика, 2 штанги</button>
+                                            <ul class="select__list">
+                                                <li class="select__list-item aside-input-text" data-value="1">Для
+                                                    гладилки, 3 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="2">Для
+                                                    гладилки, 4 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="3">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="4">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="5">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+
+                                            </ul>
+                                            <input type="text" name="select-section1" data-active="5"
+                                                   class="select__input-hidden">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-end mt-5">
+                                <div class="calculator__prev">
+                                    <svg width="26" height="12" viewBox="0 0 26 12" fill="#828282">
+                                        <path d="M25 6.75049C25.4142 6.75049 25.75 6.4147 25.75 6.00049C25.75 5.58627 25.4142 5.25049 25 5.25049L25 6.75049ZM0.469669 5.47016C0.176777 5.76305 0.176777 6.23792 0.469669 6.53082L5.24264 11.3038C5.53553 11.5967 6.01041 11.5967 6.3033 11.3038C6.59619 11.0109 6.59619 10.536 6.3033 10.2431L2.06066 6.00049L6.3033 1.75785C6.59619 1.46495 6.59619 0.990079 6.3033 0.697186C6.01041 0.404292 5.53553 0.404292 5.24264 0.697186L0.469669 5.47016ZM25 5.25049L1 5.25049L1 6.75049L25 6.75049L25 5.25049Z"/>
+                                    </svg>
+                                </div>
+                                <div class="calculator__next">Далее</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="canvas-wrapper">
+                        <canvas width="1000" height="650"></canvas>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="calculator-content">
+        <div class="container-fluid">
+            <div class="row ">
+
+                <div class="col-lg-4 col-xl-4 offset-xl-1">
+                    <div class="calculator__content-block">
+                        <div class="calculator__fittings-text">Выбор фурнитуры:</div>
+                        <div class="row calculator__border">
+                            <div class="col-8 d-flex justify-content-between mt-4">
+                                <input type="radio" name="frame-handle">
+                                <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
+                                <input type="radio" name="frame-handle">
+                                <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
+                                <input type="radio" name="frame-handle">
+                                <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
+                                <input type="radio" name="frame-handle">
+                                <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
+
+                            </div>
+                            <div class="col-8 d-flex justify-content-between mt-3">
+                                <input type="radio" id="keyColor1" name="frame-color">
+                                <label class="label-descr" for="keyColor1"><img src="image/Rectangle%20143%20(4).png" alt="">
+                                <div class="calculator__show-descr">серебро матовый</div>
+                                </label>
+                                <input type="radio" id="keyColor2" name="frame-color">
+                                <label class="label-descr" for="keyColor2"><img src="image/Rectangle%20143%20(4).png" alt="">
+                                    <div class="calculator__show-descr">серебро матовый</div>
+                                </label>
+                                <input type="radio" id="keyColor3" name="frame-color">
+                                <label for="keyColor3"><img src="image/Rectangle%20143%20(4).png" alt=""></label>
+                                <input type="radio" id="keyColor4" name="frame-color">
+                                <label for="keyColor4"><img src="image/Rectangle%20143%20(4).png" alt=""></label>
+
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-4 d-flex justify-content-between">
+                                <input type="radio" id="left-door" name="door-type">
+                                <label for="left-door">Дверь левая</label>
+                                <input type="radio" id="right-door" name="door-type">
+                                <label for="right-door">Дверь правая</label>
+                                <input type="radio" id="center-door" name="door-type">
+                                <label for="center-door">Дверь центральная</label>
+
+                            </div>
+                        </div>
+                        <div class="row mt-4 ">
+                            <div class="col-xl-2 d-flex align-items-center">
+                                <div class="calculator__input-text mt-0">Фон:</div>
+                            </div>
+                            <div class="col-xl-10 d-flex  ">
+                                <input name="texture-doors" id="keyTextureDoors1"  type="radio">
+                                <label for="keyTextureDoors1">
+                                    <img  class="img-fluid" src="image/Rectangle%20170.png" alt="">
+                                </label>
+                                <input name="texture-doors" id="keyTextureDoors2"  type="radio">
+                                <label for="keyTextureDoors2">
+                                    <img  class="img-fluid" src="image/Rectangle%20170.png" alt="">
+                                </label>
+                                <input name="texture-doors" id="keyTextureDoors3"  type="radio">
+                                <label for="keyTextureDoors3">
+                                    <img  class="img-fluid" src="image/Rectangle%20170.png" alt="">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row mt-4 calculator__border">
+                            <div class="col-xl-2 d-flex align-items-center">
+                                <div class="calculator__input-text mt-0">Центр:</div>
+                            </div>
+                            <div class="col-xl-10 d-flex   ">
+                                <input name="texture-center-doors" id="keyTextureCenterDoors1"  type="radio">
+                                <label for="keyTextureCenterDoors1">
+                                    <img class="img-fluid" src="image/Rectangle%20170.png" alt="">
+                                </label>
+                                <input name="texture-center-doors" id="keyTextureCenterDoors2"  type="radio">
+                                <label for="keyTextureCenterDoors2">
+                                    <img class="img-fluid" src="image/Rectangle%20170.png" alt="">
+                                </label>
+
+
+                            </div>
+                        </div>
+                        <div class="row mt-4 d-flex justify-content-between calculator__border">
+                            <input name="type-frame" id="typeFrame1" type="radio">
+                            <label class="d-flex flex-column align-items-center" for="typeFrame1">
+                                <div class="type-frame__round">д1</div>
+                                <img src="image/frame1.svg" alt="">
+                            </label>
+
+
+                            <input name="type-frame" id="typeFrame2" type="radio">
+                            <label class="d-flex flex-column align-items-center" for="typeFrame2">
+                                <div class="type-frame__round">д2</div>
+                                <img src="image/frame1.svg" alt="">
+                            </label>
+
+
+                            <input name="type-frame" id="typeFrame3" type="radio">
+                            <label class="d-flex flex-column align-items-center" for="typeFrame3">
+                                <div class="type-frame__round">д3</div>
+                                <img src="image/frame1.svg" alt="">
+                            </label>
+
+
+                            <input name="type-frame" id="typeFrame4" type="radio">
+                            <label class="d-flex flex-column align-items-center" for="typeFrame4">
+                                <div class="type-frame__round">д4</div>
+                                <img src="image/frame1.svg" alt="">
+                            </label>
+
+
+
+                            <input name="type-frame" id="typeFrame5" type="radio">
+                            <label class="d-flex flex-column align-items-center" for="typeFrame5">
+                                <div class="type-frame__round">д5</div>
+                                <img src="image/frame1.svg" alt="">
+                            </label>
+                        </div>
+                        <div class="col-12 d-flex">
+                            <input class="calculator__switch" type="checkbox" id="dovodchiki">
+                            <label class="me-2" for="dovodchiki">Доводчики на двери купе</label>
+                            <input class="calculator__switch" type="checkbox" id="otboinik">
+                            <label for="otboinik">Отбойники</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-end mt-5">
+                                <div class="calculator__prev">
+                                    <svg width="26" height="12" viewBox="0 0 26 12" fill="#828282">
+                                        <path d="M25 6.75049C25.4142 6.75049 25.75 6.4147 25.75 6.00049C25.75 5.58627 25.4142 5.25049 25 5.25049L25 6.75049ZM0.469669 5.47016C0.176777 5.76305 0.176777 6.23792 0.469669 6.53082L5.24264 11.3038C5.53553 11.5967 6.01041 11.5967 6.3033 11.3038C6.59619 11.0109 6.59619 10.536 6.3033 10.2431L2.06066 6.00049L6.3033 1.75785C6.59619 1.46495 6.59619 0.990079 6.3033 0.697186C6.01041 0.404292 5.53553 0.404292 5.24264 0.697186L0.469669 5.47016ZM25 5.25049L1 5.25049L1 6.75049L25 6.75049L25 5.25049Z"/>
+                                    </svg>
+                                </div>
+                                <div class="calculator__next">Далее</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-8 col-xl-6">
+                    <div class="canvas-wrapper">
+                        <canvas width="1000" height="650"></canvas>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 <section class="advantage">
     <div class="container">
         <div class="subtitle subtitle-border">Преимущества наших шкафов</div>
@@ -617,7 +964,6 @@
                 <div class="swiper-wrapper">
 
 
-
                     <div class="swiper-slide">
                         <div class="card ">
 
@@ -731,10 +1077,10 @@
     <div class="send-wrapper">
         <div class="container">
 
-                    <div class="subtitle text-center">Есть свой проект?</div>
-                    <div class="send__descr text-center mt-2">Отправьте нам на просчет. <br>
-                        Заполните форму, наш менеджер свяжется с Вами и сделает перерасчет стоимости мебели
-                    </div>
+            <div class="subtitle text-center">Есть свой проект?</div>
+            <div class="send__descr text-center mt-2">Отправьте нам на просчет. <br>
+                Заполните форму, наш менеджер свяжется с Вами и сделает перерасчет стоимости мебели
+            </div>
 
 
             <form>
@@ -979,7 +1325,7 @@
                 <div class="team__photo">
                     <img class="img-fluid"
                          src="image/3_1x%203.png" alt="">
-<!--                    <div class="team__borders"></div>-->
+                    <!--                    <div class="team__borders"></div>-->
                 </div>
 
             </div>

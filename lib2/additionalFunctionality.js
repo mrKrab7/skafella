@@ -103,7 +103,7 @@ function HeaderDropMenu() {
 
 }
 
-HeaderDropMenu()
+
 
 function burgerMenu() {
     let triggerMenu = document.querySelector('.burger')
@@ -135,9 +135,95 @@ function burgerMenu() {
         })
     })
 }
+function hidingParameters() {
+    if (window.outerWidth < 576) {
+        let btn = document.querySelector('.show-all-parameters')
+        let parameters = document.querySelectorAll( '.type-sorted-button');
+        parameters.forEach((item, i) => {
+            if (i <= 5) {
+                item.classList.add('d-block')
+            } else {
+                item.classList.add('d-none')
+            }
+        })
+        btn.addEventListener('click', function () {
+            parameters.forEach(item => {
+                item.classList.remove('d-none')
+            })
+            this.classList.add('d-none')
+        })
+    }
 
-burgerMenu()
+}
+function select() {
 
+    document.querySelectorAll('.select').forEach(function (dropDownWrapper) {
+
+        const dropDownBtn = dropDownWrapper.querySelector('.select-btn-drop');
+        console.log(dropDownBtn)
+        const dropDownList = dropDownWrapper.querySelector('.select__list');
+        const dropDownListItems = dropDownList.querySelectorAll('.select__list-item');
+        const dropDownInput = dropDownWrapper.querySelector('.select__input-hidden');
+        // проверка на выбраный параметр в интпуте по умолчанию
+        if (dropDownInput.dataset.active !== '') {
+            dropDownListItems.forEach(item => {
+                if (dropDownInput.dataset.active === item.dataset.value) {
+                    dropDownBtn.textContent = item.textContent
+                    dropDownBtn.classList.add('aside-input-text')
+                }
+            })
+        }
+        // Клик по кнопке. Открыть/Закрыть select
+        dropDownBtn.addEventListener('click', function (e) {
+            dropDownList.classList.toggle('select__list--visible');
+            // this.classList.add('select__button--active');
+            this.classList.toggle('select-open');
+
+
+
+        });
+
+        // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+        dropDownListItems.forEach(function (listItem) {
+            listItem.addEventListener('click', function (e) {
+                e.stopPropagation();
+                dropDownBtn.innerText = this.innerText;
+                dropDownBtn.focus();
+
+                // dropDownInput.value = this.dataset.value;
+                dropDownInput.value = 2;
+                console.log(dropDownInput.value)
+                dropDownList.classList.remove('select__list--visible');
+                dropDownBtn.classList.remove('select-open');
+                dropDownBtn.classList.add('aside-input-text');
+
+            });
+        });
+
+        // Клик снаружи дропдауна. Закрыть дропдаун
+        document.addEventListener('click', function (e) {
+            if (e.target !== dropDownBtn) {
+                dropDownBtn.classList.remove('select__button--active');
+                dropDownBtn.classList.remove('select-open');
+                dropDownList.classList.remove('select__list--visible');
+            }
+        });
+
+        // Нажатие на Tab или Escape. Закрыть дропдаун
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Tab' || e.key === 'Escape') {
+                dropDownBtn.classList.remove('select__button--active');
+                dropDownList.classList.remove('select__list--visible');
+                dropDownBtn.classList.remove('select-open');
+            }
+        });
+    });
+}
+select()
+// hidingParameters()
+
+// burgerMenu()
+// HeaderDropMenu()
 // showHeaderFixed()
 // scrollTop()
 // maskNumber()

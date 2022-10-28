@@ -10,8 +10,11 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass, nextBut
     if (nextBtn !== undefined) {
         nextBtn.forEach(item => {
             item.addEventListener('click', function () {
+
                 hideTabContent();
-                showTabContent(currentTab + 1)
+                currentTab++
+                showTabContent(currentTab)
+                console.log(currentTab)
             })
         })
 
@@ -56,5 +59,5 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass, nextBut
 
 
 }
-tabs('.card-product__header-wrapper', '.card-product__header-tab', '.card-product__tab-content', 'card-product__tab-active')
-// tabs('.calculator-header', '.calculator-header__item', '.calculator-content', 'calculator__item-active', '.calculator__next')
+// tabs('.card-product__header-wrapper', '.card-product__header-tab', '.card-product__tab-content', 'card-product__tab-active')
+tabs('.calculator-header', '.calculator-header__item', '.calculator-content', 'calculator__item-active', '.calculator__next')
