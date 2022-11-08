@@ -36,6 +36,8 @@
     </div>
 
 </div>
+
+
 <div class="burger-menu burger-main-menu">
     <div class="close-burger-menu"><img src="image/modal__btn-close.svg" alt=""></div>
     <ul class="burger__nav">
@@ -57,11 +59,21 @@
 
 
         </li>
+
         <li class="burger__item-list "><span class="burger__item-icons">Калькулятор шкафов</span></li>
+
+        <!--        <li class="burger__item-list "><span class="burger__item-icons burger__question">Задать вопрос</span></li>-->
+        <li class="burger__item-list ">
+            <div class="header__nav-question  d-lg-block">Задать вопрос <img class=" img-fluid"
+                                                                             src="/image/question-sign-black%20.png"
+                                                                             alt=""></div>
+        </li>
 
 
     </ul>
 </div>
+
+
 <header class="header">
     <div class="header__descr-wrap d-flex align-items-center">
         <div class="container">
@@ -108,6 +120,8 @@
 
                         </div>
                     </div>
+
+
                     <div class="burger-block d-flex d-lg-none align-items-center ">
                         <a class="d-none d-md-block header__number" href="tel:7999999999">+ 7(999) 999-99-99</a>
                         <div class="burger d-flex flex-column align-items-center justify-content-center">
@@ -156,7 +170,8 @@
                         </div>
                     </div>
                     <div class="header__call-wrapper d-flex justify-content-end justify-content-xl-between align-items-center h-100">
-                        <a class="header__number d-none d-lg-block" href="tel:7999999999">+ 7(999) 999-99-99</a>
+
+
                         <button data-type-modal="call"
                                 data-title-modal="Мы готовы перезвонить Вам, <br> чтобы согласовать время и <br> дату приезда"
                                 class="button header__call-button header-round-btn d-flex align-items-center call-btn ms-3">
@@ -210,7 +225,7 @@
                                                 <li><a class="nav_content__item" href="">Полезные рекомендации при
                                                     выборе</a></li>
                                                 <li class="close-menu-btn d-block d-lg-none">
-                                                    <img src="image/modal__btn-close.svg" alt="">
+                                                    <img src="zed/image/modal__btn-close.svg" alt="">
                                                 </li>
                                             </ul>
                                         </div>
@@ -229,13 +244,13 @@
                     </ul>
                 </div>
                 <div class="col-2  col-lg-4 col-lg-4 col-xxl-6 d-flex justify-content-end align-items-center ">
-                    <div class="header__nav-question-wrap d-flex align-items-center justify-content-end justify-content-lg-between">
-                        <div class="header__nav-question d-none d-lg-block   nav-border ">Задать вопрос</div>
-                        <div class="question-mobile d-block d-lg-none nav-border pe-3">
-                            <img class=" img-fluid" src="/image/question-sign-black%20.png" alt="">
-                        </div>
+                    <div class="header__nav-question-wrap d-flex align-items-center justify-content-end justify-content-lg-end">
+                        <div class="header__nav-question  d-lg-block    ">Задать вопрос <img class=" img-fluid"
+                                                                                             src="/image/question-sign-black%20.png"
+                                                                                             alt=""></div>
 
-                        <div class=" basket-wrapper ms-3">
+
+                        <div class=" basket-wrapper ms-3 d-none">
                             <div class="basket__icon"><img src="image/baslet-icon.svg" alt=""></div>
                             <div class="basket__count">10</div>
                         </div>
@@ -247,6 +262,7 @@
 
 
 </header>
+
 <section class="main">
     <div class="swiper main-swiper">
         <div class="swiper-wrapper">
@@ -259,7 +275,7 @@
                         </div>
 
                         <div class="col-12">
-                            <div class="main__sub-text">Посмотрите наши готовые решения и сделайте свой выбор</div>
+                            <div class="main__sub-text">Посмотрите наши готовые решения <br> и сделайте свой выбор</div>
                         </div>
 
                         <div class="col-md-3">
@@ -365,6 +381,9 @@
     </div>
 
 </section>
+
+
+
 <section class="calculator">
     <div class="container">
         <div class="subtitle mt-5">Сделайте расчет шкафа <span>оnline</span></div>
@@ -415,7 +434,7 @@
                         <div class="calculator__bold-text mt-4">Количество секций шкафа:</div>
                         <div class="row calculator__border">
                             <div class="col-12 d-flex ">
-                                <input class="calculator__checkbox" name="section-amount" id="section2" type="radio">
+                                <input  class="calculator__checkbox" name="section-amount" id="section2" type="radio">
                                 <label class="me-3" for="section2">Две секции</label>
                                 <input class="calculator__checkbox" name="section-amount" id="section3" type="radio">
                                 <label class="me-3" for="section3">Три секции</label>
@@ -460,6 +479,7 @@
                 </div>
                 <div class="col-md-5 ">
                     <img class="img-fluid calculator__preview-img" src="image/calculator__doors-img.png">
+                    {IMAGES}
                 </div>
             </div>
         </div>
@@ -476,25 +496,16 @@
                                 </div>
                                 <div class="col-xl-9 d-flex justify-content-between">
                                     <input name="box-color" id="dub" type="radio">
-                                    <label for="dub">
+                                    <label class="label-descr" for="dub">
                                         <img class="img-fluid" src="image/Rectangle%20143.png" alt="">
+                                        <div class="calculator__show-descr">серебро матовый</div>
                                     </label>
                                     <input name="box-color" id="dub1" type="radio">
                                     <label for="dub1">
                                         <img class="img-fluid" src="image/Rectangle%20143.png" alt="">
                                     </label>
-                                    <input name="box-color" id="dub2" type="radio">
-                                    <label for="dub2">
-                                        <img class="img-fluid" src="image/Rectangle%20143.png" alt="">
-                                    </label>
-                                    <input name="box-color" id="dub3" type="radio">
-                                    <label for="dub3">
-                                        <img class="img-fluid" src="image/Rectangle%20143.png" alt="">
-                                    </label>
-                                    <input name="box-color" id="dub4" type="radio">
-                                    <label for="dub4">
-                                        <img class="img-fluid" src="image/Rectangle%20143.png" alt="">
-                                    </label>
+
+                                    {COLOR_CORPUS}
                                 </div>
                             </div>
 
@@ -542,6 +553,42 @@
                                             <input type="text" name="select-section1" data-active="5"
                                                    class="select__input-hidden">
                                         </div>
+                                        {SECTION1}
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="calculator__select-wrapper ">
+                                <div class="row">
+                                    <div class="col-2 p-0 d-flex align-items-center">
+                                        <div class="text">Секция 1</div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="select">
+                                            <button class="select-btn-drop">Для гладилки, 3 ящика, 2 штанги</button>
+                                            <ul class="select__list">
+                                                <li class="select__list-item aside-input-text" data-value="1">Для
+                                                    гладилки, 3 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="2">Для
+                                                    гладилки, 4 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="3">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="4">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+                                                <li class="select__list-item aside-input-text" data-value="5">Для
+                                                    гладилки, 5 ящика, 2 штанги
+                                                </li>
+
+                                            </ul>
+                                            <input type="text" name="select-section1" data-active="5"
+                                                   class="select__input-hidden">
+                                        </div>
+                                        {SECTION2}
                                     </div>
                                 </div>
 
@@ -590,43 +637,15 @@
                                         <div class="select">
                                             <button class="select-btn-drop">Для гладилки, 3 ящика, 2 штанги</button>
                                             <ul class="select__list">
+
+
+
                                                 <li class="select__list-item aside-input-text" data-value="1">Для
                                                     гладилки, 3 ящика, 2 штанги
                                                 </li>
-                                                <li class="select__list-item aside-input-text" data-value="2">Для
-                                                    гладилки, 4 ящика, 2 штанги
-                                                </li>
-                                                <li class="select__list-item aside-input-text" data-value="3">Для
-                                                    гладилки, 5 ящика, 2 штанги
-                                                </li>
-                                                <li class="select__list-item aside-input-text" data-value="4">Для
-                                                    гладилки, 5 ящика, 2 штанги
-                                                </li>
-                                                <li class="select__list-item aside-input-text" data-value="5">Для
-                                                    гладилки, 5 ящика, 2 штанги
-                                                </li>
-
-                                            </ul>
-                                            <input type="text" name="select-section1" data-active="5"
-                                                   class="select__input-hidden">
-                                        </div>
-                                    </div>
-                                </div>
 
 
-                            </div>
-                            <div class="calculator__select-wrapper ">
-                                <div class="row">
-                                    <div class="col-2 p-0 d-flex align-items-center">
-                                        <div class="text">Секция 1</div>
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="select">
-                                            <button class="select-btn-drop">Для гладилки, 3 ящика, 2 штанги</button>
-                                            <ul class="select__list">
-                                                <li class="select__list-item aside-input-text" data-value="1">Для
-                                                    гладилки, 3 ящика, 2 штанги
-                                                </li>
+
                                                 <li class="select__list-item aside-input-text" data-value="2">Для
                                                     гладилки, 4 ящика, 2 штанги
                                                 </li>
@@ -683,42 +702,57 @@
                     <div class="calculator__content-block">
                         <div class="calculator__fittings-text">Выбор фурнитуры:</div>
                         <div class="row calculator__border">
-                            <div class="col-8 d-flex justify-content-between mt-4">
-                                <input type="radio" name="frame-handle">
-                                <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
-                                <input type="radio" name="frame-handle">
-                                <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
-                                <input type="radio" name="frame-handle">
-                                <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
-                                <input type="radio" name="frame-handle">
-                                <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
+                            <div class="col-8 d-flex justify-content-between ">
+                                <div class="row">
+                                    <div class="col-3 mt-3">
+                                        <input type="radio" name="frame-handle">
+                                        <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="radio" name="frame-handle">
+                                        <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="radio" name="frame-handle">
+                                        <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="radio" name="frame-handle">
+                                        <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="radio" name="frame-handle">
+                                        <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="radio" name="frame-handle">
+                                        <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="radio" name="frame-handle">
+                                        <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="radio" name="frame-handle">
+                                        <label><img class="img-fluid" src="image/Rectangle%20143%20(1).png" alt=""></label>
+                                    </div>
+                                </div>
+
+
+
+
 
                             </div>
-                            <div class="col-8 d-flex justify-content-between mt-3">
-                                <input type="radio" id="keyColor1" name="frame-color">
-                                <label class="label-descr" for="keyColor1"><img src="image/Rectangle%20143%20(4).png" alt="">
-                                <div class="calculator__show-descr">серебро матовый</div>
-                                </label>
-                                <input type="radio" id="keyColor2" name="frame-color">
-                                <label class="label-descr" for="keyColor2"><img src="image/Rectangle%20143%20(4).png" alt="">
-                                    <div class="calculator__show-descr">серебро матовый</div>
-                                </label>
-                                <input type="radio" id="keyColor3" name="frame-color">
-                                <label for="keyColor3"><img src="image/Rectangle%20143%20(4).png" alt=""></label>
-                                <input type="radio" id="keyColor4" name="frame-color">
-                                <label for="keyColor4"><img src="image/Rectangle%20143%20(4).png" alt=""></label>
 
-                            </div>
 
                         </div>
                         <div class="row">
                             <div class="col-12 mt-4 d-flex justify-content-between">
                                 <input type="radio" id="left-door" name="door-type">
-                                <label for="left-door">Дверь левая</label>
+                                <label for="left-door">{D1}</label>
                                 <input type="radio" id="right-door" name="door-type">
-                                <label for="right-door">Дверь правая</label>
-                                <input type="radio" id="center-door" name="door-type">
-                                <label for="center-door">Дверь центральная</label>
+                                <label for="right-door">{D2}</label>
+
 
                             </div>
                         </div>
@@ -739,6 +773,7 @@
                                 <label for="keyTextureDoors3">
                                     <img  class="img-fluid" src="image/Rectangle%20170.png" alt="">
                                 </label>
+                                {COLOR_FON}
                             </div>
                         </div>
                         <div class="row mt-4 calculator__border">
@@ -754,6 +789,7 @@
                                 <label for="keyTextureCenterDoors2">
                                     <img class="img-fluid" src="image/Rectangle%20170.png" alt="">
                                 </label>
+                                {COLOR_CENTER}
 
 
                             </div>
@@ -769,29 +805,28 @@
                             <input name="type-frame" id="typeFrame2" type="radio">
                             <label class="d-flex flex-column align-items-center" for="typeFrame2">
                                 <div class="type-frame__round">д2</div>
-                                <img src="image/frame1.svg" alt="">
+                                <img src="image/Group%20221.svg" alt="">
                             </label>
 
 
                             <input name="type-frame" id="typeFrame3" type="radio">
                             <label class="d-flex flex-column align-items-center" for="typeFrame3">
                                 <div class="type-frame__round">д3</div>
-                                <img src="image/frame1.svg" alt="">
+                                <img src="image/Group%20222.svg" alt="">
                             </label>
 
 
                             <input name="type-frame" id="typeFrame4" type="radio">
                             <label class="d-flex flex-column align-items-center" for="typeFrame4">
                                 <div class="type-frame__round">д4</div>
-                                <img src="image/frame1.svg" alt="">
+                                <img src="image/Group%20241.svg" alt="">
                             </label>
-
 
 
                             <input name="type-frame" id="typeFrame5" type="radio">
                             <label class="d-flex flex-column align-items-center" for="typeFrame5">
                                 <div class="type-frame__round">д5</div>
-                                <img src="image/frame1.svg" alt="">
+                                <img src="image/Group%20224.svg" alt="">
                             </label>
                         </div>
                         <div class="col-12 d-flex">
@@ -824,7 +859,14 @@
 
         </div>
     </div>
+
 </section>
+
+
+
+
+
+
 <section class="advantage">
     <div class="container">
         <div class="subtitle subtitle-border">Преимущества наших шкафов</div>
@@ -908,13 +950,13 @@
 <section class="design">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-7 col-xl-5">
+            <div class="col-md-8 col-xl-5">
                 <div class="subtitle design__subtitle">Бесплатный дизайн проект</div>
                 <div class="design__descr mt-3">Заполните форму и получите индивидуальный проект шкафа по Вашим
                     размерам
                 </div>
             </div>
-            <div class="col-md-4 col-md-5 col-xl-7 d-flex flex-column flex-lg-row  align-items-lg-center justify-content-lg-center">
+            <div class="col-md-4 col-xl-7 d-flex flex-column flex-lg-row  align-items-lg-center justify-content-lg-center">
                 <button class="button design__button d-flex align-items-center justify-content-center">Пригласить
                     замерщика
                 </button>
@@ -1083,26 +1125,26 @@
             </div>
 
 
-            <form>
+            <form  name="project" >
                 <div class="row send__form-wrapper d-flex align-items-end h-100">
 
                     <div class="col-md-6  col-lg-4">
                         <div class="modal__input-wrapper mt-3">
                             <div class="input-text">Телефон</div>
-                            <input required="" class="modal-input send__input" type="text">
+                            <input name="phone" inputmode="numeric" required="" class="modal-input send__input" type="text">
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="modal__input-wrapper mt-3">
                             <div class="input-text">Электронная почта</div>
-                            <input required="" class="modal-input send__input" type="text">
+                            <input name="email" required="" class="modal-input send__input" type="text">
                         </div>
                     </div>
                     <div class="col-md-6 offset-md-3 offset-lg-0  col-lg-4">
                         <div class="modal__input-wrapper d-flex align-items-end h-100 mt-3  ">
 
-                            <input id="send-project" required="" class="modal-input" type="file">
-                            <label class="send__input-file d-flex  align-items-center justify-content-center"
+                            <input  id="send-project"   class="modal-input" type="file">
+                            <label  class="send__input-file d-flex  align-items-center justify-content-center"
                                    for="send-project"><span>Прикрепить файл</span> </label>
                             <label for="send-project" class="send__progres-btn">
                                 <div class="send__progres"></div>
@@ -1124,7 +1166,7 @@
 
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="button send__button">Отправить заявку</button>
+                        <button disabled type="submit" class="button send__button">Отправить заявку</button>
                     </div>
 
                 </div>
@@ -1354,7 +1396,8 @@
             </div>
             <div class="modal__input-wrapper mt-3">
                 <div class="input-text">Телефон</div>
-                <input data-mask="+7 (___) ___-____" data-slots="" required class="modal-input" type="text">
+                <input inputmode="numeric" data-mask="+7 (___) ___-____" data-slots="" required class="modal-input"
+                       type="text">
             </div>
             <div class="modal__consent-text ">Нажимая на кнопку, вы принимаете Положение и Согласие на обработку
                 персональных данных.
@@ -1363,7 +1406,14 @@
         </form>
     </div>
 </div>
+<div class="modal-background modal-feedback">
+    <div class="modal-wrapper">
+        <div class="modal__btn-close"><img src="image/modal__btn-close.svg" alt=""></div>
+        <div class="subtitle text-center">Спасибо!</div>
+        <div class="modal__descr text-center">Ваша заявка принята. <br> Мы скоро свяжемся с Вами.</div>
 
+    </div>
+</div>
 <div class="modal-background modal-calc">
 
     <div class="modal-wrapper">
@@ -1425,7 +1475,7 @@
                         </div>
                         <div class="calculator__input-block">
                             <div class="calculator__input-text">Телефон <b>*</b></div>
-                            <input class="calculator__input" type="text">
+                            <input inputmode="numeric" class="calculator__input" type="text">
                         </div>
                         <div class="calculator__input-block">
                             <div class="calculator__input-text">Электронная почта <b>*</b></div>
@@ -1531,7 +1581,9 @@
                 <div class="footer__text mt-3">Ежедневно с 09.00 по 22.00</div>
 
                 <div class="footer__number"><a href="tel:79999999999">+ 7(999) 999-99-99</a></div>
-                <div class="footer__question">Задать вопрос</div>
+                <div class="header__nav-question  d-lg-block   ">Задать вопрос <img class=" img-fluid"
+                                                                                    src="/image/question-sign-black%20.png"
+                                                                                    alt=""></div>
             </div>
         </div>
     </div>

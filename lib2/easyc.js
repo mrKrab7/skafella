@@ -190,7 +190,7 @@ EasyC.prototype.setRelative = function (obj) {
 EasyC.prototype.clean = function () {
     var ctx = this.canvas.getContext("2d");
     ctx.clearRect(0, 0, 1000, 1000);
-    // ctx.fillStyle = 'black';
+    // ctx.fillStyle = 'red';
     // ctx.fillRect(0, 0, 1000, 1000);
 }
 EasyC.prototype.draw = function (success, i, sorted) {

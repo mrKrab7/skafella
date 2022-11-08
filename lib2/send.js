@@ -83,50 +83,66 @@
 //         timeoutPromise
 //     ]);
 // }
-
-function httpGet(url, data, progressBar) {
-
-    return new Promise(function (resolve, reject) {
-        let textStatus = document.querySelector('.send__progres-btn')
-        textStatus.classList.remove('uploaded')
-        progressBar.style.width = '0'
-        var xhr = new XMLHttpRequest();
-
-
-        xhr.upload.addEventListener('progress', function (event) {
-                const percentLoaded = Math.round((event.loaded / event.total) * 100)
-                progressBar.style.width = percentLoaded + '%'
-                if (percentLoaded === 100) {
-
-                    textStatus.classList.add('uploaded')
-
-                }
-            }
-        )
-
-
-        xhr.onload = function () {
-            if (this.status == 200) {
-                resolve(this.response);
-            } else {
-                var error = new Error(this.statusText);
-                error.code = this.status;
-                reject(error);
-            }
-        };
-
-        xhr.onerror = function () {
-            reject(new Error("Network Error"));
-        };
-        xhr.open('POST', url, true);
-        xhr.send(data);
-    });
-
-}
-
-
 function sendProject() {
+    function httpGet(url, data, progressBar) {
+
+        return new Promise(function (resolve, reject) {
+            let textStatus = document.querySelector('.send__progres-btn')
+            textStatus.classList.remove('uploaded')
+            progressBar.style.width = '0'
+            var xhr = new XMLHttpRequest();
+
+
+            xhr.upload.addEventListener('progress', function (event) {
+                    const percentLoaded = Math.round((event.loaded / event.total) * 100)
+                    progressBar.style.width = percentLoaded + '%'
+                    if (percentLoaded === 100) {
+
+                        textStatus.classList.add('uploaded')
+
+                    }
+                }
+            )
+
+
+            xhr.onload = function () {
+                if (this.status == 200) {
+                    resolve(this.response);
+                } else {
+                    var error = new Error(this.statusText);
+                    error.code = this.status;
+                    reject(error);
+                }
+            };
+
+            xhr.onerror = function () {
+                reject(new Error("Network Error"));
+            };
+            xhr.open('POST', url, true);
+            xhr.send(data);
+        });
+
+    }
+    const postData = async (url, data) => {
+
+
+        let res = await fetch(url, {
+            method: "POST",
+            body: data
+        });
+        return await res.json();
+    }
+    let fileName = ''
+    let form = document.querySelector('form[name="project"]')
+    let button = form.querySelector('button')
     let fileInput = document.querySelector('#send-project')
+
+
+
+    function sendForm () {
+        button.removeAttribute('disabled')
+        console.log(1)
+    }
 
     fileInput.addEventListener('change', function () {
         let file = fileInput.files[0]
@@ -138,11 +154,15 @@ function sendProject() {
         progressInput.classList.add('d-block')
         const formSent = new FormData()
         formSent.append('file', file)
+
+
         httpGet('/modules/canvas/project.php', file, progressBar)
             .then(res => {
-                console.log(res)
+                sendForm(res)
             })
+
     })
+
 
 }
 

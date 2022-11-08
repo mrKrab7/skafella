@@ -1,4 +1,4 @@
-const tabs = (headerSelector, tabSelector, contentSelector, activeClass, nextButton) => {
+const tabsCalculator = (headerSelector, tabSelector, contentSelector, activeClass, nextButton) => {
     const header = document.querySelector(headerSelector),
         tab = document.querySelectorAll(tabSelector),
         content = document.querySelectorAll(contentSelector),
@@ -6,7 +6,7 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass, nextBut
         nextBtn = document.querySelectorAll(nextButton)
     let previewTabActive = +header.dataset.tabActive - 1
     currentTab = 0
-    console.log(currentTab)
+    // console.log(currentTab)
     if (nextBtn !== undefined) {
         nextBtn.forEach(item => {
             item.addEventListener('click', function () {
@@ -14,7 +14,7 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass, nextBut
                 hideTabContent();
                 currentTab++
                 showTabContent(currentTab)
-                console.log(currentTab)
+
             })
         })
 
@@ -46,7 +46,7 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass, nextBut
                 currentTab = i
                 hideTabContent();
                 showTabContent(i)
-                console.log(currentTab)
+
             }
         })
 
@@ -60,4 +60,46 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass, nextBut
 
 }
 // tabs('.card-product__header-wrapper', '.card-product__header-tab', '.card-product__tab-content', 'card-product__tab-active')
-tabs('.calculator-header', '.calculator-header__item', '.calculator-content', 'calculator__item-active', '.calculator__next')
+tabsCalculator('.calculator-header', '.calculator-header__item', '.calculator-content', 'calculator__item-active', '.calculator__next')
+const tabs = (headerSelector, tabSelector, contentSelector, activeClass,) => {
+    const header = document.querySelector(headerSelector),
+        tab = document.querySelectorAll(tabSelector),
+        content = document.querySelectorAll(contentSelector)
+
+
+    function hideTabContent() {
+        content.forEach((item) => {
+            item.style.display = 'none'
+        });
+        tab.forEach((item) => {
+            item.classList.remove((activeClass))
+        })
+    }
+
+    function showTabContent(i = 0) {
+        content[i].style.display = 'block';
+        tab[i].classList.add(activeClass);
+
+    }
+
+    header.addEventListener('click', (e) => {
+
+        const target = e.target
+
+
+        tab.forEach((item, i) => {
+            if (target === item || target.parentNode === item) {
+                currentTab = i
+                hideTabContent();
+                showTabContent(i)
+
+            }
+        })
+
+    })
+    hideTabContent();
+    showTabContent();
+
+
+}
+tabs('.calc__doors-header', '.calc__doors-tab', '.calc__doors-content', 'calc__doors-active')
