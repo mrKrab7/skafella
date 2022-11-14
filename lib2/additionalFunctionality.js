@@ -164,3 +164,8 @@ burgerMenu()
 // showHeaderFixed()
 // scrollTop()
 // maskNumber()
+
+let btn = document.querySelector('.section-btn');
+btn.addEventListener('click', function () {
+    console.log(1)
+})

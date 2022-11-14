@@ -123,6 +123,7 @@ function sendProject() {
         });
 
     }
+
     const postData = async (url, data) => {
 
 
@@ -130,39 +131,80 @@ function sendProject() {
             method: "POST",
             body: data
         });
-        return await res.json();
+        return await res.text();
     }
     let fileName = ''
     let form = document.querySelector('form[name="project"]')
     let button = form.querySelector('button')
     let fileInput = document.querySelector('#send-project')
+    let progressBar = document.querySelector('.send__progres');
+    let previewInput = document.querySelector('.send__input-file')
+    let progressInput = document.querySelector('.send__progres-btn')
+    let inputs = form.querySelectorAll('input')
 
+    function sendForm(res) {
+        if (res.length > 10) {
+            button.removeAttribute('disabled')
+            fileName = res
+        }
 
-
-    function sendForm () {
-        button.removeAttribute('disabled')
-        console.log(1)
+        if (res === '3') {
+            progressInput.classList.remove('d-block')
+            previewInput.classList.remove('d-none')
+            alert('Слишком большой файл')
+        }
+        if (res === '2') {
+            progressInput.classList.remove('d-block')
+            previewInput.classList.remove('d-none')
+            alert('Формат файла не подходит')
+        }
     }
+
 
     fileInput.addEventListener('change', function () {
         let file = fileInput.files[0]
-        let progressBar = document.querySelector('.send__progres');
-        let previewInput = document.querySelector('.send__input-file')
-        let progressInput = document.querySelector('.send__progres-btn')
+        let maxSize = 8 * 1024
+        console.log(file.size > maxSize)
+        if (file.size > 8 * 1024) {
+
+            alert('Слишком большой файл')
+            return
+        }
         // progressBar.style.width = '0%'
         previewInput.classList.add('d-none')
         progressInput.classList.add('d-block')
         const formSent = new FormData()
-        formSent.append('file', file)
+        let date = Date.now()
+        formSent.append('userImage', file, date)
 
 
-        httpGet('/modules/canvas/project.php', file, progressBar)
+        httpGet('/zed/file/upload.php', formSent, progressBar)
             .then(res => {
+                console.log(res)
                 sendForm(res)
             })
 
     })
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        let formData = new FormData(form)
+        formData.append('file', fileName)
+        postData('/zed/modules/feedback/sendmessage.php', formData)
+            .then(res => {
+                console.log(res)
+            })
+            .catch(() => alert('Что-то пошло не так...'))
+            .finally(() => {
+                let modal =  document.querySelector('.modal-feedback')
+                inputs.forEach(item => {
+                    item.value = ''
+                })
+                progressInput.classList.remove('d-block')
+                previewInput.classList.remove('d-none')
+                modal.style.display = 'block'
 
+            });
+    })
 
 }
 
