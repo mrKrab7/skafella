@@ -15,6 +15,16 @@ function synchronizationCheckbox(name) {
         })
     })
 }
+function getImgCanvas () {
+    let canvas = document.querySelector('#fasad')
+    let img = document.querySelector('.fasad-img-canvas')
+
+    img.onload = function () {
+        img.src = canvas.toDataURL('image/jpeg', 1.0)
+    }
+    console.log(url)
+    img.src = url
+}
 
 synchronizationCheckbox('input[name="zakladnaia"]')
 synchronizationCheckbox('input[name="stretch-ceiling"]')
@@ -270,10 +280,7 @@ const constructor = () => {
             let parameterDoorBackground2 = searchCheckedElem('input[name="texture-doors2"]')
             let parameterDoorCenter1 = searchCheckedElem('input[name="texture-center-doors1"]')
             let parameterDoorCenter2 = searchCheckedElem('input[name="texture-center-doors2"]');
-
             let parameterСabinet = searchCheckedElem('input[name="cabinet-parameters"]')
-
-
             let parameterSectionColor = searchCheckedElem('input[name="texture-doors"]')
             let parameterSection1 = searchCheckedElem('input[name="section-modal1"]');
             let parameterSection2 = searchCheckedElem('input[name="section-modal2"]');
@@ -594,7 +601,11 @@ const constructor = () => {
 
         innerCanvas.draw()
         outerCanvas.draw()
+        getImgCanvas()
         console.log(outerCanvas.objects)
+
+
+
 
     }
 
@@ -752,6 +763,6 @@ const inputLimitation = () => {
     disabledButton()
 
 }
-inputLimitation()
+// inputLimitation()
 
 
