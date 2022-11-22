@@ -66,6 +66,7 @@ const modals = () => {
 
     bindModal('', '.modal-calc', '.calculator__prev-steep');
     bindModal('', '.modal-feedback', '.modal-feedback .modal__btn-close');
+    bindModal('', '.modal-review', '.modal-review .modal__btn-close');
 
 
 };

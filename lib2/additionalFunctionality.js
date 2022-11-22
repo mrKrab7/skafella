@@ -7,16 +7,7 @@
 //     })
 // }
 
-// function scrollTop() {
-//     let header = document.querySelector('header')
-//     let scrollBtn = document.querySelector('.btn-scroll')
-//     scrollBtn.addEventListener('click', function () {
-//         header.scrollIntoView({
-//             behavior: "smooth",
-//             block: "start"
-//         });
-//     })
-// }
+
 
 
 function maskNumber() {
@@ -106,36 +97,7 @@ function HeaderDropMenu() {
 
 
 
-function burgerMenu() {
-    let triggerMenu = document.querySelector('.burger')
-    let menu = document.querySelectorAll('.burger-menu')
-    let mainMenu = document.querySelector('.burger-main-menu')
-    let closeMenu = document.querySelectorAll('.close-burger-menu')
-    let triggerSubMenu = document.querySelectorAll('.burger-menu-arrow')
-    triggerMenu.addEventListener('click', function () {
-        mainMenu.style.transform = 'translateX(0%)'
-    })
-    closeMenu.forEach(closeTrigger => {
-        closeTrigger.addEventListener('click', function () {
-            menu.forEach(menuItem => {
-                menuItem.style.transform = 'translateX(100%)'
-            })
-        })
-    })
 
-
-    triggerSubMenu.forEach(item => {
-        item.addEventListener('click', function () {
-            let subMenu  = item.nextElementSibling
-            let prevSteep = subMenu.querySelector('.burger-prev-steep')
-            prevSteep.textContent = item.textContent
-            subMenu.style.transform = 'translateX(0%)'
-            subMenu.addEventListener('click', function () {
-                subMenu.style.transform = 'translateX(100%)'
-            })
-        })
-    })
-}
 function hidingParameters() {
     if (window.outerWidth < 576) {
         let btn = document.querySelector('.show-all-parameters')
@@ -159,7 +121,7 @@ function hidingParameters() {
 
 // hidingParameters()
 
-burgerMenu()
+
 // HeaderDropMenu()
 // showHeaderFixed()
 // scrollTop()

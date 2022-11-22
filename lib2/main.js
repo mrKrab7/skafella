@@ -15,19 +15,138 @@ function synchronizationCheckbox(name) {
         })
     })
 }
-function getImgCanvas () {
-    let canvas = document.querySelector('#fasad')
-    let img = document.querySelector('.fasad-img-canvas')
 
-    img.onload = function () {
-        img.src = canvas.toDataURL('image/jpeg', 1.0)
+
+function insertImagesInModal() {
+    let btn = document.querySelectorAll('.calculator__next')
+
+    function getImgCanvas(canvasSelector, imgSelector) {
+        let canvas = document.querySelector(canvasSelector)
+        let img = document.querySelector(imgSelector)
+        img.src = canvas.toDataURL('image/jpeg')
     }
-    console.log(url)
-    img.src = url
+
+    btn.forEach(item => {
+        item.addEventListener('click', function () {
+            getImgCanvas('#fasad', '.fasad-img-canvas')
+            getImgCanvas('#inner', '.inner-img-canvas')
+        })
+    })
+
 }
 
-synchronizationCheckbox('input[name="zakladnaia"]')
-synchronizationCheckbox('input[name="stretch-ceiling"]')
+function createDescrOrder() {
+    function getDescription(elementSelector) {
+        let inputSelector = document.querySelectorAll(elementSelector)
+        let result = false
+
+        inputSelector.forEach(item => {
+            if (item.checked) {
+                console.log(item)
+                result = item.dataset.descr
+            }
+        })
+        return result
+
+    }
+
+    let btn = document.querySelectorAll('.calculator__next')
+
+
+    function descriptionFormation() {
+
+        let amountDoors = document.querySelector('input[name="section-amount"]:checked').dataset.article
+        let frameType1 = document.querySelector('input[name="type-frame-1"]:checked').dataset.article
+        let frameType2 = document.querySelector('input[name="type-frame-2"]:checked').dataset.article
+        let resultListDoor = document.querySelector('#result-list-doors')
+        let resultListSection = document.querySelector('#result-list-section')
+        let doorsFon1 = getDescription('input[name="texture-doors1"]')
+        let doorsFon2 = getDescription('input[name="texture-doors2"]')
+        let doorsCenter1 = getDescription('input[name="texture-doors2"]')
+        let doorsCenter2 = getDescription('input[name="texture-center-doors2"]')
+        let colorCorpus = getDescription('input[name="texture-doors"]')
+        let section1 = getDescription('input[name="section-modal1"]')
+        let section2 = getDescription('input[name="section-modal2"]')
+        let section3 = getDescription('input[name="section-modal3"]')
+        let section4 = getDescription('input[name="section-modal4"]')
+        let objDoors = {}
+        let objSection = {}
+
+        objDoors.stretchCeiling = getDescription('#stretch-ceiling')
+        console.log(frameType1)
+        if (amountDoors === '2') {
+            if (frameType1 !== '1') {
+                objDoors.door1 = `Левая дверь: ${doorsFon1}  вставка ${doorsCenter1}`
+
+            } else objDoors.door1 = 'левая дверь: ' + doorsFon1
+
+
+            if (frameType2 !== '1') {
+                objDoors.door2 = `Правая дверь: ${doorsFon2}  вставка ${doorsCenter2}`
+            } else objDoors.door2 = 'правая дверь: ' + doorsFon2
+
+        }
+        if (amountDoors === '3' || amountDoors === '4') {
+            if (frameType1 !== '1') {
+                objDoors.door1 = `Крайняя дверь : ${doorsFon1}  вставка ${doorsCenter1}`
+
+            } else objDoors.door1 = `Крайняя дверь : ${doorsFon1}`
+
+
+            if (frameType2 !== '1') {
+                objDoors.door2 = `Центральная дверь: ${doorsFon2}  вставка ${doorsCenter2}`
+            } else objDoors.door2 = `Центральная дверь: ${doorsFon2}`
+
+
+        }
+        objDoors.frame = 'Профиль: ' + getDescription('input[name="frame-type"]')
+        objDoors.doorClosers = getDescription('#dovodchiki')
+
+        // descrSection ---------------------------------------------------
+
+
+        objSection.section1 = 'Секция №1: ' + section1
+        objSection.section2 = 'Секция №2: ' + section2
+        if (amountDoors === '3' || amountDoors === '4') {
+            objSection.section3 = 'Секция №3: ' + section3
+
+        }
+        if (amountDoors === '4') {
+            objSection.section4 = 'Секция №4: ' + section4
+
+        }
+        objSection.doorClosers = 'Цвет корпуса: ' + colorCorpus
+        objSection.encumbrance = getDescription('#zakladnaia')
+        objSection.fenders = getDescription('#otboinik')
+        console.log(objSection)
+
+        function insertObjectInHtml(obj, ulParent) {
+            console.log(resultListSection)
+            let string = ''
+            console.log(obj)
+            for (const key in obj) {
+                console.log(obj[key])
+                if (obj[key] !== false) {
+
+                    string += `<li class="calculator__list-item"> ${obj[key]} </li>`
+                }
+            }
+            console.log(string)
+            ulParent.innerHTML = string
+        }
+
+        insertObjectInHtml(objDoors, resultListDoor)
+        insertObjectInHtml(objSection, resultListSection)
+
+
+    }
+
+    btn.forEach(item => {
+        item.addEventListener('click', descriptionFormation)
+    })
+
+
+}
 
 const constructor = () => {
     const postData = async (url, data, type) => {
@@ -202,7 +321,7 @@ const constructor = () => {
                 },
                 section4: {
                     z: 2,
-                    x: 749
+                    x: 784
                 },
             }
 
@@ -433,6 +552,7 @@ const constructor = () => {
                 // console.log(resultArray)
                 canvasRender(resultArray, outerCanvas, parameterLocation)
             })();
+
             (function sectionRender() {
                 function hideButtons() {
 
@@ -538,8 +658,24 @@ const constructor = () => {
             })();
 
             (function calcPrice() {
+                let doorCenter1 = document.querySelector('input[name="texture-center-doors1"]:disabled')
+                let doorCenter2 = document.querySelector('input[name="texture-center-doors2"]:disabled')
+                console.log(doorCenter1)
                 let doorsObject = {}
                 let sectionObject = {}
+
+                function getNameSection(selectorElem) {
+                    let nodeList = document.querySelectorAll(selectorElem)
+                    let name = ''
+                    nodeList.forEach(item => {
+                        if (item.checked) {
+                            name = item.dataset.descr
+                        }
+
+                    })
+                    return name
+                }
+
                 doorsObject.koldors = parameterAmountDoors
                 doorsObject.width = parameterWidth.value
                 doorsObject.height = parameterHeight.value
@@ -548,13 +684,21 @@ const constructor = () => {
                 doorsObject.colorframe = parameterFrame
                 doorsObject.typed1 = parameterFrameType1
                 doorsObject.d1fon = parameterDoorBackground1
-                doorsObject.d1center = parameterDoorCenter1
+
+                if (doorCenter1 === null) {
+                    doorsObject.d1center = parameterDoorCenter1
+                } else doorsObject.d1center = 'false'
+
                 doorsObject['stretch-ceiling'] = parameterCeiling
                 doorsObject.otbonik = parameterOtbonik
                 doorsObject.dovdhik = parameterDovodchik
                 doorsObject.typed2 = parameterFrameType2
                 doorsObject.d2fon = parameterDoorBackground2
+
                 doorsObject.d2center = parameterDoorCenter2
+                if (doorCenter2 === null) {
+                    doorsObject.d2center = parameterDoorCenter2
+                } else doorsObject.d2center = 'false'
 
 
                 sectionObject.width = parameterWidth.value
@@ -564,14 +708,21 @@ const constructor = () => {
                 sectionObject.zakladnaia = parameterZakladnaia
                 sectionObject['stretch-ceiling'] = parameterCeiling
                 sectionObject.koldors = parameterAmountDoors
-                sectionObject.section1 = parameterSection1
-                sectionObject.section2 = parameterSection2
-                sectionObject.section3 = parameterSection3
-                sectionObject.section4 = parameterSection4
 
+                sectionObject.section1 = getNameSection('input[name="section-modal1"]')
+                sectionObject.section2 = getNameSection('input[name="section-modal2"]')
+                if (parameterAmountDoors === '3' || parameterAmountDoors === '4') {
+                    sectionObject.section3 = getNameSection('input[name="section-modal3"]')
+                }
+                if (parameterAmountDoors === '4') {
+                    sectionObject.section4 = getNameSection('input[name="section-modal4"]')
+                }
+
+                sectionObject.colorframe = parameterSectionColor
+                console.log(sectionObject)
 
                 let formData = new FormData()
-                console.log(parameterСabinet)
+
                 formData.append('fasad', JSON.stringify(doorsObject))
                 formData.append('section', JSON.stringify(sectionObject))
                 postData('/zed/modules/canvas/canvas_load.php', formData, 'text')
@@ -601,10 +752,9 @@ const constructor = () => {
 
         innerCanvas.draw()
         outerCanvas.draw()
-        getImgCanvas()
+
         console.log(outerCanvas.objects)
-
-
+        console.log(innerCanvas.objects)
 
 
     }
@@ -614,7 +764,6 @@ const constructor = () => {
 
 
 }
-constructor()
 
 
 const inputLimitation = () => {
@@ -638,18 +787,60 @@ const inputLimitation = () => {
     function disabledCenterFon(typeDoorsSelector, textureSelector) {
         let checkedTypeDoors = document.querySelector(typeDoorsSelector)
         let textureCenter = document.querySelectorAll(textureSelector)
-            textureCenter.forEach(texture => {
+        textureCenter.forEach(texture => {
 
-                if (checkedTypeDoors.dataset.article === '1') {
-                    texture.disabled = true
-                } else texture.disabled = false
+            if (checkedTypeDoors.dataset.article === '1') {
+                texture.disabled = true
+            } else texture.disabled = false
 
-            })
-
-
+        })
 
 
     }
+
+    function disabledMirrorTypeDoor1() {
+        function disabledTexture(textureSelector, typeDoorSelector) {
+            let typeDoor = document.querySelector(typeDoorSelector)
+            let hideArray = ['7', '8', '9', '10']
+            let texture = document.querySelectorAll(textureSelector)
+            let maxHeightMirror = +heightInput.dataset.maxHeightMirror
+
+            texture.forEach(item => {
+                item.disabled = false
+            })
+            texture.forEach(item => {
+                let id = item.dataset.article
+
+                hideArray.forEach(hideItem => {
+                    if (id === hideItem && typeDoor.dataset.article === '1' && +heightInput.value >= maxHeightMirror) {
+                        item.disabled = true
+                    }
+                })
+
+            })
+        }
+
+        heightInput.addEventListener('input', () => {
+            disabledTexture('input[name="texture-doors1"]', 'input[name="type-frame-1"]:checked')
+            disabledTexture('input[name="texture-doors2"]', 'input[name="type-frame-2"]:checked')
+        })
+        typeDoors1.forEach(item => {
+            item.addEventListener('click', () => {
+                disabledTexture('input[name="texture-doors1"]', 'input[name="type-frame-1"]:checked')
+                disabledTexture('input[name="texture-doors2"]', 'input[name="type-frame-2"]:checked')
+            })
+        })
+        typeDoors2.forEach(item => {
+            item.addEventListener('click', () => {
+                disabledTexture('input[name="texture-doors1"]', 'input[name="type-frame-1"]:checked')
+                disabledTexture('input[name="texture-doors2"]', 'input[name="type-frame-2"]:checked')
+            })
+        })
+
+
+    }
+
+    disabledMirrorTypeDoor1()
 
     typeDoors1.forEach(item => {
         item.addEventListener('click', function () {
@@ -665,6 +856,19 @@ const inputLimitation = () => {
 
     disabledCenterFon('input[name="type-frame-1"]:checked', 'input[name="texture-center-doors1"]')
     disabledCenterFon('input[name="type-frame-2"]:checked', 'input[name="texture-center-doors2"]')
+
+    function buttonNameChange() {
+        let amount = document.querySelector('input[name="section-amount"]:checked').dataset.article
+        console.log(amount)
+        let btn = document.querySelectorAll('.calc__doors-tab')
+        if (amount === '2') {
+            btn[0].textContent = 'Левая'
+            btn[1].textContent = 'Правая'
+        } else {
+            btn[0].textContent = 'Крайняя'
+            btn[1].textContent = 'Центральная'
+        }
+    }
 
     function checkWidth() {
         let value = +widthInput.value
@@ -734,6 +938,8 @@ const inputLimitation = () => {
     amountDoorsRadio.forEach(item => {
         item.addEventListener('click', function () {
             obj.amountDoors = true
+            buttonNameChange()
+
         })
     })
 
@@ -763,6 +969,234 @@ const inputLimitation = () => {
     disabledButton()
 
 }
+const tabsCalculator = (headerSelector, tabSelector, contentSelector, activeClass, nextButton, prevButton) => {
+    const header = document.querySelector(headerSelector),
+        tab = document.querySelectorAll(tabSelector),
+        content = document.querySelectorAll(contentSelector),
+        prevBtn = document.querySelectorAll(prevButton),
+        nextBtn = document.querySelectorAll(nextButton)
+    let previewTabActive = +header.dataset.tabActive - 1
+    let cabinetParameters = document.querySelectorAll('input[name="cabinet-parameters"]')
+    let cabinetParametersChecked = document.querySelector('input[name="cabinet-parameters"]:checked').id
+    let currentTab = 0
+    let modal = document.querySelector('.modal-calc')
+    let headerItem = document.querySelectorAll('.calculator-header__item')
+
+    function coupePlus() {
+
+        hideTabContent()
+        showTabContent(currentTab)
+        if (currentTab < 2) {
+            currentTab++
+            hideTabContent()
+            showTabContent(currentTab)
+        } else {
+            document.body.style.overflow = 'hidden'
+            modal.style.display = 'block'
+
+        }
+        console.log(currentTab)
+    }  // фунция для шкафа купе
+
+    function coupeMinus() {
+        currentTab--
+        hideTabContent()
+        showTabContent(currentTab)
+        console.log(currentTab)
+    } // фунция для шкафа купе
+
+    function coupe1Plus() {
+
+        if (currentTab === 0) {
+            currentTab = 1
+        } else {
+            document.body.style.overflow = 'hidden'
+            modal.style.display = 'block'
+
+        }
+        hideTabContent()
+        showTabContent(currentTab)
+        console.log(currentTab)
+    } //фунция для  Только двери
+
+    function coupe1Minus() {
+        if (currentTab === 0) {
+            currentTab = 2
+            hideTabContent()
+            showTabContent(currentTab)
+        } else {
+            document.body.style.overflow = 'hidden'
+            modal.style.display = 'block'
+        }
+
+
+    } //фунция для  Только двери
+
+    function coupe2Plus() {
+
+        if (currentTab === 0) {
+            currentTab = 2
+        } else {
+            document.body.style.overflow = 'hidden'
+            modal.style.display = 'block'
+        }
+        hideTabContent()
+        showTabContent(currentTab)
+        console.log(currentTab)
+    } //фунция для  Только внутреннее наполнение
+
+    function coupe2Minus() {
+        if (currentTab === 2) {
+            currentTab = 0
+            hideTabContent()
+            showTabContent(currentTab)
+        }
+
+
+    }// фунция для  Только внутреннее наполнение
+    console.log(cabinetParametersChecked)
+    if (cabinetParametersChecked !== null && cabinetParametersChecked === 'coupe') {
+
+        nextBtn.forEach(item => {
+            item.addEventListener('click', coupePlus)
+        })
+        prevBtn.forEach(item => {
+            item.addEventListener('click', coupeMinus)
+        })
+    }
+    if (cabinetParametersChecked !== null && cabinetParametersChecked === 'coupe1') {
+
+        nextBtn.forEach(item => {
+            item.addEventListener('click', coupe1Plus)
+        })
+
+        prevBtn.forEach(item => {
+            item.addEventListener('click', coupe1Minus)
+        })
+
+    }
+    if (cabinetParametersChecked !== null && cabinetParametersChecked === 'coupe2') {
+
+        nextBtn.forEach(item => {
+            item.addEventListener('click', coupe2Plus)
+        })
+
+        prevBtn.forEach(item => {
+            item.addEventListener('click', coupe2Minus)
+        })
+
+    }
+
+    cabinetParameters.forEach(item => {
+
+        item.addEventListener('click', function () {
+            headerItem.forEach(item => {
+                item.style.pointerEvents = 'auto'
+                item.style.opacity = '1'
+            })
+            currentTab = 0
+            nextBtn.forEach(item => {
+                item.removeEventListener('click', coupePlus)
+                item.removeEventListener('click', coupe1Plus)
+                item.removeEventListener('click', coupe2Plus)
+            })
+            prevBtn.forEach(item => {
+                item.removeEventListener('click', coupeMinus)
+                item.removeEventListener('click', coupe1Minus)
+                item.removeEventListener('click', coupe2Minus)
+            })
+            console.log(this)
+
+            if (this.id === 'coupe') {
+                console.log(1)
+                nextBtn.forEach(item => {
+                    item.addEventListener('click', coupePlus)
+                })
+                prevBtn.forEach(item => {
+                    item.addEventListener('click', coupeMinus)
+                })
+            }
+            if (this.id === 'coupe1') {
+                headerItem[2].style.pointerEvents = 'none'
+                headerItem[2].style.opacity = '.5'
+                nextBtn.forEach(item => {
+                    item.addEventListener('click', coupe1Plus)
+                })
+
+                prevBtn.forEach(item => {
+                    item.addEventListener('click', coupe1Minus)
+                })
+
+
+            }
+
+            if (this.id === 'coupe2') {
+                headerItem[1].style.pointerEvents = 'none'
+                headerItem[1].style.opacity = '.5'
+                nextBtn.forEach(item => {
+                    item.addEventListener('click', coupe2Plus)
+                })
+
+                prevBtn.forEach(item => {
+                    item.addEventListener('click', coupe2Minus)
+                })
+
+            }
+        })
+
+    })
+
+
+    function hideTabContent() {
+        content.forEach((item) => {
+            item.style.display = 'none'
+        });
+        tab.forEach((item) => {
+            item.classList.remove((activeClass))
+        })
+    }
+
+    function showTabContent(i = 0) {
+        if (i > content.length - 1) {
+            content[content.length - 1].style.display = 'block';
+            tab[content.length - 1].classList.add(activeClass);
+
+        } else {
+            content[i].style.display = 'block';
+            tab[i].classList.add(activeClass);
+        }
+
+    }
+
+    header.addEventListener('click', (e) => {
+
+        const target = e.target
+
+
+        tab.forEach((item, i) => {
+            if (target === item || target.parentNode === item) {
+                currentTab = i
+                hideTabContent();
+                showTabContent(i)
+
+            }
+        })
+
+    })
+    hideTabContent()
+
+    if (isNaN(previewTabActive) || previewTabActive === -1) {
+        showTabContent(0)
+    } else showTabContent(previewTabActive)
+
+
+}
+
+
 // inputLimitation()
-
-
+insertImagesInModal()
+createDescrOrder()
+tabsCalculator('.calculator-header', '.calculator-header__item', '.calculator-content', 'calculator__item-active', '.calculator__next', '.calculator__prev')
+synchronizationCheckbox('input[name="zakladnaia"]')
+synchronizationCheckbox('input[name="stretch-ceiling"]')
+constructor()

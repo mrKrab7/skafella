@@ -5,8 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="426e97c7-c2c8-43bf-b914-f923b0f0eadc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/image/advantage-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/advantage-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/advantage-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/advantage-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/arrow-price.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/cards-flag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/flag_new.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib2/cards.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib2/fancybox.umd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib2/reviewsModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib2/sendReviews.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/images/youtube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/images/youtube.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sitetpl/default/fancybox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/youtube (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib2/additionalFunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/additionalFunctionality.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib2/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib2/modals.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/modals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib2/send.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/send.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib2/slider-settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/slider-settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib2/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib2/tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page3.html" beforeDir="false" afterPath="$PROJECT_DIR$/page3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page4.html" beforeDir="false" afterPath="$PROJECT_DIR$/page4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitetpl/default/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sitetpl/default/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,15 +44,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="skafella-main" />
+        <entry key="$PROJECT_DIR$" value="84f815a8afef638119bd76c0d5a2019557dd4998" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,7 +69,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="skafella-main" />
-                    <option name="lastUsedInstant" value="1665131339" />
+                    <option name="lastUsedInstant" value="1668481794" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="2" />
@@ -96,7 +121,7 @@
     &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/openServer/OSPanel/domains/Canvas-v2/image&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/openServer/OSPanel/domains/Canvas-v2/sitetpl&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -109,12 +134,16 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\openServer\OSPanel\domains\Canvas-v2\sitetpl" />
+      <recent name="D:\openServer\OSPanel\domains\Canvas-v2\lib2" />
+      <recent name="D:\openServer\OSPanel\domains\Canvas-v2\modules\images" />
       <recent name="D:\openServer\OSPanel\domains\Canvas-v2\image" />
       <recent name="C:\Users\User\Desktop\Canvas-v2\image" />
-      <recent name="C:\Users\User\Desktop\Canvas-v2\lib2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\openServer\OSPanel\domains\Canvas-v2\image" />
+      <recent name="D:\openServer\OSPanel\domains\Canvas-v2\sitetpl\default" />
+      <recent name="D:\openServer\OSPanel\domains\Canvas-v2\modules\images" />
       <recent name="C:\Users\User\Desktop\Canvas-v2\image" />
       <recent name="C:\Users\User\Desktop\Canvas-v2\photo" />
     </key>
@@ -177,6 +206,11 @@
       <workItem from="1668134245857" duration="27502000" />
       <workItem from="1668392563455" duration="22364000" />
       <workItem from="1668479598712" duration="1889000" />
+      <workItem from="1668565316180" duration="23561000" />
+      <workItem from="1668653699250" duration="20929000" />
+      <workItem from="1668738216563" duration="23496000" />
+      <workItem from="1668997878410" duration="27422000" />
+      <workItem from="1669085334283" duration="23880000" />
     </task>
     <task id="LOCAL-00001" summary="предварительная загрузка картинок">
       <created>1664512087771</created>
@@ -418,11 +452,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/lib2/slider-settings.js</url>
-          <line>130</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>remoteDeploymentFS://&lt;cad848dc-bfe2-471b-9d9f-1cf27c84da35&gt;/lib2/additionalFunctionality.js</url>
           <line>157</line>

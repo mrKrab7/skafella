@@ -163,9 +163,11 @@ function sendProject() {
 
     fileInput.addEventListener('change', function () {
         let file = fileInput.files[0]
-        let maxSize = 8 * 1024
-        console.log(file.size > maxSize)
-        if (file.size > 8 * 1024) {
+
+        let maxSize = 8 * 1024 * 1024
+        console.log(file.size )
+        console.log(maxSize )
+        if (file.size > maxSize) {
 
             alert('Слишком большой файл')
             return

@@ -19,12 +19,12 @@
             <div class="subtitle">Готовые решения</div>
             <div class="products__header">
                 <div class="col-md-3">
-
-                    <input name="header-sorted" id="hits" type="radio">
-                    <label class="text products__header-text me-3" for="hits">Хиты</label>
-
+                    <input name="header-sorted" id="popular" type="radio">
+                    <label class="text products__header-text" for="popular">Популярно</label>
                     <input name="header-sorted" id="price" type="radio">
                     <label class="text products__header-text" for="price">По цене</label>
+                    <input name="header-sorted" id="hits" type="radio">
+                    <label class="text products__header-text me-3" for="hits">Хиты</label>
 
                 </div>
                 <div class="card-product__border mt-1"></div>
@@ -143,8 +143,14 @@
                         <div class="products__cards-price">Цена 95 000 руб</div>
                     </div>
                     <div class="card-footer bg-white border-0">
-                        <button class="button products__cards-btn-green">Заказать похожий</button>
-                        <button class="button products__cards-btn">Подробнее</button>
+                        <a href="">
+                            <button class="button products__cards-btn-green">Заказать похожий</button>
+                        </a>
+                        <a href="">
+                            <button class="button products__cards-btn">Подробнее</button>
+                        </a>
+
+
                     </div>
                 </div>
             </div>
