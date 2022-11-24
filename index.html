@@ -1385,19 +1385,29 @@
     </div>
 
 </section>
-<div class="modal-background modal-call">
+<div style="display: block" class="modal-background modal-call">
     <div class="modal-wrapper">
         <div class="modal__btn-close"><img src="image/modal__btn-close.svg" alt=""></div>
         <div class="modal-title">Мы готовы перезвонить Вам, <br> чтобы согласовать время <br> и дату приезда</div>
         <form action="">
             <div class="modal__input-wrapper mt-3">
-                <div class="input-text">Имя</div>
+                <div class="input-text">Имя<b>*</b></div>
                 <input required class="modal-input" type="text">
             </div>
             <div class="modal__input-wrapper mt-3">
                 <div class="input-text">Телефон</div>
                 <input inputmode="numeric" data-mask="+7 (___) ___-____" data-slots="" required class="modal-input"
                        type="text">
+            </div>
+            <div class="modal__input-wrapper modal__input-email mt-3">
+                <div class="input-text">Почта</div>
+                <input inputmode="numeric" data-mask="+7 (___) ___-____" data-slots="" required class="modal-input"
+                       type="text">
+            </div>
+            <div class="modal__input-wrapper modal__input-message mt-3">
+                <div class="input-text">Сообщение</div>
+                <textarea inputmode="numeric" data-mask="+7 (___) ___-____" data-slots="" required class="modal-input"
+                          type="text"> </textarea>
             </div>
             <div class="modal__consent-text ">Нажимая на кнопку, вы принимаете Положение и Согласие на обработку
                 персональных данных.
@@ -1528,7 +1538,7 @@
 
 </div>
 
-<div style="display: block" class="modal-background modal-review">
+<div  class="modal-background modal-review">
 
     <div class="modal-wrapper">
         <div class="modal__btn-close"><img src="image/modal__btn-close.svg" alt=""></div>

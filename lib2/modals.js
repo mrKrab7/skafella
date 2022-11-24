@@ -1,18 +1,35 @@
 const modals = () => {
 
     function bindModal(triggerSelector, modalSelector, closeSelector) {
+        const modal = document.querySelector(modalSelector),
+            close = document.querySelector(closeSelector);
         if (triggerSelector !== '') {
             const trigger = document.querySelectorAll(triggerSelector)
 
             trigger.forEach((item) => {
                 item.addEventListener('click', (e) => {
                     if (modal.classList.contains('modal-call')) {
+                        let emailInput = document.querySelector('.modal__input-email')
+                        let messageInput = document.querySelector('.modal__input-message')
                         const modalTitle = modal.querySelector('.modal-title');
                         const modalForm = modal.querySelector('form');
                         let title = item.dataset.titleModal
                         let typeForm = item.dataset.typeModal
-                        modalForm.name = typeForm
+
+
+                        modalForm.dataset.name = typeForm
                         modalTitle.innerHTML = title
+
+                        if (typeForm === 'question') {
+                            emailInput.classList.remove('d-none')
+                            messageInput.classList.remove('d-none')
+                            modal.classList.add('question-modal')
+                        } else {
+                            emailInput.classList.add('d-none')
+                            modal.classList.remove('question-modal')
+                            messageInput.classList.add('d-none')
+                        }
+
 
 
                     }
@@ -29,31 +46,32 @@ const modals = () => {
         }
 
 
-        const modal = document.querySelector(modalSelector),
-            close = document.querySelector(closeSelector);
-            if (modal !== null) {
-                close.addEventListener('click', () => {
+
+        if (modal !== null) {
+            close.addEventListener('click', () => {
+                modal.style.display = 'none'
+                document.body.style.overflow = ''
+
+            });
+
+
+            modal.addEventListener('click', function (e) {
+
+                if (e.target == modal) {
                     modal.style.display = 'none'
                     document.body.style.overflow = ''
-                });
 
-
-                modal.addEventListener('click', function (e) {
-
-                    if (e.target == modal) {
-                        modal.style.display = 'none'
-                        document.body.style.overflow = ''
-
-                    }
-                })
-            }
-
+                }
+            })
+        }
 
 
     }
 
 
     bindModal('.call-btn', '.modal-call', '.modal-call .modal__btn-close');
+    bindModal('.header__nav-question', '.modal-call', '.modal-call .modal__btn-close');
+    bindModal('.question-mobile', '.modal-call', '.modal-call .modal__btn-close');
     bindModal('.section1', '.modal-section-1', '.modal-section-1 .modal__btn-close');
     bindModal('.section2', '.modal-section-2', '.modal-section-2 .modal__btn-close');
     bindModal('.section3', '.modal-section-3', '.modal-section-3 .modal__btn-close');

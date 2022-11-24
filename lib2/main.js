@@ -16,6 +16,21 @@ function synchronizationCheckbox(name) {
     })
 }
 
+const postData = async (url, data, type) => {
+
+
+    let res = await fetch(url, {
+        method: "POST",
+        body: data
+    });
+    if (type === 'json') {
+        return await res.json();
+    }
+    if (type === 'text') {
+        return await res.text();
+    }
+
+}
 
 function insertImagesInModal() {
     let btn = document.querySelectorAll('.calculator__next')
@@ -148,22 +163,46 @@ function createDescrOrder() {
 
 }
 
-const constructor = () => {
-    const postData = async (url, data, type) => {
+function getObjectAccordance() {
+    function getNameSection(selectorElem) {
+        let nodeList = document.querySelectorAll(selectorElem)
+        let name = ''
+        nodeList.forEach(item => {
+            if (item.checked) {
+                name = item.dataset.descr
+            }
 
-
-        let res = await fetch(url, {
-            method: "POST",
-            body: data
-        });
-        if (type === 'json') {
-            return await res.json();
-        }
-        if (type === 'text') {
-            return await res.text();
-        }
-
+        })
+        return name
     }
+
+    let doorAmount = document.querySelector('input[name="section-amount"]:checked').dataset.article
+    let location = document.querySelector('input[name="location"]:checked').dataset.article
+    console.log(doorAmount)
+    let obj = {}
+    obj.section1 = getNameSection('input[name="section-modal1"]')
+    obj.section2 = getNameSection('input[name="section-modal2"]')
+    obj.location = location
+    obj.koldors = doorAmount
+    if (doorAmount === '3' || doorAmount === '4') {
+
+        obj.section3 = getNameSection('input[name="section-modal3"]')
+    }
+    if (doorAmount === '4') {
+        obj.section4 = getNameSection('input[name="section-modal4"]')
+    }
+    let formData = new FormData
+    console.log(obj)
+    formData.append('sectionMap', JSON.stringify(obj))
+
+    postData('/zed/modules/canvas/canvas_load.php', formData, 'text')
+        .then((res) => {
+            console.log(res)
+        })
+}
+
+const constructor = () => {
+
 
     let images = document.querySelector('.canvas-result');
 
@@ -177,13 +216,11 @@ const constructor = () => {
     formData.append('getImg', '')
     postData('/zed/modules/canvas/canvas_load.php', formData, 'json')
         .then((res) => {
-
-
             Render(res)
 
             canvasTrigger.forEach(canvasTriggerItem => {
                 canvasTriggerItem.addEventListener('click', () => {
-                    // postData('/zed/modules/canvas/canvas_load.php')
+
                     Render(res)
                 })
             })
@@ -1192,7 +1229,7 @@ const tabsCalculator = (headerSelector, tabSelector, contentSelector, activeClas
 
 }
 
-
+getObjectAccordance()
 // inputLimitation()
 insertImagesInModal()
 createDescrOrder()
@@ -1200,3 +1237,4 @@ tabsCalculator('.calculator-header', '.calculator-header__item', '.calculator-co
 synchronizationCheckbox('input[name="zakladnaia"]')
 synchronizationCheckbox('input[name="stretch-ceiling"]')
 constructor()
+createDescrOrder()

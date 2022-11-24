@@ -8,7 +8,9 @@ body {
 input + label {
     cursor: pointer;
 }
-
+b{
+    color: red;
+}
 input:focus, textarea:focus {
     outline: none;
 
@@ -247,10 +249,7 @@ a:hover {
 
 .modal-wrapper {
     border-radius: 8px;
-    padding-top: 40px;
-    padding-left: 75px;
-    padding-right: 75px;
-    padding-bottom: 30px;
+    padding: 40px 75px 30px;
     position: fixed;
     margin: 0 auto;
     top: 20%;
@@ -381,7 +380,7 @@ nav .nav-drop:after {
 .nav__item {
     padding-right: 20px;
     padding-left: 20px;
-    padding-top: 7px;
+    /*padding-top: 7px;*/
     padding-bottom: 7px;
 
 }
@@ -411,6 +410,7 @@ nav .nav-drop:after {
 }
 
 .header__nav_content {
+    height: 335px;
     opacity: 0;
     transition: opacity 1s;
     position: absolute;
@@ -434,7 +434,7 @@ nav .nav-drop:after {
     font-size: 20px;
     font-weight: 600;
     color: #000000;
-    padding-top: 25px;
+    /*padding-top: 25px;*/
     display: block;
 
 }
@@ -1239,8 +1239,7 @@ img[data-youtube] {
 .reviews__description {
 
 
-    margin: 0 auto;
-    margin-top: 15px;
+    margin: 15px auto 0;
     font-weight: 400;
     font-size: 14px;
     color: var(--black);
@@ -3519,6 +3518,17 @@ input[data-post="increase"] + label:before {
     position: relative;
 
 }
+.question-modal .modal-wrapper {
+    top: 10%;
+}
+.question-modal .modal-wrapper .modal-title {
+    font-size: 18px;
+}
+.question-modal .modal-wrapper  textarea{
+    height: 80px;
+    resize: none;
+}
+
 
 .send__button:disabled:before {
     position: absolute;
@@ -3819,7 +3829,7 @@ input + .label-texture img {
     }
 
     .nav__item:first-child {
-        padding-left: 50px;
+        /*padding-left: 50px;*/
     }
 
     .nav__item:first-child:before {
@@ -3877,6 +3887,7 @@ input + .label-texture img {
         font-size: 36px;
         padding-top: 70px;
     }
+
 
     .calculator__fittings-text {
         font-size: 15px;
@@ -3938,7 +3949,7 @@ input + .label-texture img {
 
     .design {
         padding: 20px;
-        padding-top: 20px;
+
     }
 
     .design__button {
@@ -4090,6 +4101,9 @@ input + .label-texture img {
     .reviews__photo {
         width: 60px;
         height: 40px;
+    }
+    .header__nav_content {
+        height: auto;
     }
 
 }
@@ -4443,6 +4457,11 @@ input + .label-texture img {
         padding-left: 15px;
         padding-right: 15px;
     }
+    .modal-call .modal-wrapper  {
+        /*padding-top: 20px;*/
+
+    }
+
 
     .reviews-swiper .swiper-slide {
         height: 200px;
@@ -4512,6 +4531,24 @@ input + .label-texture img {
         position: fixed;
         bottom: 0;
         z-index: 10;
+    }
+    .question-modal .modal-wrapper .modal-title {
+        font-size: 15px;
+        width: 80%;
+    }
+    .question-modal .modal-wrapper {
+        height: 620px;
+        top: 0;
+        bottom: 0;
+        padding-top: 15px;
+        margin: auto;
+    }
+    .question-modal .modal__consent-text {
+       margin-top: 5px;
+    }
+    .question-modal .modal__btn-close {
+        right: 95px;
+        top: 20px;
     }
 
 }
