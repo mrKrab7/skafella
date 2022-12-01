@@ -1,6 +1,6 @@
 function synchronizationCheckbox(name) {
     let checkbox = document.querySelectorAll(name)
-    console.log(checkbox)
+
     checkbox.forEach(item => {
         item.addEventListener('click', function () {
             if (item.checked) {
@@ -14,7 +14,222 @@ function synchronizationCheckbox(name) {
             }
         })
     })
+} // функция для синхронизаций нажатий на checkbox (при нажатий на один становятся выбраны все )
+function getNameSection(selectorElem) {
+    let nodeList = document.querySelectorAll(selectorElem)
+    let name = ''
+    nodeList.forEach(item => {
+        if (item.checked) {
+            name = item.dataset.descr
+        }
+
+    })
+    return name
 }
+
+function sendSale() {
+    let modal = document.querySelector('.modal-calc')
+    let finalModal = document.querySelector('.modal-feedback')
+    let buttonsTriggerSend = document.querySelectorAll('.btn-send-trigger')
+    let form = document.querySelector('.send-sale')
+    let formInputs = form.querySelectorAll('input')
+    let dataBaseId = '-1'
+    let formOfPayment = document.querySelector('input[ name="calculator-type-payment"]:checked').id
+
+    function collectionOfParameters() {
+        let parameterWidth = document.querySelector('#width-calc')
+        let parameterHeight = document.querySelector('#height-calc')
+        let parameterDeep = document.querySelector('#deep-calc')
+        let parameterAmountDoors = searchCheckedElem('input[name="section-amount"]'); // получаем id выбраного параметра отвечающего за количество дверей
+        let parameterLocation = searchCheckedElem('input[name="location"]'); // получаем id выбраного параметра отвечающего за расположение шкафа
+        let parameterZakladnaia = searchCheckedElem('#zakladnaia');
+        let parameterCeiling = searchCheckedElem('#stretch-ceiling');
+        let parameterOtbonik = searchCheckedElem('#otboinik');
+        let parameterDovodchik = searchCheckedElem('#dovodchiki');
+        let parameterFrame = searchCheckedElem('input[name="frame-type"]')
+        let parameterFrameType1 = searchCheckedElem('input[name="type-frame-1"]')
+        let parameterFrameType2 = searchCheckedElem('input[name="type-frame-2"]')
+        let parameterDoorBackground1 = searchCheckedElem('input[name="texture-doors1"]')
+        let parameterDoorBackground2 = searchCheckedElem('input[name="texture-doors2"]')
+        let parameterDoorCenter1 = searchCheckedElem('input[name="texture-center-doors1"]')
+        let parameterDoorCenter2 = searchCheckedElem('input[name="texture-center-doors2"]');
+        let parameterSectionColor = searchCheckedElem('input[name="texture-doors"]')
+        let parameterCalculation = document.querySelector('input[name="cabinet-parameters"]:checked').id
+        let parameterSection1 = getNameSection('input[name="section-modal1"]');
+        let parameterSection2 = getNameSection('input[name="section-modal2"]');
+        let parameterSection3 = getNameSection('input[name="section-modal3"]');
+        let parameterSection4 = getNameSection('input[name="section-modal4"]');
+
+
+        let doorCenter1 = document.querySelector('input[name="texture-center-doors1"]:disabled')
+        let doorCenter2 = document.querySelector('input[name="texture-center-doors2"]:disabled')
+        //console.log(doorCenter1)
+        let doorsObject = {}
+        let sectionObject = {}
+
+        doorsObject.koldors = parameterAmountDoors
+        doorsObject.width = parameterWidth.value
+        doorsObject.height = parameterHeight.value
+        doorsObject.deep = parameterDeep.value
+        doorsObject.location = parameterLocation
+        doorsObject.colorframe = parameterFrame
+        doorsObject.typed1 = parameterFrameType1
+        doorsObject.d1fon = parameterDoorBackground1
+
+        if (doorCenter1 === null) {
+            doorsObject.d1center = parameterDoorCenter1
+        } else doorsObject.d1center = 'false'
+
+        doorsObject['stretch-ceiling'] = parameterCeiling
+        doorsObject.otbonik = parameterOtbonik
+        doorsObject.dovdhik = parameterDovodchik
+        doorsObject.typed2 = parameterFrameType2
+        doorsObject.d2fon = parameterDoorBackground2
+
+        doorsObject.d2center = parameterDoorCenter2
+        if (doorCenter2 === null) {
+            doorsObject.d2center = parameterDoorCenter2
+        } else doorsObject.d2center = 'false'
+
+
+        sectionObject.width = parameterWidth.value
+        sectionObject.height = parameterHeight.value
+        sectionObject.deep = parameterDeep.value
+        sectionObject.location = parameterLocation
+        sectionObject.zakladnaia = parameterZakladnaia
+        sectionObject['stretch-ceiling'] = parameterCeiling
+        sectionObject.koldors = parameterAmountDoors
+
+        sectionObject.section1 = parameterSection1
+        sectionObject.section2 = parameterSection2
+        if (parameterAmountDoors === '3' || parameterAmountDoors === '4') {
+            sectionObject.section3 = parameterSection3
+        }
+        if (parameterAmountDoors === '4') {
+            sectionObject.section4 = parameterSection4
+        }
+
+        sectionObject.colorframe = parameterSectionColor
+        //console.log(sectionObject)
+
+        let formData = new FormData()
+
+        if (parameterCalculation === 'coupe') {
+            let coupeObject = Object.assign(doorsObject, sectionObject, {id: dataBaseId})
+            formData.append('price', JSON.stringify(coupeObject))
+            console.log(dataBaseId)
+
+
+        }
+
+        postData('/zed/modules/price/price_load.php', formData, 'text')
+            .then(res => {
+
+                dataBaseId = res
+            })
+
+
+    }
+
+
+    const clearInputs = () => {
+        formInputs.forEach(item => {
+            item.value = '';
+        });
+    };
+
+    buttonsTriggerSend.forEach(item => {
+        item.addEventListener('click', function () {
+            collectionOfParameters()
+
+        })
+    })
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let imgFasad = document.querySelector('.fasad-img-canvas')
+        let imgSection = document.querySelector('.inner-img-canvas')
+        let parameterCalculation = document.querySelector('input[name="cabinet-parameters"]:checked').id
+        let objectOrder = {}
+        objectOrder.id = dataBaseId
+        const formData = new FormData();
+
+
+        if (parameterCalculation === 'coupe') {
+            objectOrder.imgFasad = imgFasad.src
+            objectOrder.imgSection = imgFasad.src
+
+        }
+
+        formData.append('add', JSON.stringify(objectOrder))
+        formData.append('Payment', formOfPayment)
+        postData('/zed/modules/sale/sale_load.php', formData, 'text')
+            .then(res => {
+                console.log(res);
+            })
+            .catch((res) => console.log(res))
+            .finally(() => {
+                // modal.style.display = 'none'
+                // finalModal.style.display = 'block'
+                // clearInputs();
+
+            });
+    });
+
+
+}
+
+
+function searchCheckedElem(selectorElem) {
+    let nodeList = document.querySelectorAll(selectorElem)
+    let checkedElement
+
+    if (nodeList.length > 1) {
+
+        nodeList.forEach(item => {
+            if (item.checked) {
+                checkedElement = item.dataset.article
+
+            }
+        })
+    }
+    if (nodeList.length === 1) {
+
+        nodeList.forEach(item => {
+            if (item.checked) {
+                return checkedElement = '1'
+            } else checkedElement = '0'
+        })
+
+    }
+    return checkedElement
+} // функция для поиска выбранного элемента
+function resetSection(obj) {
+    function resetRadioButton(arr) {
+        arr.forEach(radioBtn => {
+            radioBtn.checked = false
+        })
+    }
+
+    let previousState = {}
+
+    Object.entries(obj).forEach((item, index, arr) => {
+        let [typeSection, nameSection] = item
+        let number = index + 1
+        let checkedInput = document.querySelector(`input[data-section-number="${number}"]:checked`)
+
+        let inputsNode = document.querySelectorAll(`input[data-section-number="${number}"]`)
+        resetRadioButton(inputsNode) // сброс checked с input
+        inputsNode.forEach(input => {
+            let inputName = input.dataset.descr
+            if (inputName === nameSection) {
+                input.checked = true
+            }
+        })
+
+
+    })
+} // функция которая принудительно сбрасывает сецкию
 
 const postData = async (url, data, type) => {
 
@@ -48,7 +263,173 @@ function insertImagesInModal() {
         })
     })
 
-}
+} // вставка картинок из canvas в модальное окно "оформление заказа"
+
+function hideSectionInput() {
+    let inputTrigger = document.querySelectorAll('.send-info-section')
+    let doorAmount = document.querySelector('input[name="section-amount"]:checked').dataset.article
+    let location = document.querySelector('input[name="location"]:checked').dataset.article
+
+
+    function formationObj() {
+        let obj = {}
+        obj.section1 = getNameSection('input[name="section-modal1"]')
+        obj.section2 = getNameSection('input[name="section-modal2"]')
+        obj.location = location
+        obj.koldors = doorAmount
+        if (doorAmount === '3' || doorAmount === '4') {
+
+            obj.section3 = getNameSection('input[name="section-modal3"]')
+        }
+        if (doorAmount === '4') {
+            obj.section4 = getNameSection('input[name="section-modal4"]')
+        }
+        // console.log(obj)
+        return JSON.stringify(obj)
+    }
+
+    function sendInfo() {
+
+        let amountDoorsId = searchCheckedElem('input[name="section-amount"]')
+        let parameterLocationId = searchCheckedElem('input[name="location"]')
+        let formData = new FormData()
+        // let obj = {}
+        // obj.kolDor = amountDoorsId
+        // obj.loc = parameterLocationId
+        // formData.append('displaySection', '')
+        //         // formData.append('koldors', amountDoorsId)
+        //         // formData.append('location', parameterLocationId)
+        formData.append('sectionMap', formationObj())
+        postData('/zed/modules/canvas/canvas_load.php', formData, 'json')
+            .then((res) => {
+
+                // displayInput('.modal-section-1', res.section1)
+                // displayInput('.modal-section-2', res.section2)
+                // displayInput('.modal-section-3', res.section3)
+                // displayInput('.modal-section-4', res.section4)
+                displayInput(res)
+            })
+    }
+
+    sendInfo()
+
+    function displayInput(obj) {
+
+        Object.entries(obj)
+            .sort()
+            .forEach((item, index) => {
+                let [sectionName, sectionArray] = item
+                let modal = document.querySelector(`.modal-section-${index + 1}`)
+                let inputs = modal.querySelectorAll('input')
+                // console.log(sectionName, sectionArray)
+                // console.log(modal)
+                inputs.forEach(input => {
+                    let parentElem = input.closest('.col')
+                    let inputName = input.dataset.name
+
+                    for (const arrItem of sectionArray) {
+                        // console.log(inputName, '===', arrItem)
+
+                        if (arrItem === inputName) {
+                            // console.log(true)
+                            parentElem.classList.remove('hide-section')
+                            // console.log(input.closest('.col'))
+                            break;
+                        } else parentElem.classList.add('hide-section')
+                    }
+                })
+            })
+
+
+    }
+
+    inputTrigger.forEach(item => {
+        item.addEventListener('click', function () {
+
+            sendInfo()
+
+        })
+    })
+
+
+}   // получаю  от сервера к каким секциям нужно применить display block
+
+
+function getObjectAccordance() {
+    let amountDoorsId = searchCheckedElem('input[name="section-amount"]')
+    let parameterLocationId = searchCheckedElem('input[name="location"]')
+    // let doorAmount = document.querySelector('input[name="section-amount"]:checked').dataset.article
+    // let location = document.querySelector('input[name="location"]:checked').dataset.article
+    // let sectionAll = document.querySelectorAll('.section-input')
+    let sectionAll = document.querySelectorAll('.section-input')
+
+    function disabledInputSection(obj) {
+        // console.log(obj)
+        Object.entries(obj)
+            .sort()
+            .forEach((item, index) => {
+
+            let [nameSection, sectionArray] = item
+
+            let modal = document.querySelector(`.modal-section-${index + 1}`)
+            let inputs = modal.querySelectorAll('input')
+
+            inputs.forEach(input => {
+
+                let inputName = input.dataset.name
+
+                for (const arrItem of sectionArray) {
+
+                    if (arrItem === inputName) {
+
+                        input.disabled = false
+                        break;
+                    } else input.disabled = true
+                }
+            })
+
+        })
+        // function disabled(modalSelector, section) {
+        //
+        //     let modal = document.querySelector(modalSelector)
+        //     let sectionArray = obj[section]
+        //
+        //
+        // }
+
+        // disabled('.modal-section-1', 'section1')
+        // disabled('.modal-section-2', 'section2')
+        // disabled('.modal-section-3', 'section3')
+        // disabled('.modal-section-4', 'section4')
+    }
+
+    function sendInfo() {
+        let formData = new FormData
+
+        formData.append('displaySection', '')
+        formData.append('koldors', amountDoorsId)
+        formData.append('location', parameterLocationId)
+        postData('/zed/modules/canvas/canvas_load.php', formData, 'json')
+            .then((res) => {
+                console.log('displaySection' ,res)
+                disabledInputSection(res)
+
+            })
+    }
+
+
+
+    sectionAll.forEach(item => {
+        item.addEventListener('click', function () {
+            sendInfo()
+
+
+
+        })
+    })
+    sendInfo()
+} // получаю  от сервера к каким секциям надо применить атрибут disabled
+
 
 function createDescrOrder() {
     function getDescription(elementSelector) {
@@ -57,7 +438,7 @@ function createDescrOrder() {
 
         inputSelector.forEach(item => {
             if (item.checked) {
-                console.log(item)
+
                 result = item.dataset.descr
             }
         })
@@ -88,7 +469,7 @@ function createDescrOrder() {
         let objSection = {}
 
         objDoors.stretchCeiling = getDescription('#stretch-ceiling')
-        console.log(frameType1)
+
         if (amountDoors === '2') {
             if (frameType1 !== '1') {
                 objDoors.door1 = `Левая дверь: ${doorsFon1}  вставка ${doorsCenter1}`
@@ -133,20 +514,20 @@ function createDescrOrder() {
         objSection.doorClosers = 'Цвет корпуса: ' + colorCorpus
         objSection.encumbrance = getDescription('#zakladnaia')
         objSection.fenders = getDescription('#otboinik')
-        console.log(objSection)
+
 
         function insertObjectInHtml(obj, ulParent) {
-            console.log(resultListSection)
+            ////console.log(resultListSection)
             let string = ''
-            console.log(obj)
+            ////console.log(obj)
             for (const key in obj) {
-                console.log(obj[key])
+                ////console.log(obj[key])
                 if (obj[key] !== false) {
 
                     string += `<li class="calculator__list-item"> ${obj[key]} </li>`
                 }
             }
-            console.log(string)
+            //console.log(string)
             ulParent.innerHTML = string
         }
 
@@ -161,45 +542,8 @@ function createDescrOrder() {
     })
 
 
-}
+}  // формирование описания для модального окна "оформление заказа"
 
-function getObjectAccordance() {
-    function getNameSection(selectorElem) {
-        let nodeList = document.querySelectorAll(selectorElem)
-        let name = ''
-        nodeList.forEach(item => {
-            if (item.checked) {
-                name = item.dataset.descr
-            }
-
-        })
-        return name
-    }
-
-    let doorAmount = document.querySelector('input[name="section-amount"]:checked').dataset.article
-    let location = document.querySelector('input[name="location"]:checked').dataset.article
-    console.log(doorAmount)
-    let obj = {}
-    obj.section1 = getNameSection('input[name="section-modal1"]')
-    obj.section2 = getNameSection('input[name="section-modal2"]')
-    obj.location = location
-    obj.koldors = doorAmount
-    if (doorAmount === '3' || doorAmount === '4') {
-
-        obj.section3 = getNameSection('input[name="section-modal3"]')
-    }
-    if (doorAmount === '4') {
-        obj.section4 = getNameSection('input[name="section-modal4"]')
-    }
-    let formData = new FormData
-    console.log(obj)
-    formData.append('sectionMap', JSON.stringify(obj))
-
-    postData('/zed/modules/canvas/canvas_load.php', formData, 'text')
-        .then((res) => {
-            console.log(res)
-        })
-}
 
 const constructor = () => {
 
@@ -209,6 +553,7 @@ const constructor = () => {
     let outerCanvas = new EasyC(document.querySelector('#fasad'));
     let innerCanvas = new EasyC(document.querySelector('#inner'));
     let canvasTrigger = document.querySelectorAll('.canvas-trigger');
+    let resetButtonTrigger = document.querySelectorAll('.reset-section')
     let count = 0
 
     let formData = new FormData
@@ -222,6 +567,49 @@ const constructor = () => {
                 canvasTriggerItem.addEventListener('click', () => {
 
                     Render(res)
+                })
+            })
+
+            resetButtonTrigger.forEach(resetTrigger => {
+                resetTrigger.addEventListener('click', function () {
+                    let numberSection = this.dataset.section
+                    let nameSection = this.dataset.name
+                    let doorAmount = document.querySelector('input[name="section-amount"]:checked').dataset.article
+                    let location = document.querySelector('input[name="location"]:checked').dataset.article
+                    let section1Id = getNameSection('input[name="section-modal1"]')
+                    let section2Id = getNameSection('input[name="section-modal2"]')
+
+                    let obj = {
+                        section1: section1Id,
+                        section2: section2Id,
+                        reset: numberSection,
+
+                        location: location,
+                        koldors: doorAmount
+
+                    }
+                    if (doorAmount === '3' || doorAmount === '4') {
+
+                        obj.section3 = getNameSection('input[name="section-modal3"]')
+                    }
+                    if (doorAmount === '4') {
+                        obj.section4 = getNameSection('input[name="section-modal4"]')
+                    }
+                    obj[`section${numberSection}`] = nameSection
+
+                    let form = new FormData()
+                    form.append('reset', JSON.stringify(obj))
+
+                    postData('/zed/modules/canvas/canvas_load.php', form, 'json')
+                        .then(resetObject => {
+
+                            resetSection(resetObject)
+                            getObjectAccordance()
+                            Render(res)
+
+                        })
+
+
                 })
             })
 
@@ -246,7 +634,7 @@ const constructor = () => {
     //     }
     //
     //     loadSrc()
-    //     console.log(cashAray)
+    //     //console.log(cashAray)
     //
     //     function loadImg(url) {
     //         return new Promise(function (resolve, reject) {
@@ -263,9 +651,9 @@ const constructor = () => {
     //     }
     //
     //     cashAray.forEach(async (item, i) => {
-    //         // console.log(item)
+    //         // //console.log(item)
     //         await loadImg(item)
-    //         console.log(i + '    ' + item)
+    //         //console.log(i + '    ' + item)
     //
     //     })
     //
@@ -274,9 +662,10 @@ const constructor = () => {
 
     //
 
+
     function Render(imgObject) {
 
-        console.log(imgObject)
+        //console.log(imgObject)
         if (outerCanvas.objects.length >= 1 || innerCanvas.objects.length >= 1) {
             outerCanvas.objects = [];
             innerCanvas.objects = [];
@@ -285,6 +674,7 @@ const constructor = () => {
             count += 10
         }
 
+        // фунция для рендора canvas
         function canvasRender(renderItems, canvas, location) {
             const settingsCanvas = {
 
@@ -365,7 +755,7 @@ const constructor = () => {
 
             renderItems.forEach(itemImg => {
 
-                // console.log(itemImg)
+                // //console.log(itemImg)
                 let currentObjImg = Object.assign({}, settingsCanvas[itemImg.locationOnCanvas])
 
                 currentObjImg.type = 'image'
@@ -381,40 +771,15 @@ const constructor = () => {
                     currentObjImg.x = 1000 - x
                 }
 
-                // console.log(currentObjImg)
+                // //console.log(currentObjImg)
                 canvas.objects.push(currentObjImg)
 
 
             })
 
 
-            // console.log(sheet.objects)
+            // //console.log(sheet.objects)
 
-        }
-
-        function searchCheckedElem(selectorElem) {
-            let nodeList = document.querySelectorAll(selectorElem)
-            let checkedElement
-
-            if (nodeList.length > 1) {
-
-                nodeList.forEach(item => {
-                    if (item.checked) {
-                        checkedElement = item.dataset.article
-
-                    }
-                })
-            }
-            if (nodeList.length === 1) {
-
-                nodeList.forEach(item => {
-                    if (item.checked) {
-                        return checkedElement = '1'
-                    } else checkedElement = '0'
-                })
-
-            }
-            return checkedElement
         }
 
 
@@ -456,8 +821,8 @@ const constructor = () => {
                         }
                     }
                 }) // производим поиск нужного фона по выбраным параметрам
-                console.log(background)
-                // console.log('фон', background)
+                //console.log(background)
+                // //console.log('фон', background)
                 canvasRender(background, outerCanvas, parameterLocation)
                 canvasRender(background, innerCanvas, parameterLocation)
 
@@ -510,7 +875,7 @@ const constructor = () => {
                             return item
                         }
                     })
-                    // console.log(textureFacade1)
+                    // //console.log(textureFacade1)
                     if (doors === '4') {
                         resultArray.push(textureFacade1[0])
                         resultArray.push(textureFacade1[3])
@@ -525,7 +890,7 @@ const constructor = () => {
                     }
 
 
-                    // console.log(parameterDoorBackground1)
+                    // //console.log(parameterDoorBackground1)
                     let textureFacade2 = imgObject.textureFacade.filter(item => {
                         if (item.article === parameterDoorBackground2) {
                             return item
@@ -540,15 +905,15 @@ const constructor = () => {
                         resultArray.push(textureFacade2[1])
                     }
 
-                    // console.log(textureFacade1)
+                    // //console.log(textureFacade1)
                     let textureCenter1 = imgObject.textureCenterFacade.filter(item => {
                         if (item.article === parameterDoorCenter1 && item.type === parameterFrameType1) {
                             return item
                         }
                     })
-                    console.log(textureCenter1)
+                    //console.log(textureCenter1)
                     sortLastNumber(textureCenter1)
-                    console.log(textureCenter1)
+                    //console.log(textureCenter1)
                     if (textureCenter1.length >= 1 && doors === '4') {
                         resultArray.push(textureCenter1[0])
                         resultArray.push(textureCenter1[3])
@@ -561,7 +926,7 @@ const constructor = () => {
                         resultArray.push(textureCenter1[0])
 
                     }
-                    console.log(parameterDoorCenter2)
+                    //console.log(parameterDoorCenter2)
                     let textureCenter2 = imgObject.textureCenterFacade.filter(item => {
                         if (item.article === parameterDoorCenter2 && item.type === parameterFrameType2) {
                             return item
@@ -586,7 +951,7 @@ const constructor = () => {
                 doorsFilter(parameterAmountDoors);
 
 
-                // console.log(resultArray)
+                // //console.log(resultArray)
                 canvasRender(resultArray, outerCanvas, parameterLocation)
             })();
 
@@ -695,9 +1060,10 @@ const constructor = () => {
             })();
 
             (function calcPrice() {
+                let parameterCalculation = document.querySelector('input[name="cabinet-parameters"]:checked').id
                 let doorCenter1 = document.querySelector('input[name="texture-center-doors1"]:disabled')
                 let doorCenter2 = document.querySelector('input[name="texture-center-doors2"]:disabled')
-                console.log(doorCenter1)
+                //console.log(doorCenter1)
                 let doorsObject = {}
                 let sectionObject = {}
 
@@ -756,12 +1122,24 @@ const constructor = () => {
                 }
 
                 sectionObject.colorframe = parameterSectionColor
-                console.log(sectionObject)
+                //console.log(sectionObject)
 
                 let formData = new FormData()
+                if (parameterCalculation === 'coupe') {
+                    formData.append('fasad', JSON.stringify(doorsObject))
+                    formData.append('section', JSON.stringify(sectionObject))
 
-                formData.append('fasad', JSON.stringify(doorsObject))
-                formData.append('section', JSON.stringify(sectionObject))
+                }
+                if (parameterCalculation === 'coupe1') {
+                    formData.append('fasad', JSON.stringify(doorsObject))
+
+                }
+                if (parameterCalculation === 'coupe2') {
+                    formData.append('section', JSON.stringify(sectionObject))
+
+                }
+
+
                 postData('/zed/modules/canvas/canvas_load.php', formData, 'text')
                     .then((res) => {
                         let priceResult = document.querySelector('.canvas-price')
@@ -769,7 +1147,7 @@ const constructor = () => {
                         let result = 0
                         arr.forEach(item => {
                             if (!isNaN(parseFloat(item))) {
-                                // console.log(+item)
+                                //console.log(+item)
                                 result = result + +item
                             }
                         })
@@ -787,11 +1165,11 @@ const constructor = () => {
         }
 
 
-        innerCanvas.draw()
+        innerCanvas.draw() // вызов рендора для канваса
         outerCanvas.draw()
 
-        console.log(outerCanvas.objects)
-        console.log(innerCanvas.objects)
+        //console.log(outerCanvas.objects)
+        // console.log(innerCanvas.objects)
 
 
     }
@@ -800,7 +1178,7 @@ const constructor = () => {
     // canvasLoadingImages(jsonSkafella)
 
 
-}
+} // функция для канваса
 
 
 const inputLimitation = () => {
@@ -896,7 +1274,7 @@ const inputLimitation = () => {
 
     function buttonNameChange() {
         let amount = document.querySelector('input[name="section-amount"]:checked').dataset.article
-        console.log(amount)
+        //console.log(amount)
         let btn = document.querySelectorAll('.calc__doors-tab')
         if (amount === '2') {
             btn[0].textContent = 'Левая'
@@ -955,12 +1333,12 @@ const inputLimitation = () => {
             let min = +item.dataset.min
             let max = +item.dataset.max
 
-            console.log(min)
-            console.log(max)
-            console.log(value)
+            //console.log(min)
+            //console.log(max)
+            //console.log(value)
             if (value >= min && value <= max) {
                 obj.width = true
-                console.log(item)
+                //console.log(item)
                 break;
 
 
@@ -1005,7 +1383,7 @@ const inputLimitation = () => {
 
     disabledButton()
 
-}
+}  // функция для ограничения переходов между табами если не введены нужные параметры
 const tabsCalculator = (headerSelector, tabSelector, contentSelector, activeClass, nextButton, prevButton) => {
     const header = document.querySelector(headerSelector),
         tab = document.querySelectorAll(tabSelector),
@@ -1032,14 +1410,14 @@ const tabsCalculator = (headerSelector, tabSelector, contentSelector, activeClas
             modal.style.display = 'block'
 
         }
-        console.log(currentTab)
+        //console.log(currentTab)
     }  // фунция для шкафа купе
 
     function coupeMinus() {
         currentTab--
         hideTabContent()
         showTabContent(currentTab)
-        console.log(currentTab)
+        //console.log(currentTab)
     } // фунция для шкафа купе
 
     function coupe1Plus() {
@@ -1053,7 +1431,7 @@ const tabsCalculator = (headerSelector, tabSelector, contentSelector, activeClas
         }
         hideTabContent()
         showTabContent(currentTab)
-        console.log(currentTab)
+        //console.log(currentTab)
     } //фунция для  Только двери
 
     function coupe1Minus() {
@@ -1079,7 +1457,7 @@ const tabsCalculator = (headerSelector, tabSelector, contentSelector, activeClas
         }
         hideTabContent()
         showTabContent(currentTab)
-        console.log(currentTab)
+        //console.log(currentTab)
     } //фунция для  Только внутреннее наполнение
 
     function coupe2Minus() {
@@ -1091,7 +1469,7 @@ const tabsCalculator = (headerSelector, tabSelector, contentSelector, activeClas
 
 
     }// фунция для  Только внутреннее наполнение
-    console.log(cabinetParametersChecked)
+    //console.log(cabinetParametersChecked)
     if (cabinetParametersChecked !== null && cabinetParametersChecked === 'coupe') {
 
         nextBtn.forEach(item => {
@@ -1142,10 +1520,10 @@ const tabsCalculator = (headerSelector, tabSelector, contentSelector, activeClas
                 item.removeEventListener('click', coupe1Minus)
                 item.removeEventListener('click', coupe2Minus)
             })
-            console.log(this)
+            //console.log(this)
 
             if (this.id === 'coupe') {
-                console.log(1)
+                //console.log(1)
                 nextBtn.forEach(item => {
                     item.addEventListener('click', coupePlus)
                 })
@@ -1227,7 +1605,7 @@ const tabsCalculator = (headerSelector, tabSelector, contentSelector, activeClas
     } else showTabContent(previewTabActive)
 
 
-}
+} // табы для калькулятора
 
 getObjectAccordance()
 // inputLimitation()
@@ -1238,3 +1616,5 @@ synchronizationCheckbox('input[name="zakladnaia"]')
 synchronizationCheckbox('input[name="stretch-ceiling"]')
 constructor()
 createDescrOrder()
+hideSectionInput()
+sendSale()

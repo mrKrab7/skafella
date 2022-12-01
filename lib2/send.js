@@ -141,6 +141,7 @@ function sendProject() {
     let previewInput = document.querySelector('.send__input-file')
     let progressInput = document.querySelector('.send__progres-btn')
     let inputs = form.querySelectorAll('input')
+    let textArea = form.querySelector('textarea')
 
     function sendForm(res) {
         if (res.length > 10) {
@@ -191,7 +192,8 @@ function sendProject() {
         e.preventDefault()
         let formData = new FormData(form)
         formData.append('file', fileName)
-        postData('/zed/modules/feedback/sendmessage.php', formData)
+        formData.append('form_type', 'project')
+        postData('/zed/modules/feedback/server.php', formData)
             .then(res => {
                 console.log(res)
             })
@@ -201,6 +203,7 @@ function sendProject() {
                 inputs.forEach(item => {
                     item.value = ''
                 })
+                textArea.value = ''
                 progressInput.classList.remove('d-block')
                 previewInput.classList.remove('d-none')
                 modal.style.display = 'block'

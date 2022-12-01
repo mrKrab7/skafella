@@ -45,6 +45,7 @@ if (document.querySelector('.main-swiper') !== null) {
 }
 
 if (document.querySelector('.projects__swiper') !== null) {
+    // setHeightCard('.projects__swiper')
     let cardsSwiper = new Swiper(".projects__swiper", {
         slidesPerView: 2,
         spaceBetween: 20,
@@ -263,4 +264,3 @@ if (document.querySelector('.cards-swiper__similar-product') !== null) {
 
 
 
-// setHeightCard('.projects__swiper')

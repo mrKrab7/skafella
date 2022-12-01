@@ -31,7 +31,6 @@ const modals = () => {
                         }
 
 
-
                     }
 
 
@@ -44,7 +43,6 @@ const modals = () => {
                 });
             })
         }
-
 
 
         if (modal !== null) {
@@ -70,6 +68,7 @@ const modals = () => {
 
 
     bindModal('.call-btn', '.modal-call', '.modal-call .modal__btn-close');
+    bindModal('.design__button', '.modal-call', '.modal-call .modal__btn-close');
     bindModal('.header__nav-question', '.modal-call', '.modal-call .modal__btn-close');
     bindModal('.question-mobile', '.modal-call', '.modal-call .modal__btn-close');
     bindModal('.section1', '.modal-section-1', '.modal-section-1 .modal__btn-close');
@@ -89,3 +88,21 @@ const modals = () => {
 
 };
 modals();
+
+
+function closeSectionModal() {
+    let closeTrigger = document.querySelectorAll('.close-modal')
+
+    if (closeTrigger !== null) {
+        closeTrigger.forEach(item => {
+            item.addEventListener('click', function () {
+
+                let modal = item.closest('.modal-section')
+                modal.style.display = 'none'
+                document.body.style.overflow = ''
+            })
+        })
+    }
+}
+
+closeSectionModal()

@@ -43,4 +43,7 @@ let tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
 if (document.querySelector('.card-product__header-wrapper') !== null) {
     tabs('.card-product__header-wrapper', '.card-product__header-tab', '.card-product__tab-content', 'card-product__tab-active')
 }
+if (document.querySelector('.calc__doors-header') !== null) {
+    tabs('.calc__doors-header', '.calc__doors-tab', '.calc__doors-content', 'calc__doors-active')
+}
 

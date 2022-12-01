@@ -33,7 +33,7 @@ const forms = () => {
         postData('/zed/modules/feedback/server.php', formData)
             .then(res => {
 
-                console.log(res);
+                console.log('sendModal',res);
 
 
             })
